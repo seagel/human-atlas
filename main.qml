@@ -16,26 +16,26 @@ ApplicationWindow {
         anchors.fill: parent
 
         Rectangle {
+            id: diagram
+            property string currentOrgan
+
             color: "lightsteelblue"
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            Image {
-                id: heart
-                source: "qrc:///lungs.png"
+            OrganImage {
+                organ: "lungs"
 
                 ImageMouseArea {
                     anchors.fill: parent
 
                     imageName: parent.source
-                    onClicked: console.log("Clicked" + imageName)
+                    onClicked: diagram.currentOrgan = parent.organ
                 }
-
             }
 
-            Image {
-                id: oesophagus
-                source: "qrc:///heart.png"
+            OrganImage {
+                organ: "heart"
                 x: 120
                 y: 90
 
@@ -43,15 +43,15 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     imageName: parent.source
-                    onClicked: console.log("Clicked " + imageName)
+                    onClicked: diagram.currentOrgan = parent.organ
                 }
             }
 
         }
 
         WebView {
-            url: "qrc:///heart.html"
-            Layout.preferredWidth: 200
+            url: "qrc:///" + diagram.currentOrgan + ".html"
+            Layout.preferredWidth: 240
             Layout.fillHeight: true
         }
     }

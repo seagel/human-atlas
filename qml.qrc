@@ -5,5 +5,7 @@
         <file>lungs.png</file>
         <file>bubble.png</file>
         <file>heart.html</file>
+        <file>OrganImage.qml</file>
+        <file>lungs.html</file>
     </qresource>
 </RCC>
