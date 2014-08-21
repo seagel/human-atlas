@@ -17,3 +17,4 @@ HEADERS += \
     imagemousearea.h
 
 CONFIG += c++11
+
