@@ -4,8 +4,6 @@ import QtQuick.Particles 2.0
 import QtWebKit 3.0
 import QtQuick.Layouts 1.1
 
-import org.swecha.humanatlas 1.0
-
 ApplicationWindow {
     visible: true
     width: 640
@@ -25,28 +23,19 @@ ApplicationWindow {
 
             OrganImage {
                 organ: "lungs"
-
-                ImageMouseArea {
-                    anchors.fill: parent
-
-                    imageName: parent.source
-                    onClicked: diagram.currentOrgan = parent.organ
-                }
             }
 
             OrganImage {
                 organ: "heart"
                 x: 120
                 y: 90
-
-                ImageMouseArea {
-                    anchors.fill: parent
-
-                    imageName: parent.source
-                    onClicked: diagram.currentOrgan = parent.organ
-                }
             }
 
+            OrganImage {
+                organ: "liver"
+                x: 10
+                y: 250
+            }
         }
 
         WebView {

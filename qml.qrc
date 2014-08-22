@@ -7,5 +7,7 @@
         <file>heart.html</file>
         <file>OrganImage.qml</file>
         <file>lungs.html</file>
+        <file>liver.png</file>
+        <file>liver.html</file>
     </qresource>
 </RCC>
