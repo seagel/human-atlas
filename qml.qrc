@@ -1,13 +1,24 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>heart.png</file>
-        <file>lungs.png</file>
         <file>bubble.png</file>
-        <file>heart.html</file>
-        <file>OrganImage.qml</file>
-        <file>lungs.html</file>
-        <file>liver.png</file>
-        <file>liver.html</file>
+        <file>Explorer.qml</file>
+        <file>Home.qml</file>
+    </qresource>
+    <qresource prefix="/imports">
+        <file>humanbody/qmldir</file>
+        <file>humanbody/circulatory_system/heart.html</file>
+        <file>humanbody/circulatory_system/heart.png</file>
+        <file>humanbody/circulatory_system/Organs.qml</file>
+        <file>humanbody/digestive_system/liver.html</file>
+        <file>humanbody/digestive_system/liver.png</file>
+        <file>humanbody/digestive_system/Organs.qml</file>
+        <file>humanbody/respiratory_system/lungs.html</file>
+        <file>humanbody/respiratory_system/lungs.png</file>
+        <file>humanbody/respiratory_system/Organs.qml</file>
+    </qresource>
+    <qresource prefix="/components">
+        <file>components/OrganImage.qml</file>
+        <file>components/qmldir</file>
     </qresource>
 </RCC>

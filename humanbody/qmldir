@@ -1,0 +1,4 @@
+CirculatorySystem 1.0 circulatory_system/Organs.qml
+DigestiveSystem 1.0 digestive_system/Organs.qml
+RespiratorySystem 1.0 respiratory_system/Organs.qml
+
