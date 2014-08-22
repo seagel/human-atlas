@@ -17,6 +17,7 @@
         <file>humanbody/respiratory_system/lungs.html</file>
         <file>humanbody/respiratory_system/lungs.png</file>
         <file>humanbody/respiratory_system/Organs.qml</file>
+        <file>humanbody/OrganSystems.qml</file>
     </qresource>
     <qresource prefix="/components">
         <file>components/OrganImage.qml</file>

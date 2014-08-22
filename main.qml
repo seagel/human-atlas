@@ -21,6 +21,11 @@ ApplicationWindow {
     Component {
         id: explorer
         Explorer {
+            onSelected: {
+                var newObject = Qt.createQmlObject("import humanbody 1.0;" +
+                                                   componentName + "{}", stack);
+                stack.push(newObject);
+            }
         }
     }
 
