@@ -3,8 +3,9 @@
         <file>main.qml</file>
         <file>bubble.png</file>
         <file>Explorer.qml</file>
-        <file>Home.qml</file>
+        <file>Mode.qml</file>
         <file>Quiz.qml</file>
+        <file>Home.qml</file>
     </qresource>
     <qresource prefix="/imports">
         <file>humanbody/qmldir</file>

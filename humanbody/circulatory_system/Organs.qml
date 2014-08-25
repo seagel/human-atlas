@@ -6,6 +6,8 @@ import components 1.0 as Components
 
 Rectangle {
     id: root
+    anchors.fill: parent
+    clip: true
     property string currentOrgan
     property string organSystem: "circulatory_system"
     color: "lightsteelblue"
@@ -22,12 +24,7 @@ Rectangle {
             Layout.fillHeight: true
 
             Components.OrganImage {
-                id: lungsImage
-                organSystem: root.organSystem
-                organ: "lungs"
-            }
-
-            Components.OrganImage {
+                id: heartImage
                 organSystem: root.organSystem
                 organ: "heart"
                 x: 120
@@ -36,7 +33,7 @@ Rectangle {
         }
 
         WebView {
-            url: "qrc:///imports/" + lungsImage.organism + "/" + lungsImage.organSystem + "/" + diagram.currentOrgan + ".html"
+            url: "qrc:///imports/" + heartImage.organism + "/" + heartImage.organSystem + "/" + diagram.currentOrgan + ".html"
             Layout.preferredWidth: 240
             Layout.fillHeight: true
         }

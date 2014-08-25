@@ -4,34 +4,45 @@ import QtWebKit 3.0
 import humanbody 1.0 as HumanBody
 
 ApplicationWindow {
+    id: app
     visible: true
     width: 640
     height: 480
     title: qsTr("Balaswecha")
 
+    property string currentOrganSystem
+    property string currentOrganism: "humanbody"
+
     StackView {
         id: stack
         anchors.fill: parent
         initialItem: Home {
-            onExplore: stack.push(explorer)
-            onQuiz: stack.push(quiz)
+
+            onSelected: {
+                app.currentOrganSystem =  selectedComponent;
+                stack.push(mode);
+            }
         }
     }
 
     Component {
         id: explorer
         Explorer {
-            onSelected: {
-                var newObject = Qt.createQmlObject("import humanbody 1.0;" +
-                                                   componentName + "{}", stack);
-                stack.push(newObject);
-            }
         }
     }
 
     Component {
         id: quiz
         Quiz {
+        }
+    }
+
+    Component {
+        id: mode
+        Mode {
+            onExplore: {
+                stack.push(explorer)
+            }
         }
     }
 }

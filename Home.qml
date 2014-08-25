@@ -1,22 +1,18 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
-import QtQuick.Layouts 1.1
+import humanbody 1.0
 
 Item {
     id: root
-    signal explore
-    signal quiz
+    signal selected(var selectedComponent)
 
-    ColumnLayout {
-        anchors.centerIn: parent
+    ListView {
+        anchors { fill: parent; margins: 10 }
 
-        Button {
-            text: "Explore"
-            onClicked: root.explore()
-        }
-        Button {
-            text: "Quiz"
-            onClicked: root.quiz()
+        model: OrganSystems {}
+        delegate: Button {
+            text: nameRole
+            onClicked: root.selected(componentNameRole)
         }
     }
 }

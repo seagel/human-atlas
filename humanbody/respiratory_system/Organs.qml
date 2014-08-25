@@ -6,6 +6,8 @@ import components 1.0 as Components
 
 Rectangle {
     id: root
+    anchors.fill: parent
+    clip: true
     property string currentOrgan
     property string organSystem: "respiratory_system"
     color: "lightsteelblue"

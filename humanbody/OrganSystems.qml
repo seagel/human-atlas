@@ -2,15 +2,15 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        name: "Circulatory System"
-        componentName: "CirculatorySystem"
+        nameRole: "Circulatory System"
+        componentNameRole: "CirculatorySystem"
     }
     ListElement {
-        name: "Respiratory System"
-        componentName: "RespiratorySystem"
+        nameRole: "Respiratory System"
+        componentNameRole: "RespiratorySystem"
     }
     ListElement {
-        name: "Digestive System"
-        componentName: "DigestiveSystem"
+        nameRole: "Digestive System"
+        componentNameRole: "DigestiveSystem"
     }
 }
