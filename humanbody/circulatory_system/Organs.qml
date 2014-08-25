@@ -10,32 +10,24 @@ Rectangle {
     clip: true
     property string currentOrgan
     property string organSystem: "circulatory_system"
-    color: "lightsteelblue"
+    property string mode: "explore"
 
-    RowLayout {
+    Loader {
         anchors.fill: parent
+        sourceComponent: mode == "explore" ? explore : quiz
+    }
 
-        Rectangle {
-            id: diagram
-            property string currentOrgan
+    Component {
+        id: explore
 
-            color: "lightsteelblue"
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Components.OrganImage {
-                id: heartImage
-                organSystem: root.organSystem
-                organ: "heart"
-                x: 120
-                y: 90
-            }
+        Explore {
         }
+    }
 
-        WebView {
-            url: "qrc:///imports/" + heartImage.organism + "/" + heartImage.organSystem + "/" + diagram.currentOrgan + ".html"
-            Layout.preferredWidth: 240
-            Layout.fillHeight: true
+    Component {
+        id: quiz
+
+        Quiz {
         }
     }
 }

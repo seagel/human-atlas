@@ -4,17 +4,25 @@
         <file>bubble.png</file>
         <file>Explorer.qml</file>
         <file>Mode.qml</file>
-        <file>Quiz.qml</file>
         <file>Home.qml</file>
+        <file>Quiz.qml</file>
     </qresource>
     <qresource prefix="/imports">
         <file>humanbody/qmldir</file>
         <file>humanbody/circulatory_system/heart.html</file>
         <file>humanbody/circulatory_system/heart.png</file>
         <file>humanbody/circulatory_system/Organs.qml</file>
+
         <file>humanbody/digestive_system/liver.html</file>
         <file>humanbody/digestive_system/liver.png</file>
+        <file>humanbody/digestive_system/intestine.html</file>
+        <file>humanbody/digestive_system/intestine.png</file>
+        <file>humanbody/digestive_system/stomach.html</file>
+        <file>humanbody/digestive_system/stomach.png</file>
         <file>humanbody/digestive_system/Organs.qml</file>
+        <file>humanbody/digestive_system/Explore.qml</file>
+        <file>humanbody/digestive_system/Quiz.qml</file>
+
         <file>humanbody/respiratory_system/lungs.html</file>
         <file>humanbody/respiratory_system/lungs.png</file>
         <file>humanbody/respiratory_system/Organs.qml</file>

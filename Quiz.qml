@@ -1,5 +1,12 @@
 import QtQuick 2.0
 
-Text {
-    text: "HELLO QUIZ"
+Item {
+    id: root
+
+    Component.onCompleted: {
+        var newObject = Qt.createQmlObject("import humanbody 1.0;" +
+                                           app.currentOrganSystem + "{}", root);
+        newObject.mode = 'quiz';
+    }
+
 }

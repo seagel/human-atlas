@@ -1,5 +1,5 @@
 import QtQuick 2.2
-import QtQuick.Controls 1.1
+import QtQuick.Controls 1.2
 import QtWebKit 3.0
 import humanbody 1.0 as HumanBody
 
@@ -17,7 +17,6 @@ ApplicationWindow {
         id: stack
         anchors.fill: parent
         initialItem: Home {
-
             onSelected: {
                 app.currentOrganSystem =  selectedComponent;
                 stack.push(mode);
@@ -40,8 +39,12 @@ ApplicationWindow {
     Component {
         id: mode
         Mode {
-            onExplore: {
+            onExploreSelected: {
                 stack.push(explorer)
+            }
+
+            onQuizSelected: {
+                stack.push(quiz)
             }
         }
     }

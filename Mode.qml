@@ -4,19 +4,19 @@ import QtQuick.Layouts 1.1
 
 Item {
     id: root
-    signal explore
-    signal quiz
+    signal exploreSelected
+    signal quizSelected
 
     ColumnLayout {
         anchors.centerIn: parent
 
         Button {
             text: "Explore"
-            onClicked: root.explore()
+            onClicked: root.exploreSelected()
         }
         Button {
             text: "Quiz"
-            onClicked: root.quiz()
+            onClicked: root.quizSelected()
         }
     }
 }
