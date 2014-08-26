@@ -10,8 +10,6 @@ RowLayout {
     property string currentQuizOrgan: "liver"
     property variant organs: ["liver", "intestine", "stomach"]
     property int score: 0
-    property int numberQuestions: 0
-
 
     anchors.fill: parent
 
@@ -63,20 +61,29 @@ RowLayout {
 
         Text {
             id: scoreText
+            property string label: "Score"
+
             color: "blue"
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            text: "Score:" + root.score + "/" + root.numberQuestions
+            text: label + ": " + root.score
         }
 
 
         function handleAnswer(answerOrgan, correctOrgan) {
             if (answerOrgan === correctOrgan) {
-                var index = (root.organs.indexOf(answerOrgan) + 1) % root.organs.length
-                root.currentQuizOrgan = root.organs[index]
                 root.score += 1
             }
-            root.numberQuestions += 1
+            var index = (root.organs.indexOf(correctOrgan) + 1)
+            if (index == root.organs.length) {
+                gameOver()
+            } else {
+                root.currentQuizOrgan = root.organs[index]
+            }
+        }
+
+        function gameOver() {
+            scoreText.label = "Game Over, your score is"
         }
     }
 }
