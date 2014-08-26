@@ -11,7 +11,7 @@ ImageMouseArea::ImageMouseArea(QQuickItem *parent) :
 bool ImageMouseArea::contains(const QPointF &point) const
 {
     auto newString = m_imageName;
-    QImage image(newString.replace("qrc://", ":"));
+    QImage image(newString.replace("file://", ""));
 
     return image.rect().contains(point.toPoint())
             && qAlpha(image.pixel(point.toPoint())) > 0;

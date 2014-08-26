@@ -10,8 +10,8 @@ ApplicationWindow {
     height: 480
     title: qsTr("Balaswecha")
 
-    property string currentOrganSystem
     property string currentOrganism: "humanbody"
+    property string currentOrganSystem
 
     StackView {
         id: stack
@@ -26,13 +26,17 @@ ApplicationWindow {
 
     Component {
         id: explorer
-        Explorer {
+        ExploreLoader {
+            organism: app.currentOrganism
+            organSystem: app.currentOrganSystem
         }
     }
 
     Component {
         id: quiz
-        Quiz {
+        QuizLoader {
+            organism: app.currentOrganism
+            organSystem: app.currentOrganSystem
         }
     }
 
