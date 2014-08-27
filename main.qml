@@ -1,14 +1,12 @@
 import QtQuick 2.2
 import QtQuick.Controls 1.2
-import QtWebKit 3.0
-import humanbody 1.0 as HumanBody
 
 ApplicationWindow {
     id: app
     visible: true
     width: 1024
     height: 768
-    title: qsTr("Balaswecha")
+    title: qsTr("HUMAN ATLAS")
 
     property string currentOrganism: "humanbody"
     property string currentOrganSystem
@@ -21,6 +19,7 @@ ApplicationWindow {
         id: stack
         anchors.fill: parent
         initialItem: Home {
+            organism: app.currentOrganism
             onSelected: {
                 app.currentOrganSystem =  selectedComponent;
                 stack.push(mode);
