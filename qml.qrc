@@ -6,10 +6,12 @@
         <file>Mode.qml</file>
         <file>Home.qml</file>
         <file>QuizLoader.qml</file>
+        <file>Theme.qml</file>
     </qresource>
     <qresource prefix="/components">
         <file>components/OrganImage.qml</file>
         <file>components/ModeSelector.qml</file>
+        <file>components/ButtonStyle.qml</file>
         <file>components/qmldir</file>
     </qresource>
 </RCC>

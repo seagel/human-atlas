@@ -6,12 +6,16 @@ import humanbody 1.0 as HumanBody
 ApplicationWindow {
     id: app
     visible: true
-    width: 640
-    height: 480
+    width: 1024
+    height: 768
     title: qsTr("Balaswecha")
 
     property string currentOrganism: "humanbody"
     property string currentOrganSystem
+
+    Theme {     //This will be accessed all over the code
+        id: theme   //Global ID
+    }
 
     StackView {
         id: stack
