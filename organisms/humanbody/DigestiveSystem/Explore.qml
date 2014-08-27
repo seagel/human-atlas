@@ -6,26 +6,23 @@ RowLayout {
     id: root
     property string organism
     property string organSystem
+    property string currentOrgan
 
     anchors.fill: parent
 
-    Rectangle {
-        id: diagram
-        property string currentOrgan
-
-        color: "lightgreen"
+    Organs {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        Organs {
-            organism: root.organism
-            organSystem: root.organSystem
-            onClicked: diagram.currentOrgan = organ
-        }
+        organism: root.organism
+        organSystem: root.organSystem
+        currentOrgan: root.currentOrgan
+
+        onClicked: root.currentOrgan = organ
     }
 
     WebView {
-        url: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + diagram.currentOrgan + ".html"
+        url: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".html"
         Layout.preferredWidth: 240
         Layout.fillHeight: true
     }
