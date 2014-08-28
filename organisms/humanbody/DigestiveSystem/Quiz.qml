@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtWebKit 3.0
 
+
 RowLayout {
     id: root
     property string organism
@@ -27,23 +28,31 @@ RowLayout {
             onClicked: diagram.handleAnswer(organ, root.currentQuizOrgan)
         }
 
-        Text {
+        Column {
+          anchors {
+            right: parent.right;
+            margins: 10;
+          }
+
+          height: parent.height; width: 300
+          spacing: 5
+
+          Text {
             id: questionText
-            anchors.right: parent.right
-            anchors.top: parent.top
-            text: "Where is " + root.currentQuizOrgan
+            font.bold: true
+            font.pixelSize: 14
+            text: "Question: where is " + root.currentQuizOrgan + "?"
         }
 
-        Text {
+         Text {
             id: scoreText
+            font.bold: true
+            font.pixelSize: 14
             property string label: "Score"
-
-            color: "blue"
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
+            color: "brown"
             text: label + ": " + root.score
+            }
         }
-
 
         function handleAnswer(answerOrgan, correctOrgan) {
             if (answerOrgan === correctOrgan) {
@@ -58,7 +67,7 @@ RowLayout {
         }
 
         function gameOver() {
-            scoreText.label = "Game Over, your score is"
+            scoreText.label = "Game over, your score is"
         }
     }
 }

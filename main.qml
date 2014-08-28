@@ -29,7 +29,6 @@ ApplicationWindow {
 
     Component {
         id: explorer
-
         ModeLoader {
             mode: "explore"
             organism: app.currentOrganism
@@ -39,7 +38,6 @@ ApplicationWindow {
 
     Component {
         id: quiz
-
         ModeLoader {
             mode: "quiz"
             organism: app.currentOrganism
