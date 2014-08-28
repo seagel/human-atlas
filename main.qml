@@ -29,7 +29,9 @@ ApplicationWindow {
 
     Component {
         id: explorer
-        ExploreLoader {
+
+        ModeLoader {
+            mode: "explore"
             organism: app.currentOrganism
             organSystem: app.currentOrganSystem
         }
@@ -37,7 +39,9 @@ ApplicationWindow {
 
     Component {
         id: quiz
-        QuizLoader {
+
+        ModeLoader {
+            mode: "quiz"
             organism: app.currentOrganism
             organSystem: app.currentOrganSystem
         }

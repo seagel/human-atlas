@@ -2,11 +2,10 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>bubble.png</file>
-        <file>ExploreLoader.qml</file>
         <file>Mode.qml</file>
         <file>Home.qml</file>
-        <file>QuizLoader.qml</file>
         <file>Theme.qml</file>
+        <file>ModeLoader.qml</file>
     </qresource>
     <qresource prefix="/components">
         <file>components/OrganImage.qml</file>
