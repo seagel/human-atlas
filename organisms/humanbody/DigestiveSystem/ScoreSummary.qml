@@ -6,6 +6,8 @@ Item {
     property string organism
     property string organSystem
     property string responseText
+    property int numberQuestions: 0
+    property int score: 0
 
     Rectangle {
         id: diagram
@@ -21,7 +23,8 @@ Item {
         }
 
         Text {
-            text: "Your Score Summary: " + "\n\n" + root.responseText
+            text: "Your Score Summary, your score is: " + root.score + "/" + root.numberQuestions +
+                  "\n\n" + root.responseText
             x: 500
             y: 80
         }

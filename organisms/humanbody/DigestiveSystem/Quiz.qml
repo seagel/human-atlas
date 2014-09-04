@@ -34,6 +34,8 @@ RowLayout {
             organism: root.organism
             organSystem: root.organSystem
             responseText: quizLogic.responseSheet
+            numberQuestions: root.organs.length
+            score: quizLogic.score
         }
     }  
 }
