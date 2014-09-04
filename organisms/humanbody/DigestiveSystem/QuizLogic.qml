@@ -9,16 +9,17 @@ RowLayout {
     property string organism
     property string organSystem
     property string currentQuizOrgan
+    property string currentOrgan: "liver"
     property variant organs: ["liver", "intestine", "stomach"]
 
     property int score: 0
+    property bool isGameOver: false
 
     signal selected(var selectDisplaySummary)
 
 
     Rectangle {
                id: diagram
-               property string currentOrgan: "liver"
                color: "lightsteelblue"
                Layout.fillWidth: true
                Layout.fillHeight: true
@@ -35,7 +36,10 @@ RowLayout {
                Organs {
                     organism: root.organism
                     organSystem: root.organSystem
-                    onClicked: diagram.handleAnswer(diagram.currentOrgan, root.currentQuizOrgan)
+                    onClicked: {
+                        if (!root.isGameOver)
+                            diagram.handleAnswer(organ, root.currentQuizOrgan)
+                    }
                }
 
                 Column {
@@ -79,9 +83,9 @@ RowLayout {
 
                 function gameOver() {
                     scoreText.label = "Game over, your score is"
+                    root.isGameOver = true
                 }
 
     }
 
 }
-

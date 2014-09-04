@@ -9,11 +9,8 @@ RowLayout {
     id: root
     property string organism
     property string organSystem
-
     property string currentQuizOrgan: "liver"
     property variant organs: ["liver", "intestine", "stomach"]
-
-    property int score: 0
 
     anchors.fill: parent
 
@@ -26,7 +23,7 @@ RowLayout {
                 organs: root.organs
                 organism: root.organism
                 organSystem: root.organSystem
-                score: root.score  
+
         }
 
     }
