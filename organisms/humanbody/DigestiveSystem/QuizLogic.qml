@@ -11,6 +11,7 @@ RowLayout {
     property string currentQuizOrgan
     property string currentOrgan: "liver"
     property variant organs: ["liver", "intestine", "stomach"]
+    property string responseSheet
 
     property int score: 0
     property bool isGameOver: false
@@ -69,12 +70,15 @@ RowLayout {
                 }
 
                 function handleAnswer(answerOrgan, correctOrgan) {
+                     populateResponseSheet(answerOrgan, correctOrgan)
+
                     if (answerOrgan === correctOrgan) {
                         root.score += 1
                     }
                     var index = (root.organs.indexOf(correctOrgan) + 1)
                     if (index == root.organs.length) {
-                            gameOver()
+                        gameOver()
+
 
                     } else {
                         root.currentQuizOrgan = root.organs[index]
@@ -86,6 +90,15 @@ RowLayout {
                     root.isGameOver = true
                 }
 
-    }
+                function populateResponseSheet(answerOrgan, correctOrgan){
+                   root.responseSheet = root.responseSheet  + "Question: Where is " + correctOrgan  +
+                   "? Your Answer: " + answerOrgan + ", Correct Answer: " +  correctOrgan + "\n"
+
+                    return root.responseSheet
+
+               }
+
+   }
 
 }
+

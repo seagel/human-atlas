@@ -33,6 +33,7 @@ RowLayout {
         ScoreSummary {
             organism: root.organism
             organSystem: root.organSystem
+            responseText: quizLogic.responseSheet
         }
     }  
 }
