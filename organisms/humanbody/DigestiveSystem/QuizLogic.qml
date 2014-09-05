@@ -10,8 +10,14 @@ RowLayout {
     property string organSystem
     property string currentQuizOrgan
     property string currentOrgan: "liver"
-    property variant organs: ["liver", "intestine", "stomach"]
     property string responseSheet
+    property string wrongAnwserColor: "red"
+    property string correctAnwserColor: "green"
+
+    property variant organs: ["liver", "intestine", "stomach"]
+    property variant labelColorSheet: {"liver":root.wrongAnwserColor,
+                                       "intestine": root.wrongAnwserColor,
+                                       "stomach": root.wrongAnwserColor}
 
     property int score: 0
     property bool isGameOver: false
@@ -37,6 +43,7 @@ RowLayout {
                Organs {
                     organism: root.organism
                     organSystem: root.organSystem
+                    labelColorSheet: root.labelColorSheet
                     onClicked: {
                         if (!root.isGameOver)
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
@@ -70,19 +77,21 @@ RowLayout {
                 }
 
                 function handleAnswer(answerOrgan, correctOrgan) {
-                     populateResponseSheet(answerOrgan, correctOrgan)
-
+                    scoreSummarySheet(answerOrgan, correctOrgan)
+                    var tempLabelColorSheet = root.labelColorSheet
                     if (answerOrgan === correctOrgan) {
+                        tempLabelColorSheet[answerOrgan] = root.correctAnwserColor
                         root.score += 1
                     }
                     var index = (root.organs.indexOf(correctOrgan) + 1)
                     if (index == root.organs.length) {
                         gameOver()
 
-
                     } else {
                         root.currentQuizOrgan = root.organs[index]
                     }
+
+                    root.labelColorSheet = tempLabelColorSheet
                 }
 
                 function gameOver() {
@@ -90,12 +99,10 @@ RowLayout {
                     root.isGameOver = true
                 }
 
-                function populateResponseSheet(answerOrgan, correctOrgan){
+                function scoreSummarySheet(answerOrgan, correctOrgan){
                    root.responseSheet = root.responseSheet  + "Question: Where is " + correctOrgan  +
-                   "? Your Answer: " + answerOrgan + ", Correct Answer: " +  correctOrgan + "\n"
-
+                   "? Your Answer: " + answerOrgan + "\n"
                     return root.responseSheet
-
                }
 
    }

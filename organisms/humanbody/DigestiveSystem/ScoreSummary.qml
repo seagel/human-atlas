@@ -6,6 +6,9 @@ Item {
     property string organism
     property string organSystem
     property string responseText
+
+    property variant labelColorSheet
+
     property int numberQuestions: 0
     property int score: 0
 
@@ -19,14 +22,14 @@ Item {
         Organs {
             organism: root.organism
             organSystem: root.organSystem
-
+            labelColorSheet: root.labelColorSheet
+            displayOrganLabel: true
         }
 
         Text {
-            text: "Your Score Summary, your score is: " + root.score + "/" + root.numberQuestions +
-                  "\n\n" + root.responseText
-            x: 500
-            y: 80
+            text: "Your score is: " + root.score + "/" + root.numberQuestions + "\n\n" + root.responseText
+            x: 520
+            y: 70
         }
 
     }

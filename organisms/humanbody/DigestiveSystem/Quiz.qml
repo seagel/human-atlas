@@ -23,7 +23,6 @@ RowLayout {
                 organs: root.organs
                 organism: root.organism
                 organSystem: root.organSystem
-
         }
 
     }
@@ -31,11 +30,13 @@ RowLayout {
     Component {
         id: scoreSummary
         ScoreSummary {
-            organism: root.organism
-            organSystem: root.organSystem
+            organism: quizLogic.organism
+            organSystem: quizLogic.organSystem
             responseText: quizLogic.responseSheet
-            numberQuestions: root.organs.length
+            numberQuestions: quizLogic.organs.length
             score: quizLogic.score
+            labelColorSheet: quizLogic.labelColorSheet
+
         }
     }  
 }
