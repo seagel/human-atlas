@@ -6,6 +6,7 @@ import components 1.0 as Components
 
 Item {
     id: root
+    signal buildSelected
     signal exploreSelected
     signal quizSelected
 
@@ -25,6 +26,13 @@ Item {
             text: "Quiz"
             style: Components.ButtonStyle {}
             onClicked: root.quizSelected()
+        }
+
+        Button {
+            Layout.fillWidth: true
+            text: "Build"
+            style: Components.ButtonStyle {}
+            onClicked: root.buildSelected()
         }
     }
 }

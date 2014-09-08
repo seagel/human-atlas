@@ -28,6 +28,15 @@ ApplicationWindow {
     }
 
     Component {
+        id: build
+        ModeLoader {
+            mode: "build"
+            organism: app.currentOrganism
+            organSystem: app.currentOrganSystem
+        }
+    }
+
+    Component {
         id: explorer
         ModeLoader {
             mode: "explore"
@@ -45,9 +54,15 @@ ApplicationWindow {
         }
     }
 
+
     Component {
         id: mode
+
         Mode {
+            onBuildSelected: {
+                stack.push(build)
+            }
+
             onExploreSelected: {
                 stack.push(explorer)
             }
@@ -55,6 +70,7 @@ ApplicationWindow {
             onQuizSelected: {
                 stack.push(quiz)
             }
+
         }
     }
 }
