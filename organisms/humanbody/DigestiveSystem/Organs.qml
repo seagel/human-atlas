@@ -8,15 +8,21 @@ Item {
     property string currentOrgan
     property variant labelColorSheet
     property bool displayOrganLabel: false
+    property bool dragOrgans: false
+    property variant coordinatesSheet: {"liver": {"x": 50, "y": 70, "z": 1},
+                                       "intestine": {"x": 120, "y": 90},
+                                       "stomach": {"x": 170, "y": 20}
+                                       }
 
     signal clicked(var organ)
 
     Components.OrganImage {
         id: liverImage
         organ: "liver"
-        x: 50
-        y: 70
-        z: 1
+        drapOrgans: root.dragOrgans
+        x: root.coordinatesSheet[liverImage.organ].x
+        y: root.coordinatesSheet[liverImage.organ].y
+        z: root.coordinatesSheet[liverImage.organ].z
 
         onClicked: root.clicked(organ)
 
@@ -30,8 +36,9 @@ Item {
     Components.OrganImage {
         id: intestineImage
         organ: "intestine"
-        x: 120
-        y: 90
+        drapOrgans: root.dragOrgans
+        x: root.coordinatesSheet[intestineImage.organ].x
+        y: root.coordinatesSheet[intestineImage.organ].y
 
         onClicked: root.clicked(organ)
 
@@ -46,8 +53,9 @@ Item {
     Components.OrganImage {
         id: stomachImage
         organ: "stomach"
-        x: 170
-        y: 20
+        drapOrgans: root.dragOrgans
+        x: root.coordinatesSheet[stomachImage.organ].x
+        y: root.coordinatesSheet[stomachImage.organ].y
 
         onClicked: root.clicked(organ)
 

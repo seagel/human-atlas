@@ -15,6 +15,7 @@ Rectangle {
 
     Components.ModeSelector {
         id: selector
+        build: Component { Build { organism: root.organism; organSystem: root.organSystem } }
         explore: Component { Explore { organism: root.organism; organSystem: root.organSystem } }
         quiz: Component { Quiz { organism: root.organism; organSystem: root.organSystem } }
     }
