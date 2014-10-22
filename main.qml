@@ -19,16 +19,17 @@ ApplicationWindow {
         id: stack
         anchors.fill: parent
         initialItem: Home {
+            id: homeSelection
             organism: app.currentOrganism
             onSelected: {
                 app.currentOrganSystem =  selectedComponent;
-                stack.push(mode);
+                stack.push(modeSelection);
             }
         }
     }
 
     Component {
-        id: build
+        id: buildSelection
         ModeLoader {
             mode: "build"
             organism: app.currentOrganism
@@ -37,7 +38,7 @@ ApplicationWindow {
     }
 
     Component {
-        id: explorer
+        id: exploreSelection
         ModeLoader {
             mode: "explore"
             organism: app.currentOrganism
@@ -46,7 +47,7 @@ ApplicationWindow {
     }
 
     Component {
-        id: quiz
+        id: quizSelection
         ModeLoader {
             mode: "quiz"
             organism: app.currentOrganism
@@ -56,19 +57,19 @@ ApplicationWindow {
 
 
     Component {
-        id: mode
+        id: modeSelection
 
         Mode {
             onBuildSelected: {
-                stack.push(build)
+                stack.push(buildSelection)
             }
 
             onExploreSelected: {
-                stack.push(explorer)
+                stack.push(exploreSelection)
             }
 
             onQuizSelected: {
-                stack.push(quiz)
+                stack.push(quizSelection)
             }
 
         }

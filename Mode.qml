@@ -34,5 +34,16 @@ Item {
             style: Components.ButtonStyle {}
             onClicked: root.buildSelected()
         }
+
+        Button {
+            x: 470
+            text: "Back"
+            style: Components.ButtonStyle {}
+            width: 50
+            height: 50
+            onClicked: {
+                stack.push(homeSelection)
+            }
+        }
     }
 }

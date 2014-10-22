@@ -48,6 +48,18 @@ RowLayout {
                         if (!root.isGameOver)
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
                     }
+
+                    Button {
+                         text: "Back"
+                         style: Components.ButtonStyle {}
+                         width: 50
+                         height: 50
+                         x: 450
+                         y: 600
+                         onClicked: {
+                             stack.push(modeSelection)
+                         }
+                     }
                }
 
                 Column {

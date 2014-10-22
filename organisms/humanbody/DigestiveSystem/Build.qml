@@ -4,108 +4,157 @@ import QtWebKit 3.0
 import QtQuick.Controls 1.2
 import QtQuick.LocalStorage 2.0
 
+import components 1.0 as Components
+
 RowLayout {
     id: root
     property string organism
     property string organSystem
     property string currentOrgan
+    property int organMatches: 0
     property variant coordinatesSheet: {"liver": {"x": 50, "y": 50, "z": 1},
                                        "intestine": {"x": 50, "y": 300},
                                        "stomach": {"x": 50, "y": 200}
                                        }
-
     anchors.fill: parent
 
-    Organs {
-        anchors.fill: parent
-        organism: root.organism
-        organSystem: root.organSystem
-        currentOrgan: root.currentOrgan
-        dragOrgans: true
-        coordinatesSheet: root.coordinatesSheet
+    Rectangle {
+        width: parent.width/2
+        height: parent.height
+        anchors.left: parent.left
+
+        TableView {
+            id: organsTable
+            headerVisible: true
+            anchors.fill: parent
+
+            TableViewColumn {
+                role: "title"  ;
+                title: "List of organs";
+                horizontalAlignment: Text.AlignHCenter;
+                }
+
+            Organs {
+                id:buildSpaceOrgansList
+                organism: root.organism
+                organSystem: root.organSystem
+                currentOrgan: root.currentOrgan
+                dragOrgans: true
+                coordinatesSheet: root.coordinatesSheet  
+            }
+         }
+
+        Button {
+            text: "Back"
+            style: Components.ButtonStyle {}
+            width: 50
+            height: 50
+            x: 400
+            y: 630
+            onClicked: {
+                stack.push(modeSelection)
+            }
+        }
     }
 
-
-    Rectangle {
-        anchors.fill: parent
-        border.color: "lightblue"
-        anchors.rightMargin: -749
-        anchors.bottomMargin: 289
-        anchors.leftMargin: 650
-        anchors.topMargin: -289
-        visible: true
+    DropArea {
+        id:dropArea
+        width: parent.width/2
+        height: parent.height
+        anchors.right: parent.right
+        property string droppedOrgan
+        Drag.active: true
 
         Text {
-            x: 21
-            y: 45
-            text: "You are draging ..."
-        }
-    }
-
-    DropArea {
-        id: dropFirstOrgan
-        width: 116; height: 125
-
-        Rectangle {
+            id: dropAreaText
             anchors.fill: parent
-            border.color: "lightblue"
-            anchors.rightMargin: -749
-            anchors.bottomMargin: 289
-            anchors.leftMargin: 650
-            anchors.topMargin: -289
-            visible: true
+            text: qsTr("Work" + " space")
+            font.bold: true
+            font.pixelSize: 14
+            horizontalAlignment: Text.AlignHCenter
+        }
 
-            Text {
-                x: 21
-                y: 45
-                text: "Drop Your First Organ Here"
+        onDropped: {
+            droppedOrgan = drag.source.organ
+        }
+
+        Organs {
+            id:workSpaceOrgansList
+            organism: root.organism
+            organSystem: root.organSystem
+            currentOrgan: root.currentOrgan
+            dragOrgans: false
+            displayOrganLabel: true
+            opacity: 0
+            property string clickedOrgan
+
+            onClicked: {
+                clickedOrgan = organ
+                //TODO: Implement a better functionality to check whether the 2 organs matche
+                // Here we're just checking if the names of the two organs matche
+                if (dropArea.droppedOrgan == workSpaceOrgansList.clickedOrgan) {
+                    root.organMatches +=1
+                }
+            }
+
+        }
+
+        Text {
+            id: feedbackText
+            text: ""
+            color: "red"
+            font.bold: true
+            font.pixelSize: 14
+            x: 70
+            y: 600
+        }
+
+        Button {
+            id: feedbackButton
+            style: Components.ButtonStyle {}
+            text: "Feedback"
+            x: 130
+            y: 630
+            width: 100
+            height: 50
+
+            onClicked: {
+                if (feedbackButton.text == "Reset") {
+                  stack.push(buildSelection)
+                }
+
+                else {
+                    // 3 here represents the total number of organs
+                    // We should be able to make this more generic
+                    if (root.organMatches >= 3) {
+                        feedbackText.color = "green"
+                        feedbackText.text += "Well done, you have successfully built the "
+                                + root.organSystem + "\n"
+                        dropAreaText.color = "green"
+                    }
+
+                    else {
+                        workSpaceOrgansList.opacity = 1
+                        buildSpaceOrgansList.opacity = 0.2
+                        feedbackText.text += "Check what you got wrong" + "\n"
+                        dropAreaText.color = "red"
+                    }
+
+                   feedbackButton.text = "Reset"
+                   dropArea.feedbackReset()
+             }
+
+          }
+
+        }
+
+        function feedbackReset() {
+            if (feedbackButton.text == "Reset") {
+                feedbackButton.enabled = true
+            }
+            else {
+                feedbackButton.enabled = false
             }
         }
-
     }
-
-
-    DropArea {
-        id: dropSecondOrgan
-        width: 116; height: 125
-        Rectangle {
-            anchors.fill: parent
-            border.color: "lightblue"
-            anchors.rightMargin: -409
-            anchors.bottomMargin: 116
-            anchors.leftMargin: 310
-            anchors.topMargin: -116
-            visible: true
-
-            Text {
-                x: 13
-                y: 49
-                text: "Drop Your Second Organ Here"
-            }
-        }
-
-    }
-
-
-    DropArea {
-        id: dropThirdOrgan
-        width: 116; height: 125
-        Rectangle {
-            anchors.fill: parent
-            border.color: "lightblue"
-            anchors.rightMargin: -69
-            anchors.bottomMargin: -59
-            anchors.leftMargin: -30
-            anchors.topMargin: 59
-            visible: true
-
-            Text {
-                x: 20
-                y: 51
-                text: "Drop Your Third Organ Here"
-            }
-        }
-
-    }
-
-}
+ }

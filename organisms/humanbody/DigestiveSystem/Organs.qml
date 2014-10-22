@@ -19,7 +19,7 @@ Item {
     Components.OrganImage {
         id: liverImage
         organ: "liver"
-        drapOrgans: root.dragOrgans
+        dragOrgans: root.dragOrgans
         x: root.coordinatesSheet[liverImage.organ].x
         y: root.coordinatesSheet[liverImage.organ].y
         z: root.coordinatesSheet[liverImage.organ].z
@@ -36,7 +36,7 @@ Item {
     Components.OrganImage {
         id: intestineImage
         organ: "intestine"
-        drapOrgans: root.dragOrgans
+        dragOrgans: root.dragOrgans
         x: root.coordinatesSheet[intestineImage.organ].x
         y: root.coordinatesSheet[intestineImage.organ].y
 
@@ -53,7 +53,7 @@ Item {
     Components.OrganImage {
         id: stomachImage
         organ: "stomach"
-        drapOrgans: root.dragOrgans
+        dragOrgans: root.dragOrgans
         x: root.coordinatesSheet[stomachImage.organ].x
         y: root.coordinatesSheet[stomachImage.organ].y
 
