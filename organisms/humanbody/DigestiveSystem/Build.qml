@@ -100,6 +100,27 @@ RowLayout {
         }
 
         Text {
+            text: "         1"
+            x: workSpaceOrgansList.coordinatesSheet["stomach"].x
+            y: workSpaceOrgansList.coordinatesSheet["stomach"].y
+        }
+
+        Text {
+
+            text: "         2"
+            x: workSpaceOrgansList.coordinatesSheet["liver"].x
+            y: workSpaceOrgansList.coordinatesSheet["liver"].y
+            z: workSpaceOrgansList.coordinatesSheet["liver"].z
+        }
+
+        Text {
+            text: "         3"
+            x: workSpaceOrgansList.coordinatesSheet["intestine"].x + 200
+            y:workSpaceOrgansList.coordinatesSheet["intestine"].y
+            z:1
+        }
+
+        Text {
             id: feedbackText
             text: ""
             color: "red"
@@ -128,8 +149,8 @@ RowLayout {
                     // We should be able to make this more generic
                     if (root.organMatches >= 3) {
                         feedbackText.color = "green"
-                        feedbackText.text += "Well done, you have successfully built the "
-                                + root.organSystem + "\n"
+                        feedbackText.text += "Good job! You have learnt the "
+                                + root.organSystem + "!\n"
                         dropAreaText.color = "green"
                     }
 
