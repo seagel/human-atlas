@@ -8,7 +8,7 @@ Item {
     property string currentOrgan
     property variant labelColorSheet
     property bool displayOrganLabel: false
-    property bool dragOrgans: true
+    property bool dragOrgans: false
     property variant coordinatesSheet: {
         "mouth" : {"x": 120, "y": 1, "z": 1},
         "oesophagus": {"x": 157, "y": 140, "z": 1},
