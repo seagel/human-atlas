@@ -7,8 +7,7 @@ Item {
     property string organSystem
 
     Component.onCompleted: {
-        var newObject = Qt.createQmlObject("import " + organism + " 1.0;" +
-                                           organSystem + "{}", root)
+        var newObject = Qt.createQmlObject("import " + organism + " 1.0;" + organSystem + "{}", root)
         newObject.mode = root.mode
     }
 }

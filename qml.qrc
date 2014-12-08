@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>bubble.png</file>
         <file>Mode.qml</file>
         <file>Home.qml</file>
         <file>Theme.qml</file>
@@ -10,7 +9,16 @@
     <qresource prefix="/components">
         <file>components/OrganImage.qml</file>
         <file>components/ModeSelector.qml</file>
-        <file>components/ButtonStyle.qml</file>
         <file>components/qmldir</file>
+        <file>components/ButtonStyle.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>circulatory.jpg</file>
+        <file>digest.jpg</file>
+        <file>resp.jpg</file>
+        <file>explore.png</file>
+        <file>quiz.png</file>
+        <file>build.png</file>
+        <file>back.png</file>
     </qresource>
 </RCC>

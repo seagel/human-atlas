@@ -8,8 +8,8 @@ Item {
     property color buttonForeground: "white"
     property color highlightedButtonForeground: "white"
 
+    property real buttonDefaultRadius: 5
     property real buttonFontPointSize: 20
-    property real buttonDefaultHeight: 100
-    property real buttonDefaultWidth: 300
-    property real buttonDefaultRadius: 20
+    property real buttonDefaultHeight: 50
+    property real buttonDefaultWidth: 50
 }

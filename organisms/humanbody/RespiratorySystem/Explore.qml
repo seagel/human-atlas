@@ -27,29 +27,29 @@ RowLayout {
             pronunciation.play()
         }
 
-        Button {
+       Button {
             text: "Back"
             style: Components.ButtonStyle {}
             width: 50
             height: 50
-            x: 900
-            y: 700
+            x: 450
+            y: 600
             onClicked: {
                 stack.push(modeSelection)
             }
         }
     }
 
-    Image {
-        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
-    }
+    WebView {
 
-    Audio {
-        id: pronunciation
-        source: root.currentOrgan + ".wav"
-    }
+        Audio {
+            id: pronunciation
+            source:root.currentOrgan + ".wav"
+        }
 
-    Text {
-        text: "Hello World";
+        url: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".html"
+        Layout.preferredWidth: 240
+        Layout.fillHeight: true
+
     }
 }

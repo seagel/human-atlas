@@ -6,34 +6,17 @@ import components 1.0 as Components
 
 Rectangle {
     id: root
+    property alias mode: selector.mode
+    property string organism: "humanbody"
+    property string organSystem: "RespiratorySystem"
+
     anchors.fill: parent
     clip: true
-    property string currentOrgan
-    property string organSystem: "respiratory_system"
-    color: "lightsteelblue"
 
-    RowLayout {
-        anchors.fill: parent
-
-        Rectangle {
-            id: diagram
-            property string currentOrgan
-
-            color: "lightsteelblue"
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Components.OrganImage {
-                id: lungsImage
-                organSystem: root.organSystem
-                organ: "lungs"
-            }
-        }
-
-        WebView {
-            url: "qrc:///imports/" + lungsImage.organism + "/" + lungsImage.organSystem + "/" + diagram.currentOrgan + ".html"
-            Layout.preferredWidth: 240
-            Layout.fillHeight: true
-        }
+    Components.ModeSelector {
+        id: selector
+        build: Component { Build { organism: root.organism; organSystem: root.organSystem } }
+        explore: Component { Explore { organism: root.organism; organSystem: root.organSystem } }
+        quiz: Component { Quiz { organism: root.organism; organSystem: root.organSystem } }
     }
 }

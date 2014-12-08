@@ -4,9 +4,9 @@ import QtQuick.Controls 1.2
 ApplicationWindow {
     id: app
     visible: true
-    width: 1024
-    height: 768
-    title: qsTr("HUMAN ATLAS")
+    minimumHeight: 768
+    minimumWidth: 1024
+    title: qsTr("Human Atlas - Bala Swecha")
 
     property string currentOrganism: "humanbody"
     property string currentOrganSystem
@@ -22,7 +22,7 @@ ApplicationWindow {
             id: homeSelection
             organism: app.currentOrganism
             onSelected: {
-                app.currentOrganSystem =  selectedComponent;
+                app.currentOrganSystem = selectedComponent;
                 stack.push(modeSelection);
             }
         }
@@ -55,7 +55,6 @@ ApplicationWindow {
         }
     }
 
-
     Component {
         id: modeSelection
 
@@ -71,7 +70,6 @@ ApplicationWindow {
             onQuizSelected: {
                 stack.push(quizSelection)
             }
-
         }
     }
 }

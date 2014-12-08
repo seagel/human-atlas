@@ -12,10 +12,11 @@ RowLayout {
     property string organSystem
     property string currentOrgan
     property int organMatches: 0
-    property variant coordinatesSheet: {"liver": {"x": 50, "y": 50, "z": 1},
-                                       "intestine": {"x": 50, "y": 300},
-                                       "stomach": {"x": 50, "y": 200}
-                                       }
+    property variant coordinatesSheet: {
+        "liver": {"x": 50, "y": 50, "z": 1},
+        "intestine": {"x": 50, "y": 300},
+        "stomach": {"x": 50, "y": 200}
+    }
     anchors.fill: parent
 
     Rectangle {
@@ -163,8 +164,10 @@ RowLayout {
 
                    feedbackButton.text = "Reset"
                    dropArea.feedbackReset()
-                }
-            }
+             }
+
+          }
+
         }
 
         function feedbackReset() {

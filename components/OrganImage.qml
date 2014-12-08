@@ -32,7 +32,6 @@ Image {
         onReleased: {
             parent.Drag.drop()
         }
-
     }
 
     Behavior on opacity {

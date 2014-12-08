@@ -9,12 +9,14 @@ Rectangle {
     property variant build
     property variant explore
     property variant quiz
-    property variant modeSheet: {"build": root.build,
-                                 "explore": explore,
-                                 "quiz": quiz}
+    property variant modeSheet: {
+        "build": root.build,
+        "explore": explore,
+        "quiz": quiz
+    }
 
     Loader {
         anchors.fill: parent
         sourceComponent: root.modeSheet[root.mode]
-   }
+    }
 }

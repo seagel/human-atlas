@@ -25,3 +25,5 @@ Makefile*
 **/*.qmlproject.user
 **/*.qmlproject.user.*
 **/*creator.user
+#Ignore Finder ds stores
+**/.DS_Store
