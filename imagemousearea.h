@@ -6,14 +6,12 @@
 class ImageMouseArea : public QQuickItem
 {
     Q_OBJECT
-    Q_PROPERTY(QString imageName READ imageName
-                                 WRITE setImageName)
+    Q_PROPERTY(QString imageName READ imageName WRITE setImageName)
 
 public:
     explicit ImageMouseArea(QQuickItem *parent = 0);
 
-    QString imageName() const
-    {
+    QString imageName() const {
         return m_imageName;
     }
 
@@ -25,8 +23,7 @@ private:
     QString m_imageName;
 
 public slots:
-    void setImageName(QString arg)
-    {
+    void setImageName(QString arg) {
         m_imageName = arg;
     }
 
