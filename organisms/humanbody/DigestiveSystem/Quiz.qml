@@ -9,8 +9,8 @@ RowLayout {
     id: root
     property string organism
     property string organSystem
-    property string currentQuizOrgan: "liver"
-    property variant organs: ["liver", "intestine", "stomach"]
+    property string currentQuizOrgan: "mouth"
+    property variant organs: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
 
     anchors.fill: parent
 

@@ -9,15 +9,22 @@ RowLayout {
     property string organism
     property string organSystem
     property string currentQuizOrgan
-    property string currentOrgan: "liver"
+    property string currentOrgan: "mouth"
     property string responseSheet
     property string wrongAnwserColor: "red"
     property string correctAnwserColor: "green"
 
-    property variant organs: ["liver", "intestine", "stomach"]
-    property variant labelColorSheet: {"liver":root.wrongAnwserColor,
-                                       "intestine": root.wrongAnwserColor,
-                                       "stomach": root.wrongAnwserColor}
+    property variant organs: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
+    property variant labelColorSheet: { "mouth" :root.wrongAnwserColor,
+                                        "oesophagus" :root.wrongAnwserColor,
+                                        "liver":root.wrongAnwserColor,
+                                        "stomach": root.wrongAnwserColor,
+                                       "small_intestine": root.wrongAnwserColor,
+                                        "large_intestine": root.wrongAnwserColor,
+                                        "anus": root.wrongAnwserColor,
+                                        "pancreas": root.wrongAnwserColor,
+                                        "gall_bladder": root.wrongAnwserColor
+                                       }
 
     property int score: 0
     property bool isGameOver: false
