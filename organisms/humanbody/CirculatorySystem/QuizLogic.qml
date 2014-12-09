@@ -34,7 +34,7 @@ RowLayout {
 
     Rectangle {
                id: diagram
-               color: "#55ADAB"
+               color: "lightsteelblue"
                Layout.fillWidth: true
                Layout.fillHeight: true
                border.color: "green"
@@ -43,8 +43,8 @@ RowLayout {
                    id: button
                    style: Components.ButtonStyle {}
                    text: "Visualize Score Summary"
-                   x: 600
-                   y: 400
+                   x: 700
+                   y: 70
                    onClicked: stack.push(scoreSummary)
                 }
 
@@ -57,111 +57,42 @@ RowLayout {
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
                     }
 
-//                    Button {
-//                         text: "Back"
-//                         style: Components.ButtonStyle {}
-//                         width: 50
-//                         height: 50
-//                         x: 450
-//                         y: 600
-//                         onClicked: {
-//                             stack.push(modeSelection)
-//                         }
-//                     }
-
-
-
-                    Item {
-                        height: 100
-                        width: 100
-
-                        x: 450
-                        y: 600
-
-
-
-                        Image {
-                            id: backimagebutton
-                            anchors.fill: parent
-                            source: "../../../back.png"
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                stack.push(modeSelection)
-                            }
-                        }
-
-                        Text {
-                            text: "Back"
-                            anchors.top: backimagebutton.bottom
-
-
-
-                            color: "white"
-                            font.bold: true
-                        }
-                    }
-
-
-
-
-
-
-
+                    Button {
+                         text: "Back"
+                         style: Components.ButtonStyle {}
+                         width: 50
+                         height: 50
+                         x: 450
+                         y: 600
+                         onClicked: {
+                             stack.push(modeSelection)
+                         }
+                     }
                }
 
-                Rectangle {
+                Column {
                   anchors {
                     right: parent.right;
-                    top:parent.top
-                    topMargin: 100
-                    rightMargin: 90
-                    margins: 50;
+                    margins: 10;
                     }
-                  radius: 30
-                  border.width: 3
-                  border.color: "black"
 
-
-                  height: 200; width: 400
-
-                  //spacing: 5
+                  height: parent.height; width: 300
+                  spacing: 5
 
                   Text {
                         id: questionText
                         font.bold: true
-                        font.pixelSize: 30
-                        text: "Question:- where is " + root.currentQuizOrgan + "?"
-                        wrapMode: Text.WordWrap
-                        width:380
-                        anchors{
-                            top:parent.top
-                            topMargin: 20
-                            left:parent.left
-                            leftMargin: 20
-
-                        }
+                        font.pixelSize: 14
+                        text: "Question: where is " + root.currentQuizOrgan + "?"
                   }
 
                    Text {
                         id: scoreText
                         property string label: "Score"
                         font.bold: true
-                        font.pixelSize: 30
+                        font.pixelSize: 14
                         color: "brown"
-                        text: label
-                        wrapMode: Text.WordWrap
-                        width:220
-                        visible: false
-                        anchors{
-                            top:questionText.bottom
-                            topMargin: 10
-                            left:questionText.left
-                            leftMargin:100
-
-                        }
+                        text: label + ": " + root.score
                     }
                 }
 
@@ -184,9 +115,8 @@ RowLayout {
                 }
 
                 function gameOver() {
-                    scoreText.label = "Game over"
+                    scoreText.label = "Game over, your score is"
                     root.isGameOver = true
-                    scoreText.visible = true
                 }
 
                 function scoreSummarySheet(answerOrgan, correctOrgan){

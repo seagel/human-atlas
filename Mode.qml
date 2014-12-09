@@ -25,8 +25,8 @@ Item {
         spacing: 100
 
         Item {
-            height: 150
-            width: 150
+            height: 250
+            width: 250
 
             Image {
                 anchors.fill: parent
@@ -45,7 +45,7 @@ Item {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                     top: parent.top
-                    topMargin: 160
+                    topMargin: 260
                 }
                 color: "white"
                 font.bold: true
@@ -53,8 +53,8 @@ Item {
         }
 
         Item {
-            height: 150
-            width: 150
+            height: 250
+            width: 250
 
             Image {
                 anchors.fill: parent
@@ -73,7 +73,7 @@ Item {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                     top: parent.top
-                    topMargin: 160
+                    topMargin: 260
                 }
                 color: "white"
                 font.bold: true
@@ -81,8 +81,8 @@ Item {
         }
 
         Item {
-            height: 150
-            width: 150
+            height: 250
+            width: 250
 
             Image {
                 anchors.fill: parent
@@ -101,7 +101,7 @@ Item {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                     top: parent.top
-                    topMargin: 160
+                    topMargin: 260
                 }
                 color: "white"
                 font.bold: true
@@ -110,12 +110,12 @@ Item {
     }
 
     Item {
-        height: 150
-        width: 150
+        height: 100
+        width: 100
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
-            topMargin: 500
+            topMargin: 600
         }
 
         Image {
@@ -135,7 +135,7 @@ Item {
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: parent.top
-                topMargin: 160
+                topMargin: 100
             }
             color: "white"
             font.bold: true

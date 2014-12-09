@@ -18,7 +18,7 @@ Item {
     Rectangle {
         id: diagram
         anchors.fill: parent
-        color: "#55ADAB"
+        color: "lightsteelblue"
         Layout.fillWidth: true
         Layout.fillHeight: true
 

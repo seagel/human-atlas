@@ -6,28 +6,17 @@ import components 1.0 as Components
 
 Rectangle {
     id: root
+    property alias mode: selector.mode
+    property string organism: "humanbody"
+    property string organSystem: "DigestiveSystem"
+
     anchors.fill: parent
     clip: true
-    property string currentOrgan
-    property string organSystem: "circulatory_system"
-    property string mode: "explore"
 
-    Loader {
-        anchors.fill: parent
-        sourceComponent: mode == "explore" ? explore : quiz
-    }
-
-    Component {
-        id: explore
-
-        Explore {
-        }
-    }
-
-    Component {
-        id: quiz
-
-        Quiz {
-        }
+    Components.ModeSelector {
+        id: selector
+        build: Component { Build { organism: root.organism; organSystem: root.organSystem } }
+        explore: Component { Explore { organism: root.organism; organSystem: root.organSystem } }
+        quiz: Component { Quiz { organism: root.organism; organSystem: root.organSystem } }
     }
 }
