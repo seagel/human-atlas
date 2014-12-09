@@ -3,7 +3,8 @@ TEMPLATE = app
 QT += qml quick widgets
 
 SOURCES += main.cpp \
-    imagemousearea.cpp
+    imagemousearea.cpp \
+    jsonreader.cpp
 
 RESOURCES += qml.qrc
 
@@ -14,6 +15,7 @@ QML_IMPORT_PATH = /components
 include(deployment.pri)
 
 HEADERS += \
-    imagemousearea.h
+    imagemousearea.h \
+    jsonreader.h
 
 CONFIG += c++11
