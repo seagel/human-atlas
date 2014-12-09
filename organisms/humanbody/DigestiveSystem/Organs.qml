@@ -12,6 +12,17 @@ Item {
     property bool dragOrgans: false
     property variant coordinatesSheet
 
+    Image {
+        anchors {
+            left: parent.left
+            top: parent.top
+            leftMargin: -45
+            topMargin: -20
+        }
+        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/background.png"
+        z: -2
+    }
+
     JSONReader {
         id: myFile
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + "data.json"

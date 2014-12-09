@@ -3,6 +3,7 @@ import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
 import QtWebKit 3.0
 import QtMultimedia 5.0
+import JSONReader 1.0
 
 import components 1.0 as Components
 
@@ -10,10 +11,17 @@ RowLayout {
     id: root
     property string organism
     property string organSystem
-    property string currentOrgan: "mouth"
-    property string currentOrganDesc: ""
+    property string currentOrgan: ""
+    property string currentOrganDesc: "Click on a organ to see the description"
+    property variant organData
 
     anchors.fill: parent
+
+    JSONReader {
+        id: myFile
+        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + "data.json"
+        onError: console.log(msg);
+    }
 
     Organs {
         Layout.fillWidth: true
@@ -30,8 +38,9 @@ RowLayout {
         currentOrgan: root.currentOrgan
 
         onClicked: {
-            root.currentOrgan = organ
-            pronunciation.play()
+            root.currentOrgan = organ;
+            root.currentOrganDesc = root.organData[organ].description;
+            pronunciation.play();
         }
 
         Button {
@@ -88,5 +97,9 @@ RowLayout {
     Audio {
         id: pronunciation
         source: root.currentOrgan + ".wav"
+    }
+
+    Component.onCompleted: {
+        root.organData = JSON.parse(myFile.read());
     }
 }
