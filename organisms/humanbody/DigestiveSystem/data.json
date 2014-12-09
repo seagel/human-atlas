@@ -5,7 +5,14 @@
             "y": 1,
             "z": 10
         },
-        "description": "In human anatomy, the mouth is the first portion of the alimentary canal that receives food and saliva. In addition to its primary role as the beginning of the digestive system, in humans the mouth also plays a significant role in communication. The mouth, normally moist, is lined with a mucous membrane, and contains the teeth."
+        "description": "In human anatomy, the mouth is the first portion of the alimentary canal that receives food and saliva. In addition to its primary role as the beginning of the digestive system, in humans the mouth also plays a significant role in communication. The mouth, normally moist, is lined with a mucous membrane, and contains the teeth.",
+        "label": "Mouth",
+        "labelcoordinates":{
+			"x":15,
+			"y":130,
+			"z":0
+        },
+        "fontsize":20
     },
     "oesophagus": {
         "coordinates": {
@@ -13,7 +20,14 @@
             "y": 140,
             "z": 1
         },
-        "description": "commonly known as the foodpipe or gullet, is an organ in vertebrates which consists of a fibromuscular tube through which food passes, aided by peristaltic contractions, from the pharynx to the stomach. In humans, the esophagus is usually 18–25 centimeters (cm) long."
+        "description": "commonly known as the foodpipe or gullet, is an organ in vertebrates which consists of a fibromuscular tube through which food passes, aided by peristaltic contractions, from the pharynx to the stomach. In humans, the esophagus is usually 18–25 centimeters (cm) long.",
+                "label": "Oesophagus",
+        "labelcoordinates":{
+			"x":400,
+			"y":200,
+			"z":0
+        },
+        "fontsize":20
     },
     "liver": {
         "coordinates": {
@@ -21,14 +35,28 @@
             "y": 290,
             "z": -1
         },
-        "description": "The liver is a vital organ of the digestive system present in vertebrates and some other animals. It has a wide range of functions, including detoxification, protein synthesis, and production of biochemicals necessary for digestion. The liver is necessary for survival; there is currently no way to compensate for the absence of liver function in the long term, although new liver dialysis techniques can be used in the short term. This gland plays a major role in metabolism and has a number of functions in the body, including glycogen storage, decomposition of red blood cells, plasma protein synthesis, hormone production, and detoxification. It lies below the diaphragm in the abdominal-pelvic region of the abdomen. It produces bile, an alkaline compound which aids in digestion via the emulsification of lipids. The liver's highly specialized tissues regulate a wide variety of high-volume biochemical reactions, including the synthesis and breakdown of small and complex molecules, many of which are necessary for normal vital functions.[2] Estimates regarding the organ's total number of functions vary, but textbooks generally cite it at around 500 or so. Terminology related to the liver often starts in hepar- or hepat- from the Greek word for liver."
+        "description": "The liver is a vital organ of the digestive system present in vertebrates and some other animals. It has a wide range of functions, including detoxification, protein synthesis, and production of biochemicals necessary for digestion. The liver is necessary for survival; there is currently no way to compensate for the absence of liver function in the long term, although new liver dialysis techniques can be used in the short term. This gland plays a major role in metabolism and has a number of functions in the body, including glycogen storage, decomposition of red blood cells, plasma protein synthesis, hormone production, and detoxification. It lies below the diaphragm in the abdominal-pelvic region of the abdomen. It produces bile, an alkaline compound which aids in digestion via the emulsification of lipids. The liver's highly specialized tissues regulate a wide variety of high-volume biochemical reactions, including the synthesis and breakdown of small and complex molecules, many of which are necessary for normal vital functions. Estimates regarding the organ's total number of functions vary, but textbooks generally cite it at around 500 or so. Terminology related to the liver often starts in hepar- or hepat- from the Greek word for liver.",
+                "label": "Liver",
+        "labelcoordinates":{
+			"x":15,
+			"y":320,
+			"z":0
+        },
+        "fontsize":20
     },
     "stomach": {
         "coordinates": {
             "x": 183,
             "y": 311
         },
-        "description": "The stomach is a muscular, hollow, dilated part of the digestive system which functions as an important organ of the digestive tract in some animals, including vertebrates, echinoderms, insects (mid-gut), and molluscs. It is involved in the second phase of digestion, following mastication (chewing). The stomach is located between the esophagus and the small intestine. It secretes protein-digesting enzymes called proteases and strong acids to aid in food digestion, (sent to it via esophageal peristalsis) through smooth muscular contortions (called segmentation) before sending partially digested food (chyme) to the small intestines."
+        "description": "The stomach is a muscular, hollow, dilated part of the digestive system which functions as an important organ of the digestive tract in some animals, including vertebrates, echinoderms, insects (mid-gut), and molluscs. It is involved in the second phase of digestion, following mastication (chewing). The stomach is located between the esophagus and the small intestine. It secretes protein-digesting enzymes called proteases and strong acids to aid in food digestion, (sent to it via esophageal peristalsis) through smooth muscular contortions (called segmentation) before sending partially digested food (chyme) to the small intestines.",
+                "label": "Stomach",
+        "labelcoordinates":{
+			"x":400,
+			"y":350,
+			"z":0
+        },
+        "fontsize":20
     },
     "small_intestine": {
         "coordinates": {
@@ -36,7 +64,15 @@
             "y": 435,
             "z": 2
         },
-        "description": "The small intestine (or small bowel) is the part of the gastrointestinal tract following the stomach and followed by the large intestine, and is where much of the digestion and absorption of food takes place. The small intestine is composed of a duodenum, jejunum, and ileum. It receives bile juice and pancreatic juice from the liver."
+        "description": "The small intestine (or small bowel) is the part of the gastrointestinal tract following the stomach and followed by the large intestine, and is where much of the digestion and absorption of food takes place. The small intestine is composed of a duodenum, jejunum, and ileum. It receives bile juice and pancreatic juice from the liver.",
+                "label": "Small Intestine",
+        "labelcoordinates":{
+			"x":400,
+			"y":520,
+			"z":0
+        },
+        "fontsize":20
+        
     },
     "large_intestine": {
         "coordinates": {
@@ -44,7 +80,14 @@
             "y": 400,
             "z": 1
         },
-        "description": "The large intestine is the combination of the cecum, colon, rectum, and anal canal. Its function is to absorb water from fecal matter, and then rid the body of remaining waste material."
+        "description": "The large intestine is the combination of the cecum, colon, rectum, and anal canal. Its function is to absorb water from fecal matter, and then rid the body of remaining waste material.",
+                "label": "Large Intestine",
+        "labelcoordinates":{
+			"x":400,
+			"y":450,
+			"z":0
+        },
+        "fontsize":20
     },
     "anus": {
         "coordinates": {
@@ -52,7 +95,14 @@
             "y": 615,
             "z": 1
         },
-        "description": "The anus is the opening where the gastrointestinal tract ends and exits the body. The anus starts at the bottom of the rectum, the last portion of the colon (large intestine). The anorectal line separates the anus from the rectum."
+        "description": "The anus is the opening where the gastrointestinal tract ends and exits the body. The anus starts at the bottom of the rectum, the last portion of the colon (large intestine). The anorectal line separates the anus from the rectum.",
+                "label": "Anus",
+        "labelcoordinates":{
+			"x":15,
+			"y":660,
+			"z":0
+        },
+        "fontsize":20
     },
     "pancreas": {
         "coordinates": {
@@ -60,7 +110,14 @@
             "y": 310,
             "z": -10
         },
-        "description": "The pancreas is a glandular organ in the digestive system and endocrine system of vertebrates. In humans, it is located in the abdominal cavity behind the stomach. It is an endocrine gland producing several important hormones, including insulin, glucagon, somatostatin, and pancreatic polypeptide which circulate in the blood. The pancreas is also a digestive organ, secreting pancreatic juice containing digestive enzymes that assist digestion and absorption of nutrients in the small intestine. These enzymes help to further break down the carbohydrates, proteins, and lipids in the chyme."
+        "description": "The pancreas is a glandular organ in the digestive system and endocrine system of vertebrates. In humans, it is located in the abdominal cavity behind the stomach. It is an endocrine gland producing several important hormones, including insulin, glucagon, somatostatin, and pancreatic polypeptide which circulate in the blood. The pancreas is also a digestive organ, secreting pancreatic juice containing digestive enzymes that assist digestion and absorption of nutrients in the small intestine. These enzymes help to further break down the carbohydrates, proteins, and lipids in the chyme.",
+                "label": "Pancreas",
+        "labelcoordinates":{
+			"x":400,
+			"y":400,
+			"z":0
+        },
+        "fontsize":20
     },
     "gall_bladder": {
         "coordinates": {
@@ -68,6 +125,13 @@
             "y": 350,
             "z": 10
         },
-        "description": "The gallbladder is a small pouch that sits just under the liver. The gallbladder stores bile produced by the liver. After meals, the gallbladder is empty and flat, like a deflated balloon. Before a meal, the gallbladder may be full of bile and about the size of a small pear."
+        "description": "The gallbladder is a small pouch that sits just under the liver. The gallbladder stores bile produced by the liver. After meals, the gallbladder is empty and flat, like a deflated balloon. Before a meal, the gallbladder may be full of bile and about the size of a small pear.",
+                "label": "Gall Bladder",
+        "labelcoordinates":{
+			"x":15,
+			"y":390,
+			"z":0
+        },
+        "fontsize":20
     }
 }

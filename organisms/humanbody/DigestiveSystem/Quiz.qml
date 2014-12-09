@@ -33,6 +33,7 @@ RowLayout {
             organism: quizLogic.organism
             organSystem: quizLogic.organSystem
             responseText: quizLogic.responseSheet
+            quizAnswersList : quizLogic.quizAnswerSheet
             numberQuestions: quizLogic.organs.length
             score: quizLogic.score
             labelColorSheet: quizLogic.labelColorSheet

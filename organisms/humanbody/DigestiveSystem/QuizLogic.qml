@@ -25,11 +25,23 @@ RowLayout {
                                         "pancreas": root.wrongAnwserColor,
                                         "gall_bladder": root.wrongAnwserColor
                                        }
+    property variant quizAnswerSheet: { "mouth" :"" ,
+                                        "oesophagus" :"",
+                                        "liver":"",
+                                        "stomach": "",
+                                       "small_intestine": "",
+                                        "large_intestine": "",
+                                        "anus": "",
+                                        "pancreas": "",
+                                        "gall_bladder": ""
+                                       }
+
 
     property int score: 0
     property bool isGameOver: false
 
     signal selected(var selectDisplaySummary)
+
 
 
     Rectangle {
@@ -180,6 +192,7 @@ RowLayout {
                         root.currentQuizOrgan = root.organs[index]
                     }
 
+                    root.quizAnswerSheet[correctOrgan] = answerOrgan;
                     root.labelColorSheet = tempLabelColorSheet
                 }
 
