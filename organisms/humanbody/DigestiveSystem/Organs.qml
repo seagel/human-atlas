@@ -40,8 +40,6 @@ Item {
         z: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -53,7 +51,6 @@ Item {
         z: 0
 
         onClicked: root.clicked(organ)
-
     }
 
     Components.OrganImage {
@@ -77,8 +74,6 @@ Item {
         y: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -102,8 +97,6 @@ Item {
         z: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -114,8 +107,6 @@ Item {
         y: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -127,8 +118,6 @@ Item {
         z: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -140,8 +129,6 @@ Item {
         z: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
 
