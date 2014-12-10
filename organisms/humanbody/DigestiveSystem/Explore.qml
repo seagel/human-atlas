@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
-import QtWebKit 3.0
 import QtMultimedia 5.0
 import JSONReader 1.0
 

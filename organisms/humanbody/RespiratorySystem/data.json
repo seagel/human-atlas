@@ -1,0 +1,95 @@
+{
+    "bronchi_left": {
+        "coordinates": {
+            "x": 120,
+            "y": 1,
+            "z": 10
+        },
+        "description": "A bronchus, also known as a main or primary bronchus, is a passage of airway in the respiratory tract that conducts air into the lungs. There is a right bronchus and a left bronchus and these bronchi branch into smaller secondary and tertiary bronchi which branch into smaller tubes, known as bronchioles. No gas exchange takes place in the bronchi."
+        "label": "Left Bronchi",
+        "labelcoordinates": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "fontsize": 20
+    },
+    "bronchi_right": {
+        "coordinates": {
+            "x": 157,
+            "y": 140,
+            "z": 1
+        },
+        "description": "A bronchus, also known as a main or primary bronchus, is a passage of airway in the respiratory tract that conducts air into the lungs. There is a right bronchus and a left bronchus and these bronchi branch into smaller secondary and tertiary bronchi which branch into smaller tubes, known as bronchioles. No gas exchange takes place in the bronchi."
+        "label": "Right Bronchi",
+        "labelcoordinates": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "fontsize": 20
+    },
+    "bronchioles": {
+        "coordinates": {
+            "x": 120,
+            "y": 290,
+            "z": -1
+        },
+        "description": "The bronchioles or bronchioli are the passageways by which air passes through the nose or mouth to the alveoli (air sacs) of the lungs, in which branches no longer contain cartilage or glands in their submucosa. They are branches of the bronchi, and are part of the conducting zone of the respiratory system."
+        "label": "Bronchioles",
+        "labelcoordinates": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "fontsize": 20
+    },
+    "diaphragm": {
+        "coordinates": {
+            "x": 183,
+            "y": 311
+            "z": 0
+        },
+        "description": "The diaphragm is a sheet of internal skeletal muscle that extends across the bottom of the rib cage. The diaphragm separates the thoracic cavity containing the heart and lungs, from the abdominal cavity and performs an important function in respiration: as the diaphragm contracts, the volume of the thoracic cavity increases and air is drawn into the lungs."
+    },
+    "small_intestine": {
+        "coordinates": {
+            "x": 145,
+            "y": 435,
+            "z": 2
+        },
+        "description": "The small intestine (or small bowel) is the part of the gastrointestinal tract following the stomach and followed by the large intestine, and is where much of the digestion and absorption of food takes place. The small intestine is composed of a duodenum, jejunum, and ileum. It receives bile juice and pancreatic juice from the liver."
+    },
+    "large_intestine": {
+        "coordinates": {
+            "x": 120,
+            "y": 400,
+            "z": 1
+        },
+        "description": "The large intestine is the combination of the cecum, colon, rectum, and anal canal. Its function is to absorb water from fecal matter, and then rid the body of remaining waste material."
+    },
+    "anus": {
+        "coordinates": {
+            "x": 173,
+            "y": 615,
+            "z": 1
+        },
+        "description": "The anus is the opening where the gastrointestinal tract ends and exits the body. The anus starts at the bottom of the rectum, the last portion of the colon (large intestine). The anorectal line separates the anus from the rectum."
+    },
+    "pancreas": {
+        "coordinates": {
+            "x": 170,
+            "y": 310,
+            "z": -1
+        },
+        "description": "The pancreas is a glandular organ in the digestive system and endocrine system of vertebrates. In humans, it is located in the abdominal cavity behind the stomach. It is an endocrine gland producing several important hormones, including insulin, glucagon, somatostatin, and pancreatic polypeptide which circulate in the blood. The pancreas is also a digestive organ, secreting pancreatic juice containing digestive enzymes that assist digestion and absorption of nutrients in the small intestine. These enzymes help to further break down the carbohydrates, proteins, and lipids in the chyme."
+    },
+    "gall_bladder": {
+        "coordinates": {
+            "x": 130,
+            "y": 350,
+            "z": 10
+        },
+        "description": "The gallbladder is a small pouch that sits just under the liver. The gallbladder stores bile produced by the liver. After meals, the gallbladder is empty and flat, like a deflated balloon. Before a meal, the gallbladder may be full of bile and about the size of a small pear."
+    }
+}
