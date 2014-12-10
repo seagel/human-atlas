@@ -12,8 +12,14 @@ Item {
 
     property variant labelColorSheet
 
+    property variant quizAnswersList
+
     property int numberQuestions: 0
     property int score: 0
+    ListModel{
+        id:quizAnswerModel
+    }
+
 
     Rectangle {
         id: diagram
@@ -45,6 +51,13 @@ Item {
             text: "Your score is: " + root.score + "/" + root.numberQuestions + "\n\n" + root.responseText
             x: 520
             y: 70
+        }
+
+        ListModel {
+           id: quizAnswersModel
+           ListElement{ yourAnswer: "A Masterpiece" ; correctAnswer: "Gabriel" }
+           ListElement{ title: "Brilliance"    ; author: "Jens" }
+           ListElement{ title: "Outstanding"   ; author: "Frederik" }
         }
 
     }
