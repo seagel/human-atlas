@@ -25,6 +25,17 @@ RowLayout {
                                         "pancreas": root.wrongAnwserColor,
                                         "gall_bladder": root.wrongAnwserColor
                                        }
+    property variant quizAnswerSheet: { "mouth" :"" ,
+                                        "oesophagus" :"",
+                                        "liver":"",
+                                        "stomach": "",
+                                       "small_intestine": "",
+                                        "large_intestine": "",
+                                        "anus": "",
+                                        "pancreas": "",
+                                        "gall_bladder": ""
+                                       }
+
 
     property int score: 0
     property bool isGameOver: false
@@ -32,9 +43,10 @@ RowLayout {
     signal selected(var selectDisplaySummary)
 
 
+
     Rectangle {
                id: diagram
-               color: "lightsteelblue"
+               color: "#55ADAB"
                Layout.fillWidth: true
                Layout.fillHeight: true
                border.color: "green"
@@ -43,8 +55,8 @@ RowLayout {
                    id: button
                    style: Components.ButtonStyle {}
                    text: "Visualize Score Summary"
-                   x: 700
-                   y: 70
+                   x: 600
+                   y: 400
                    onClicked: stack.push(scoreSummary)
                 }
 
@@ -57,42 +69,111 @@ RowLayout {
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
                     }
 
-                    Button {
-                         text: "Back"
-                         style: Components.ButtonStyle {}
-                         width: 50
-                         height: 50
-                         x: 450
-                         y: 600
-                         onClicked: {
-                             stack.push(modeSelection)
-                         }
-                     }
-               }
+//                    Button {
+//                         text: "Back"
+//                         style: Components.ButtonStyle {}
+//                         width: 50
+//                         height: 50
+//                         x: 450
+//                         y: 600
+//                         onClicked: {
+//                             stack.push(modeSelection)
+//                         }
+//                     }
 
-                Column {
-                  anchors {
-                    right: parent.right;
-                    margins: 10;
+
+
+                    Item {
+                        height: 100
+                        width: 100
+
+                        x: 450
+                        y: 600
+
+
+
+                        Image {
+                            id: backimagebutton
+                            anchors.fill: parent
+                            source: "../../../back.png"
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                stack.push(modeSelection)
+                            }
+                        }
+
+                        Text {
+                            text: "Back"
+                            anchors.top: backimagebutton.bottom
+
+
+
+                            color: "white"
+                            font.bold: true
+                        }
                     }
 
-                  height: parent.height; width: 300
-                  spacing: 5
+
+
+
+
+
+
+               }
+
+                Rectangle {
+                  anchors {
+                    right: parent.right;
+                    top:parent.top
+                    topMargin: 100
+                    rightMargin: 90
+                    margins: 50;
+                    }
+                  radius: 30
+                  border.width: 3
+                  border.color: "black"
+
+
+                  height: 200; width: 400
+
+                  //spacing: 5
 
                   Text {
                         id: questionText
                         font.bold: true
-                        font.pixelSize: 14
-                        text: "Question: where is " + root.currentQuizOrgan + "?"
+                        font.pixelSize: 30
+                        text: "Question:- where is " + root.currentQuizOrgan + "?"
+                        wrapMode: Text.WordWrap
+                        width:380
+                        anchors{
+                            top:parent.top
+                            topMargin: 20
+                            left:parent.left
+                            leftMargin: 20
+
+                        }
                   }
 
                    Text {
                         id: scoreText
                         property string label: "Score"
                         font.bold: true
-                        font.pixelSize: 14
+                        font.pixelSize: 30
                         color: "brown"
-                        text: label + ": " + root.score
+                        text: label
+                        wrapMode: Text.WordWrap
+                        width:220
+                        visible: false
+                        anchors{
+                            top:questionText.bottom
+                            topMargin: 10
+                            left:questionText.left
+                            leftMargin:100
+
+                        }
                     }
                 }
 
@@ -111,12 +192,14 @@ RowLayout {
                         root.currentQuizOrgan = root.organs[index]
                     }
 
+                    root.quizAnswerSheet[correctOrgan] = answerOrgan;
                     root.labelColorSheet = tempLabelColorSheet
                 }
 
                 function gameOver() {
-                    scoreText.label = "Game over, your score is"
+                    scoreText.label = "Game over"
                     root.isGameOver = true
+                    scoreText.visible = true
                 }
 
                 function scoreSummarySheet(answerOrgan, correctOrgan){

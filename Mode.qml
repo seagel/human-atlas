@@ -81,8 +81,10 @@ Item {
         }
 
         Item {
+            id: buildIcon
             height: 250
             width: 250
+            visible: true
 
             Image {
                 anchors.fill: parent
@@ -140,5 +142,10 @@ Item {
             color: "white"
             font.bold: true
         }
+    }
+
+    Component.onCompleted: {
+        if (app.currentOrganSystem === "CirculatorySystem")
+            buildIcon.visible = false;
     }
 }

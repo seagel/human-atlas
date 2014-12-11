@@ -1,0 +1,182 @@
+{
+    "aorta": {
+        "coordinates": {
+            "x": 60,
+            "y": 50,
+            "z": 1
+        },
+        "description": "The aorta is the main artery in the human body, originating from the left ventricle of the heart and extending down to the abdomen, where it splits into two smaller arteries. The aorta distributes oxygenated blood to all parts of the body through the systemic circulation.",
+        "label": "Aorta",
+        "labelcoordinates":{
+            "x": 15,
+            "y": 130,
+            "z": 0
+        },
+        "fontsize":20
+    },
+    "inferior_vena_cava": {
+        "coordinates": {
+            "x": 5,
+            "y": 325,
+            "z": 2
+        },
+        "description": "The inferior vena cava (or IVC), also known as the posterior vena cava, is the large vein that carries deoxygenated blood from the lower half of the body into the right atrium of the heart.",
+        "label": "Inferior Vena Cava",
+        "labelcoordinates":{
+            "x": 400,
+            "y": 200,
+            "z": 0
+        },
+        "fontsize":20
+    },
+    "left_atrium": {
+        "coordinates": {
+            "x": 120,
+            "y": 290,
+            "z": -1
+        },
+        "description": "The left atrium is one of four chambers in the human heart. It receives oxygenated blood from the pulmonary veins, and pumps it into the left ventricle, via the mitral valve. Atria facilitate circulation primarily by allowing uninterrupted venous flow to the heart, preventing the inertia of interrupted venous flow that would otherwise occur at each ventricular systole.",
+        "label": "Left Atrium",
+        "labelcoordinates":{
+            "x":15,
+            "y":320,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "left_pulmonary_artries": {
+        "coordinates": {
+            "x": 100,
+            "y": 110
+        },
+        "description": "The left pulmonary artery or left branch of the pulmonary artery, shorter and somewhat smaller than the right, passes horizontally in front of the descending aorta and left bronchus to the root of the left lung, where it divides into two branches, one for each lobe of the lung.",
+        "label": "Left Pulmonary Artries",
+        "labelcoordinates":{
+            "x":400,
+            "y":350,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "left_pulmonary_veins": {
+        "coordinates": {
+            "x": 145,
+            "y": 435,
+            "z": 2
+        },
+        "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
+        "label": "Left Pulmonary Veins",
+        "labelcoordinates":{
+            "x":400,
+            "y":520,
+            "z":0
+        },
+        "fontsize":20
+
+    },
+    "left_ventricle": {
+        "coordinates": {
+            "x": 120,
+            "y": 400,
+            "z": 1
+        },
+        "description": "A ventricle is one of two large chambers that collect and expel blood received from an atrium towards the peripheral beds within the body and lungs.",
+        "label": "Left Ventricle",
+        "labelcoordinates":{
+            "x":400,
+            "y":450,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "pulmonary_valves": {
+        "coordinates": {
+            "x": 173,
+            "y": 615,
+            "z": 1
+        },
+        "description": "The pulmonary valve (sometimes referred to as the pulmonic valve) is the semilunar valve of the heart that lies between the right ventricle and the pulmonary artery and has three cusps.",
+        "label": "Pulmonary Valves",
+        "labelcoordinates":{
+            "x":15,
+            "y":660,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "right_atrium": {
+        "coordinates": {
+            "x": 0,
+            "y": 200,
+            "z": -1
+        },
+        "description": "The right atrium is one of four chambers (two atria and two ventricles) in the hearts of mammals (including humans) and archosaurs (which include birds and crocodilians). It receives deoxygenated blood from the superior and inferior venae cavae, the coronary sinus, and the anterior and smallest cardiac veins, and pumps it into the right ventricle through the tricuspid valve.",
+        "label": "Right Atrium",
+        "labelcoordinates":{
+            "x":400,
+            "y":400,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "right_pulmonary_artries": {
+        "coordinates": {
+            "x": -20,
+            "y": 140,
+            "z": 10
+        },
+        "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
+        "label": "Right Pulmonary Artries",
+        "labelcoordinates":{
+            "x":15,
+            "y":390,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "right_pulmonary_veins": {
+        "coordinates": {
+            "x": -55,
+            "y": 150,
+            "z": 1
+        },
+        "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
+        "label": "Right Pulmonary Veins",
+        "labelcoordinates":{
+            "x":15,
+            "y":130,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "right_ventricle": {
+        "coordinates": {
+            "x": 80,
+            "y": 300,
+            "z": 1
+        },
+        "description": "A ventricle is one of two large chambers that collect and expel blood received from an atrium towards the peripheral beds within the body and lungs.",
+        "label": "Right Ventricle",
+        "labelcoordinates":{
+            "x":15,
+            "y":130,
+            "z":0
+        },
+        "fontsize":20
+    },
+    "superior_vena_cava": {
+        "coordinates": {
+            "x": 0,
+            "y": 90,
+            "z": -1
+        },
+        "description": "The superior vena cava (also known as the cava or cva) is a large diameter, yet short, vein that carries deoxygenated blood from the upper half of the body to the heart's right atrium.",
+        "label": "Superior Vena Cava",
+        "labelcoordinates":{
+            "x":15,
+            "y":130,
+            "z":0
+        },
+        "fontsize":20
+    }
+}

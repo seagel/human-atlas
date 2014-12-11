@@ -15,12 +15,12 @@ QString JSONReader::read() {
 
     if (file.open(QIODevice::ReadOnly)) {
         QString line;
-        QTextStream t( &file );
+        QTextStream t(&file);
 
         do {
             line = t.readLine();
             fileContent += line;
-         } while (!line.isNull());
+        } while (!line.isNull());
 
         file.close();
     } else {
