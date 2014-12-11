@@ -33,10 +33,21 @@ RowLayout {
             organism: quizLogic.organism
             organSystem: quizLogic.organSystem
             responseText: quizLogic.responseSheet
+            quizAnswerSheetYourAnswer : quizLogic.quizAnswerSheetYour
+            quizAnswerSheetCorrectAnswer : quizLogic.quizAnswerSheetCorrect
             quizAnswersList : quizLogic.quizAnswerSheet
+            //quizAnswerSheetModel: quizLogic.quizAnswersListModel
             numberQuestions: quizLogic.organs.length
             score: quizLogic.score
             labelColorSheet: quizLogic.labelColorSheet
+            answerListStringsNames: quizLogic.answerListString
+
+//            function getTableModel(){
+//                var newListModel = Qt.createQmlObject('import QtQuick 2.2; \
+//                        ListModel {'+ answerListStringsNames +'}', parent);
+//                console.log("test");
+//                    return newListModel;
+//            }
 
         }
     }  

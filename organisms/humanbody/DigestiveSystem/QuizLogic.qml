@@ -25,16 +25,14 @@ RowLayout {
                                         "pancreas": root.wrongAnwserColor,
                                         "gall_bladder": root.wrongAnwserColor
                                        }
-    property variant quizAnswerSheet: { "mouth" :"" ,
-                                        "oesophagus" :"",
-                                        "liver":"",
-                                        "stomach": "",
-                                       "small_intestine": "",
-                                        "large_intestine": "",
-                                        "anus": "",
-                                        "pancreas": "",
-                                        "gall_bladder": ""
-                                       }
+    property variant quizAnswerSheetCorrect: []
+    property variant quizAnswerSheetYour: []
+    property string answerListString
+
+    ListModel{
+        id:quizAnswerSheetModel
+    }
+
 
 
     property int score: 0
@@ -69,17 +67,6 @@ RowLayout {
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
                     }
 
-//                    Button {
-//                         text: "Back"
-//                         style: Components.ButtonStyle {}
-//                         width: 50
-//                         height: 50
-//                         x: 450
-//                         y: 600
-//                         onClicked: {
-//                             stack.push(modeSelection)
-//                         }
-//                     }
 
 
 
@@ -108,6 +95,7 @@ RowLayout {
                         Text {
                             text: "Back"
                             anchors.top: backimagebutton.bottom
+                            x:40
 
 
 
@@ -192,7 +180,17 @@ RowLayout {
                         root.currentQuizOrgan = root.organs[index]
                     }
 
-                    root.quizAnswerSheet[correctOrgan] = answerOrgan;
+//                    root.quizAnswerSheetCorrect.length = correctOrgan
+//                    root.quizAnswerSheetYour.length = answerOrgan
+
+                    root.quizAnswerSheetCorrect.push(correctOrgan)
+                    root.quizAnswerSheetYour.push(answerOrgan)
+                    //console.log(typeof(root.quizAnswerSheetYour))
+                    //console.log(isArray(root.quizAnswerSheetCorrect));
+                    //root.quizAnswerSheetModel.append({"correct": correctOrgan, "your":answerOrgan});
+                    //root.quizAnswerSheet[correctOrgan] = answerOrgan;
+                    root.answerListString = root.answerListString + 'ListElement{ your: "'+answerOrgan+'" ; correct: "'+correctOrgan+'";  image:"'+correctOrgan+'.png\"  } '
+                    //console.log(root.answerListString)
                     root.labelColorSheet = tempLabelColorSheet
                 }
 
@@ -207,6 +205,9 @@ RowLayout {
                    "? Your Answer: " + answerOrgan + "\n"
                     return root.responseSheet
                }
+                function isArray(myArray) {
+                    return myArray.constructor.toString().indexOf("Array") > -1;
+                }
 
    }
 

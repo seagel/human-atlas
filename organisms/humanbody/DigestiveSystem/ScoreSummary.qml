@@ -13,12 +13,15 @@ Item {
     property variant labelColorSheet
 
     property variant quizAnswersList
+    property variant quizAnswerSheetCorrectAnswer
+    property variant quizAnswerSheetYourAnswer
+    property string answerListStringsNames
 
     property int numberQuestions: 0
     property int score: 0
-    ListModel{
-        id:quizAnswerModel
-    }
+
+
+
 
 
     Rectangle {
@@ -34,33 +37,95 @@ Item {
             labelColorSheet: root.labelColorSheet
             displayOrganLabel: true
 
-            Button {
-                 text: "Back"
-                 style: Components.ButtonStyle {}
-                 width: 50
-                 height: 50
-                 x: 450
-                 y: 600
-                 onClicked: {
-                     stack.push(quizLogic)
-                 }
-             }
+            Item {
+                height: 100
+                width: 100
+
+                x: 430
+                y: 600
+
+
+
+                Image {
+                    id: backimagebutton
+                    anchors.fill: parent
+                    source: "../../../back.png"
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        stack.push(quizLogic)
+                    }
+                }
+
+                Text {
+                    text: "Back"
+                    anchors.top: backimagebutton.bottom
+                    x:40
+
+
+
+                    color: "white"
+                    font.bold: true
+                }
+            }
+
+
         }
 
         Text {
-            text: "Your score is: " + root.score + "/" + root.numberQuestions + "\n\n" + root.responseText
-            x: 520
-            y: 70
+            text: "Your score is: " + root.score + "/" + root.numberQuestions
+            y: 50;x:410
+            //Font.pixelSize: 40
         }
 
-        ListModel {
-           id: quizAnswersModel
-           ListElement{ yourAnswer: "A Masterpiece" ; correctAnswer: "Gabriel" }
-           ListElement{ title: "Brilliance"    ; author: "Jens" }
-           ListElement{ title: "Outstanding"   ; author: "Frederik" }
+
+        TableView {
+            id:answersTable
+           rowDelegate: Rectangle{
+               width: childrenRect.width
+               height: 75
+               border.width: 1
+               color: "lightblue"
+
+
+           }
+
+
+
+
+
+           TableViewColumn{ role: "your"  ; title: "Your Answer" ; width: 150;  }
+           TableViewColumn{ role: "correct" ; title: "Correct Answer" ; width: 150 }
+           TableViewColumn{ role: "image"; title: "Image";width:150 ; delegate: Image {
+
+                   source: styleData.value
+               }  }
+           x:560;y:30
+           width:460
+           height: 710
+
         }
+
+        Component.onCompleted: {
+
+            var newListModel = Qt.createQmlObject('import QtQuick 2.2; \
+                    ListModel {'+ root.answerListStringsNames +'}', parent);
+                answersTable.model= newListModel;
+            //console.log("test")
+
+
+        }
+
+
+
+
 
     }
+
+
+
 }
 
 
