@@ -9,15 +9,31 @@ RowLayout {
     property string organism
     property string organSystem
     property string currentQuizOrgan
-    property string currentOrgan: "liver"
+    property string currentOrgan: "mouth"
     property string responseSheet
     property string wrongAnwserColor: "red"
     property string correctAnwserColor: "green"
 
-    property variant organs: ["liver", "intestine", "stomach"]
-    property variant labelColorSheet: {"liver":root.wrongAnwserColor,
-                                       "intestine": root.wrongAnwserColor,
-                                       "stomach": root.wrongAnwserColor}
+    property variant organs: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
+    property variant labelColorSheet: { "mouth" :root.wrongAnwserColor,
+                                        "oesophagus" :root.wrongAnwserColor,
+                                        "liver":root.wrongAnwserColor,
+                                        "stomach": root.wrongAnwserColor,
+                                       "small_intestine": root.wrongAnwserColor,
+                                        "large_intestine": root.wrongAnwserColor,
+                                        "anus": root.wrongAnwserColor,
+                                        "pancreas": root.wrongAnwserColor,
+                                        "gall_bladder": root.wrongAnwserColor
+                                       }
+    property variant quizAnswerSheetCorrect: []
+    property variant quizAnswerSheetYour: []
+    property string answerListString
+
+    ListModel{
+        id:quizAnswerSheetModel
+    }
+
+
 
     property int score: 0
     property bool isGameOver: false
@@ -25,18 +41,20 @@ RowLayout {
     signal selected(var selectDisplaySummary)
 
 
+
     Rectangle {
                id: diagram
-               color: "lightsteelblue"
+               color: "#55ADAB"
                Layout.fillWidth: true
                Layout.fillHeight: true
+               border.color: "green"
 
                Button {
                    id: button
                    style: Components.ButtonStyle {}
                    text: "Visualize Score Summary"
-                   x: 700
-                   y: 70
+                   x: 600
+                   y: 400
                    onClicked: stack.push(scoreSummary)
                 }
 
@@ -49,42 +67,101 @@ RowLayout {
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
                     }
 
-                    Button {
-                         text: "Back"
-                         style: Components.ButtonStyle {}
-                         width: 50
-                         height: 50
-                         x: 450
-                         y: 600
-                         onClicked: {
-                             stack.push(modeSelection)
-                         }
-                     }
-               }
 
-                Column {
-                  anchors {
-                    right: parent.right;
-                    margins: 10;
+
+
+                    Item {
+                        height: 100
+                        width: 100
+
+                        x: 450
+                        y: 600
+
+
+
+                        Image {
+                            id: backimagebutton
+                            anchors.fill: parent
+                            source: "../../../back.png"
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                stack.push(modeSelection)
+                            }
+                        }
+
+                        Text {
+                            text: "Back"
+                            anchors.top: backimagebutton.bottom
+                            x:40
+
+
+
+                            color: "white"
+                            font.bold: true
+                        }
                     }
 
-                  height: parent.height; width: 300
-                  spacing: 5
+
+
+
+
+
+
+               }
+
+                Rectangle {
+                  anchors {
+                    right: parent.right;
+                    top:parent.top
+                    topMargin: 100
+                    rightMargin: 90
+                    margins: 50;
+                    }
+                  radius: 30
+                  border.width: 3
+                  border.color: "black"
+
+
+                  height: 200; width: 400
+
+                  //spacing: 5
 
                   Text {
                         id: questionText
                         font.bold: true
-                        font.pixelSize: 14
-                        text: "Question: where is " + root.currentQuizOrgan + "?"
+                        font.pixelSize: 30
+                        text: "Question:- where is " + root.currentQuizOrgan + "?"
+                        wrapMode: Text.WordWrap
+                        width:380
+                        anchors{
+                            top:parent.top
+                            topMargin: 20
+                            left:parent.left
+                            leftMargin: 20
+
+                        }
                   }
 
                    Text {
                         id: scoreText
                         property string label: "Score"
                         font.bold: true
-                        font.pixelSize: 14
+                        font.pixelSize: 30
                         color: "brown"
-                        text: label + ": " + root.score
+                        text: label
+                        wrapMode: Text.WordWrap
+                        width:220
+                        visible: false
+                        anchors{
+                            top:questionText.bottom
+                            topMargin: 10
+                            left:questionText.left
+                            leftMargin:100
+
+                        }
                     }
                 }
 
@@ -103,12 +180,24 @@ RowLayout {
                         root.currentQuizOrgan = root.organs[index]
                     }
 
+//                    root.quizAnswerSheetCorrect.length = correctOrgan
+//                    root.quizAnswerSheetYour.length = answerOrgan
+
+                    root.quizAnswerSheetCorrect.push(correctOrgan)
+                    root.quizAnswerSheetYour.push(answerOrgan)
+                    //console.log(typeof(root.quizAnswerSheetYour))
+                    //console.log(isArray(root.quizAnswerSheetCorrect));
+                    //root.quizAnswerSheetModel.append({"correct": correctOrgan, "your":answerOrgan});
+                    //root.quizAnswerSheet[correctOrgan] = answerOrgan;
+                    root.answerListString = root.answerListString + 'ListElement{ your: "'+answerOrgan+'" ; correct: "'+correctOrgan+'";  image:"'+correctOrgan+'.png\"  } '
+                    //console.log(root.answerListString)
                     root.labelColorSheet = tempLabelColorSheet
                 }
 
                 function gameOver() {
-                    scoreText.label = "Game over, your score is"
+                    scoreText.label = "Game over"
                     root.isGameOver = true
+                    scoreText.visible = true
                 }
 
                 function scoreSummarySheet(answerOrgan, correctOrgan){
@@ -116,6 +205,9 @@ RowLayout {
                    "? Your Answer: " + answerOrgan + "\n"
                     return root.responseSheet
                }
+                function isArray(myArray) {
+                    return myArray.constructor.toString().indexOf("Array") > -1;
+                }
 
    }
 

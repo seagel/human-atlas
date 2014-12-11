@@ -133,5 +133,182 @@
             "z":0
         },
         "fontsize":20
+    },
+    
+        "lines":{
+
+			"mouthLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+			"oesophagusLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 245,
+						"y": 213,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 133,
+						"y": -9,
+						"z": 10
+						},
+					"width": 145,
+					"widthArrow": 20
+        
+			
+		},
+		
+		"liverLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 340,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		},
+		
+		"stomachLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		},
+		
+		"small_intestineLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		},
+		
+		"large_intestineLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		},
+		
+		"anusLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		},
+		
+		"pancreasLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		},
+		
+		"gall_bladderLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 130,
+						"y": 350,
+						"z": 10
+						},
+					"width": 200,
+					"widthArrow": 36
+        
+			
+		}
+		
+		
+		
     }
 }

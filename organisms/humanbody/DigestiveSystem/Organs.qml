@@ -11,6 +11,8 @@ Item {
     property bool displayOrganLabel: false
     property bool dragOrgans: false
     property variant coordinatesSheet
+    property variant organsList: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
+    //property variant organsList: [ "mouth","oesophagus"]
 
     Image {
         anchors {
@@ -146,6 +148,7 @@ Item {
         visible: root.displayOrganLabel
         font.pixelSize: 20
         x:0;y:0;z:0
+
     }
 
     Text {
@@ -210,6 +213,40 @@ Item {
         font.pixelSize: 20
         x:0;y:0;z:0
     }
+    Repeater{
+        model:getModel()
+        Image {
+
+
+
+            source: root.coordinatesSheet.lines[modelData + "Line"].source
+            x:root.coordinatesSheet.lines[modelData + "Line"].coordinates.x;
+            y:root.coordinatesSheet.lines[modelData + "Line"].coordinates.y
+            z:root.coordinatesSheet.lines[modelData + "Line"].coordinates.z
+            width:root.coordinatesSheet.lines[modelData + "Line"].width
+            visible: root.displayOrganLabel
+            Image {
+
+                source: root.coordinatesSheet.lines[modelData + "Line"].sourceArrow
+                x:root.coordinatesSheet.lines[modelData + "Line"].coordinatesArrow.x;
+                y:root.coordinatesSheet.lines[modelData + "Line"].coordinatesArrow.y
+                z:root.coordinatesSheet.lines[modelData + "Line"].coordinatesArrow.z
+                width:root.coordinatesSheet.lines[modelData + "Line"].widthArrow
+                visible: root.displayOrganLabel
+
+            }
+
+        }
+        function getModel(){
+            root.coordinatesSheet = JSON.parse(myFile.read());
+
+            return organsList
+        }
+
+
+
+    }
+
 
     function organLabelColor(organName) {
         var labelColor = "red";
