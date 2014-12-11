@@ -148,5 +148,202 @@
             "z": 0
         },
         "fontsize": 20
-    }
+    },
+          "lines":{
+
+			"bronchi_leftLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+
+		
+		"bronchi_rightLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"bronchiolesLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"diaphragmLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"epiglottisLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"lungsLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"noseLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"oral_cavityLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"ribsLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"tracheaLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		}
+
+}
+
+		
+		
 }

@@ -9,32 +9,34 @@ RowLayout {
     property string organism
     property string organSystem
     property string currentQuizOrgan
-    property string currentOrgan: "mouth"
+    property string currentOrgan: "bronchi_left"
     property string responseSheet
     property string wrongAnwserColor: "red"
     property string correctAnwserColor: "green"
 
-    property variant organs: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
-    property variant labelColorSheet: { "mouth" :root.wrongAnwserColor,
-                                        "oesophagus" :root.wrongAnwserColor,
-                                        "liver":root.wrongAnwserColor,
-                                        "stomach": root.wrongAnwserColor,
-                                       "small_intestine": root.wrongAnwserColor,
-                                        "large_intestine": root.wrongAnwserColor,
-                                        "anus": root.wrongAnwserColor,
-                                        "pancreas": root.wrongAnwserColor,
-                                        "gall_bladder": root.wrongAnwserColor
+    property variant organs:  ["bronchi_left", "bronchi_right", "bronchioles", "diaphragm", "epiglottis","lungs", "nose","oral_cavity", "ribs", "trachea" ]
+    property variant labelColorSheet: {  "bronchi_left": root.wrongAnwserColor,
+                                         "bronchi_right": root.wrongAnwserColor,
+                                         "bronchioles": root.wrongAnwserColor,
+                                         "diaphragm":root.wrongAnwserColor,
+                                         "epiglottis": root.wrongAnwserColor,
+                                         "lungs" :root.wrongAnwserColor,
+                                         "nose": root.wrongAnwserColor,
+                                         "oral_cavity":  root.wrongAnwserColor,
+                                         "ribs" : root.wrongAnwserColor,
+                                         "trachea": root.wrongAnwserColor
                                        }
-    property variant organsLabelSheet: { "mouth" :"Mouth",
-                                          "oesophagus" :"Oesophagus",
-                                          "liver":"Liver",
-                                          "stomach": "Stomach",
-                                         "small_intestine": "Small Intestine",
-                                          "large_intestine": "Large Intestine",
-                                          "anus": "Anus",
-                                          "pancreas": "Pancreas",
-                                          "gall_bladder": "Gall Bladder"
-                                         }
+    property variant organsLabelSheet: { "bronchi_left": "Bronchi Left" ,
+                                          "bronchi_right": "Bronchi Right" ,
+                                          "bronchioles":"Bronchioles" ,
+                                          "diaphragm": "Diaphragm",
+                                          "epiglottis": "Epiglottis" ,
+                                          "lungs" : "Lungs" ,
+                                          "nose": "Nose",
+                                          "oral_cavity": "Oral Cavity"  ,
+                                          "ribs" : "Ribs" ,
+                                          "trachea": "Trachea"
+                                        }
     property variant quizAnswerSheetCorrect: []
     property variant quizAnswerSheetYour: []
     property string answerListString

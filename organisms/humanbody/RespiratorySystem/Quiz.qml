@@ -9,8 +9,8 @@ RowLayout {
     id: root
     property string organism
     property string organSystem
-    property string currentQuizOrgan: "mouth"
-    property variant organs: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
+    property string currentQuizOrgan: "bronchi_left"
+    property variant organs: ["bronchi_left", "bronchi_right", "bronchioles", "diaphragm", "epiglottis","lungs", "nose","oral_cavity", "ribs", "trachea" ]
 
     anchors.fill: parent
 
@@ -42,12 +42,7 @@ RowLayout {
             labelColorSheet: quizLogic.labelColorSheet
             answerListStringsNames: quizLogic.answerListString
 
-//            function getTableModel(){
-//                var newListModel = Qt.createQmlObject('import QtQuick 2.2; \
-//                        ListModel {'+ answerListStringsNames +'}', parent);
-//                console.log("test");
-//                    return newListModel;
-//            }
+
 
         }
     }  
