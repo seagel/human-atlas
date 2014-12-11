@@ -25,6 +25,16 @@ RowLayout {
                                         "pancreas": root.wrongAnwserColor,
                                         "gall_bladder": root.wrongAnwserColor
                                        }
+    property variant organsLabelSheet: { "mouth" :"Mouth",
+                                          "oesophagus" :"Oesophagus",
+                                          "liver":"Liver",
+                                          "stomach": "Stomach",
+                                         "small_intestine": "Small Intestine",
+                                          "large_intestine": "Large Intestine",
+                                          "anus": "Anus",
+                                          "pancreas": "Pancreas",
+                                          "gall_bladder": "Gall Bladder"
+                                         }
     property variant quizAnswerSheetCorrect: []
     property variant quizAnswerSheetYour: []
     property string answerListString
@@ -55,7 +65,9 @@ RowLayout {
                    text: "Visualize Score Summary"
                    x: 600
                    y: 400
+                   visible: root.isGameOver
                    onClicked: stack.push(scoreSummary)
+
                 }
 
                Organs {
@@ -133,7 +145,7 @@ RowLayout {
                         id: questionText
                         font.bold: true
                         font.pixelSize: 30
-                        text: "Question:- where is " + root.currentQuizOrgan + "?"
+                        text: "Question:- where is " + root.organsLabelSheet[root.currentQuizOrgan] + "?"
                         wrapMode: Text.WordWrap
                         width:380
                         anchors{
@@ -189,7 +201,7 @@ RowLayout {
                     //console.log(isArray(root.quizAnswerSheetCorrect));
                     //root.quizAnswerSheetModel.append({"correct": correctOrgan, "your":answerOrgan});
                     //root.quizAnswerSheet[correctOrgan] = answerOrgan;
-                    root.answerListString = root.answerListString + 'ListElement{ your: "'+answerOrgan+'" ; correct: "'+correctOrgan+'";  image:"'+correctOrgan+'.png\"  } '
+                    root.answerListString = root.answerListString + 'ListElement{ your: "'+root.organsLabelSheet[answerOrgan]+'" ; correct: "'+root.organsLabelSheet[correctOrgan]+'";  image:"'+correctOrgan+'.png\"  } '
                     //console.log(root.answerListString)
                     root.labelColorSheet = tempLabelColorSheet
                 }

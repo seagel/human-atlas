@@ -102,7 +102,7 @@ Item {
 
                    source: styleData.value
                }  }
-           x:560;y:30
+           x:550;y:30
            width:460
            height: 710
 

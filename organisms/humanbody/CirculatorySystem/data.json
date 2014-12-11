@@ -179,5 +179,237 @@
             "z":0
         },
         "fontsize":20
-    }
+    },
+    "lines":{
+
+			"aortaLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"inferior_vena_cavaLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"left_atriumLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"left_pulmonary_artriesLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"left_pulmonary_veinsLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"left_ventricleLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"pulmonary_valvesLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"right_atriumLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"right_pulmonary_artriesLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"right_pulmonary_veinsLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"right_ventricleLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		},
+		
+					"superior_vena_cavaLine":{
+				"source":"../line.png",
+				"sourceArrow":"../left.png",
+					"coordinates": {
+						"x": 85,
+						"y": 142,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": -7,
+						"y": -9,
+						"z": 10
+						},
+					"width": 100,
+					"widthArrow": 21
+        
+			
+		}
+		
+		
+		}
 }
