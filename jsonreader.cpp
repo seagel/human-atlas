@@ -20,7 +20,7 @@ QString JSONReader::read() {
         do {
             line = t.readLine();
             fileContent += line;
-         } while (!line.isNull());
+        } while (!line.isNull());
 
         file.close();
     } else {

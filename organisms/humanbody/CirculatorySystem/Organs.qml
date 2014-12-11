@@ -33,7 +33,7 @@ Item {
 
     Components.OrganImage {
         id: aortaImage
-        organ: "Aorta"
+        organ: "aorta"
         dragOrgans: root.dragOrgans
         x: 0
         y: 0

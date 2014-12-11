@@ -37,5 +37,4 @@ Image {
     Behavior on opacity {
         NumberAnimation { duration: 300 }
     }
-
 }
