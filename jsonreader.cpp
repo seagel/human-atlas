@@ -15,7 +15,7 @@ QString JSONReader::read() {
 
     if (file.open(QIODevice::ReadOnly)) {
         QString line;
-        QTextStream t( &file );
+        QTextStream t(&file);
 
         do {
             line = t.readLine();

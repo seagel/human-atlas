@@ -62,8 +62,6 @@ Item {
         z: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -195,11 +193,10 @@ Item {
         x:0;y:0;z:0
     }
 
-
     Text {
         id: pancreasImageLabel
-        text: liverImage.organ
-        color: root.organLabelColor(liverImage.organ)
+        text: pancreasImage.organ
+        color: root.organLabelColor(pancreasImage.organ)
         visible: root.displayOrganLabel
         font.pixelSize: 20
         x:0;y:0;z:0
