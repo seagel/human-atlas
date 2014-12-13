@@ -1,8 +1,8 @@
 {
     "bronchi_left": {
         "coordinates": {
-            "x": 52,
-            "y": 387,
+            "x": 75,
+            "y": 350,
             "z": 1
         },
         "description": "A bronchus, also known as a main or primary bronchus, is a passage of airway in the respiratory tract that conducts air into the lungs. There is a right bronchus and a left bronchus and these bronchi branch into smaller secondary and tertiary bronchi which branch into smaller tubes, known as bronchioles. No gas exchange takes place in the bronchi.",
@@ -16,8 +16,8 @@
     },
     "bronchi_right": {
         "coordinates": {
-            "x": 232,
-            "y": 418,
+            "x": 210,
+            "y": 370,
             "z": 0
         },
         "description": "A bronchus, also known as a main or primary bronchus, is a passage of airway in the respiratory tract that conducts air into the lungs. There is a right bronchus and a left bronchus and these bronchi branch into smaller secondary and tertiary bronchi which branch into smaller tubes, known as bronchioles. No gas exchange takes place in the bronchi.",
@@ -31,8 +31,8 @@
     },
     "bronchioles": {
         "coordinates": {
-            "x": 91,
-            "y": 565,
+            "x": 105,
+            "y": 500,
             "z": 0
         },
         "description": "The bronchioles or bronchioli are the passageways by which air passes through the nose or mouth to the alveoli (air sacs) of the lungs, in which branches no longer contain cartilage or glands in their submucosa. They are branches of the bronchi, and are part of the conducting zone of the respiratory system.",
@@ -46,9 +46,9 @@
     },
     "diaphragm": {
         "coordinates": {
-            "x": 0,
-            "y": 570,
-            "z": -2
+            "x": 55,
+            "y": 550,
+            "z": 20
         },
         "description": "The diaphragm is a sheet of internal skeletal muscle that extends across the bottom of the rib cage. The diaphragm separates the thoracic cavity containing the heart and lungs, from the abdominal cavity and performs an important function in respiration: as the diaphragm contracts, the volume of the thoracic cavity increases and air is drawn into the lungs.",
         "label": "Diaphragm",
@@ -61,8 +61,8 @@
     },
     "epiglottis": {
         "coordinates": {
-            "x": 185,
-            "y": 210,
+            "x": 170,
+            "y": 200,
             "z": 2
         },
         "description": "The epiglottis is a flap that is made of elastic cartilage tissue covered with a mucous membrane, attached to the entrance of the larynx. It prevents food from going into the trachea and instead directs it to the esophagus, which is at the back.",
@@ -76,8 +76,8 @@
     },
     "lungs": {
         "coordinates": {
-            "x": -30,
-            "y": 274,
+            "x": 50,
+            "y": 330,
             "z": -1
         },
         "description": "The human lungs are the organs of respiration. The lungs are located within the thoracic cavity, on either side of the heart and close to the backbone. They are enclosed and protected by the ribcage. The left lung has a lateral indentation which is shaped to accommodate the position of the heart.",
@@ -91,15 +91,15 @@
     },
     "nose": {
         "coordinates": {
-            "x": 84,
-            "y": 0,
+            "x": 97,
+            "y": 76,
             "z": -1
         },
         "description": "The visible part of the human nose is the protruding part of the face that bears the nostrils. The nose has an area of specialised cells which are responsible for smelling (part of the olfactory system). Another function of the nose is the conditioning of inhaled air, warming it and making it more humid. Hairs inside the nose prevent large particles from entering the lungs.",
         "label": "Nose",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 5,
+            "y": 110,
             "z": 0
         },
         "fontsize": 20
@@ -107,22 +107,22 @@
     "oral_cavity": {
         "coordinates": {
             "x": 115,
-            "y": 125,
+            "y": 150,
             "z": 0
         },
         "description": "The first section of the mouth is known as the oral cavity, or the mouth cavity. This space is bordered in the front and to the sides by the two alveolar arches, which contain the teeth.",
         "label": "Oral Cavity",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 5,
+            "y": 155,
             "z": 0
         },
         "fontsize": 20
     },
     "ribs": {
         "coordinates": {
-            "x": 160,
-            "y": 280,
+            "x": 215,
+            "y": 325,
             "z": 5
         },
         "description": "Ribs are the long curved bones which form the cage. In most vertebrates, ribs surround the chest, enabling the lungs to expand and thus facilitate breathing by expanding the chest cavity. They serve to protect the lungs, heart, and other internal organs of the thorax.",
@@ -136,8 +136,8 @@
     },
     "trachea": {
         "coordinates": {
-            "x": 118,
-            "y": 270,
+            "x": 174,
+            "y": 290,
             "z": 1
         },
         "description": "The trachea, colloquially called windpipe, is a tube that connects the pharynx and larynx to the lungs, allowing the passage of air, and so is present in all air-breathing animals with lungs.",
@@ -270,8 +270,8 @@
 				"source":"../line.png",
 				"sourceArrow":"../left.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 60,
+						"y": 125,
 						"z": 10
 						},
 					"coordinatesArrow": {
@@ -279,7 +279,7 @@
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 50,
 					"widthArrow": 21
         
 			
@@ -290,7 +290,7 @@
 				"sourceArrow":"../left.png",
 					"coordinates": {
 						"x": 85,
-						"y": 142,
+						"y": 170,
 						"z": 10
 						},
 					"coordinatesArrow": {
@@ -298,7 +298,7 @@
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 80,
 					"widthArrow": 21
         
 			
