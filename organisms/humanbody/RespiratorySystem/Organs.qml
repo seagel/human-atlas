@@ -17,8 +17,8 @@ Item {
         anchors {
             left: parent.left
             top: parent.top
-            leftMargin: -45
-            topMargin: 0
+            leftMargin: 0
+            topMargin: 28
         }
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/background.png"
         z: -2

@@ -1,97 +1,97 @@
 {
     "bronchi_left": {
         "coordinates": {
-            "x": 75,
+            "x": 100,
             "y": 350,
             "z": 1
         },
         "description": "A bronchus, also known as a main or primary bronchus, is a passage of airway in the respiratory tract that conducts air into the lungs. There is a right bronchus and a left bronchus and these bronchi branch into smaller secondary and tertiary bronchi which branch into smaller tubes, known as bronchioles. No gas exchange takes place in the bronchi.",
         "label": "Left Bronchi",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 420,
+            "y": 395,
             "z": 0
         },
         "fontsize": 20
     },
     "bronchi_right": {
         "coordinates": {
-            "x": 210,
+            "x": 235,
             "y": 370,
             "z": 0
         },
         "description": "A bronchus, also known as a main or primary bronchus, is a passage of airway in the respiratory tract that conducts air into the lungs. There is a right bronchus and a left bronchus and these bronchi branch into smaller secondary and tertiary bronchi which branch into smaller tubes, known as bronchioles. No gas exchange takes place in the bronchi.",
         "label": "Right Bronchi",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 420,
+            "y": 435,
             "z": 0
         },
         "fontsize": 20
     },
     "bronchioles": {
         "coordinates": {
-            "x": 105,
+            "x": 130,
             "y": 500,
             "z": 0
         },
         "description": "The bronchioles or bronchioli are the passageways by which air passes through the nose or mouth to the alveoli (air sacs) of the lungs, in which branches no longer contain cartilage or glands in their submucosa. They are branches of the bronchi, and are part of the conducting zone of the respiratory system.",
         "label": "Bronchioles",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 440,
+            "y": 515,
             "z": 0
         },
         "fontsize": 20
     },
     "diaphragm": {
         "coordinates": {
-            "x": 55,
+            "x": 80,
             "y": 550,
             "z": 20
         },
         "description": "The diaphragm is a sheet of internal skeletal muscle that extends across the bottom of the rib cage. The diaphragm separates the thoracic cavity containing the heart and lungs, from the abdominal cavity and performs an important function in respiration: as the diaphragm contracts, the volume of the thoracic cavity increases and air is drawn into the lungs.",
         "label": "Diaphragm",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 210,
+            "y": 630,
             "z": 0
         },
         "fontsize": 20
     },
     "epiglottis": {
         "coordinates": {
-            "x": 170,
+            "x": 195,
             "y": 200,
             "z": 2
         },
         "description": "The epiglottis is a flap that is made of elastic cartilage tissue covered with a mucous membrane, attached to the entrance of the larynx. It prevents food from going into the trachea and instead directs it to the esophagus, which is at the back.",
         "label": "Epiglottis",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 330,
+            "y": 205,
             "z": 0
         },
         "fontsize": 20
     },
     "lungs": {
         "coordinates": {
-            "x": 50,
+            "x": 75,
             "y": 330,
             "z": -1
         },
         "description": "The human lungs are the organs of respiration. The lungs are located within the thoracic cavity, on either side of the heart and close to the backbone. They are enclosed and protected by the ribcage. The left lung has a lateral indentation which is shaped to accommodate the position of the heart.",
         "label": "Lungs",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 5,
+            "y": 420,
             "z": 0
         },
         "fontsize": 20
     },
     "nose": {
         "coordinates": {
-            "x": 97,
+            "x": 122,
             "y": 76,
             "z": -1
         },
@@ -106,7 +106,7 @@
     },
     "oral_cavity": {
         "coordinates": {
-            "x": 115,
+            "x": 140,
             "y": 150,
             "z": 0
         },
@@ -121,30 +121,30 @@
     },
     "ribs": {
         "coordinates": {
-            "x": 215,
+            "x": 240,
             "y": 325,
             "z": 5
         },
         "description": "Ribs are the long curved bones which form the cage. In most vertebrates, ribs surround the chest, enabling the lungs to expand and thus facilitate breathing by expanding the chest cavity. They serve to protect the lungs, heart, and other internal organs of the thorax.",
         "label": "Ribs",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 400,
+            "y": 350,
             "z": 0
         },
         "fontsize": 20
     },
     "trachea": {
         "coordinates": {
-            "x": 174,
+            "x": 199,
             "y": 290,
             "z": 1
         },
         "description": "The trachea, colloquially called windpipe, is a tube that connects the pharynx and larynx to the lungs, allowing the passage of air, and so is present in all air-breathing animals with lungs.",
         "label": "Trachea",
         "labelcoordinates": {
-            "x": 0,
-            "y": 0,
+            "x": 5,
+            "y": 310,
             "z": 0
         },
         "fontsize": 20
@@ -153,18 +153,18 @@
 
 			"bronchi_leftLine":{
 				"source":"../line.png",
-				"sourceArrow":"../left.png",
+				"sourceArrow":"../right.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 165,
+						"y": 410,
 						"z": 10
 						},
 					"coordinatesArrow": {
-						"x": -7,
+						"x": 230,
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 230,
 					"widthArrow": 21
         
 			
@@ -173,18 +173,18 @@
 		
 		"bronchi_rightLine":{
 				"source":"../line.png",
-				"sourceArrow":"../left.png",
+				"sourceArrow":"../right.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 280,
+						"y": 450,
 						"z": 10
 						},
 					"coordinatesArrow": {
-						"x": -7,
+						"x": 115,
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 115,
 					"widthArrow": 21
         
 			
@@ -192,18 +192,18 @@
 		
 		"bronchiolesLine":{
 				"source":"../line.png",
-				"sourceArrow":"../left.png",
+				"sourceArrow":"../right.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 165,
+						"y": 530,
 						"z": 10
 						},
 					"coordinatesArrow": {
-						"x": -7,
+						"x": 250,
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 250,
 					"widthArrow": 21
         
 			
@@ -211,18 +211,18 @@
 		
 		"diaphragmLine":{
 				"source":"../line.png",
-				"sourceArrow":"../left.png",
+				"sourceArrow":"../right.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 125,
+						"y": 640,
 						"z": 10
 						},
 					"coordinatesArrow": {
-						"x": -7,
+						"x": 60,
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 60,
 					"widthArrow": 21
         
 			
@@ -230,14 +230,14 @@
 		
 		"epiglottisLine":{
 				"source":"../line.png",
-				"sourceArrow":"../left.png",
+				"sourceArrow":"../right.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 208,
+						"y": 218,
 						"z": 10
 						},
 					"coordinatesArrow": {
-						"x": -7,
+						"x": 100,
 						"y": -9,
 						"z": 10
 						},
@@ -251,8 +251,8 @@
 				"source":"../line.png",
 				"sourceArrow":"../left.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 68,
+						"y": 435,
 						"z": 10
 						},
 					"coordinatesArrow": {
@@ -260,7 +260,7 @@
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 55,
 					"widthArrow": 21
         
 			
@@ -270,27 +270,8 @@
 				"source":"../line.png",
 				"sourceArrow":"../left.png",
 					"coordinates": {
-						"x": 60,
+						"x": 65,
 						"y": 125,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": -7,
-						"y": -9,
-						"z": 10
-						},
-					"width": 50,
-					"widthArrow": 21
-        
-			
-		},
-		
-		"oral_cavityLine":{
-				"source":"../line.png",
-				"sourceArrow":"../left.png",
-					"coordinates": {
-						"x": 85,
-						"y": 170,
 						"z": 10
 						},
 					"coordinatesArrow": {
@@ -304,12 +285,12 @@
 			
 		},
 		
-		"ribsLine":{
+		"oral_cavityLine":{
 				"source":"../line.png",
 				"sourceArrow":"../left.png",
 					"coordinates": {
-						"x": 85,
-						"y": 142,
+						"x": 115,
+						"y": 170,
 						"z": 10
 						},
 					"coordinatesArrow": {
@@ -317,7 +298,26 @@
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 60,
+					"widthArrow": 21
+        
+			
+		},
+		
+		"ribsLine":{
+				"source":"../line.png",
+				"sourceArrow":"../right.png",
+					"coordinates": {
+						"x": 305,
+						"y": 360,
+						"z": 10
+						},
+					"coordinatesArrow": {
+						"x": 70,
+						"y": -9,
+						"z": 10
+						},
+					"width": 70,
 					"widthArrow": 21
         
 			
@@ -328,7 +328,7 @@
 				"sourceArrow":"../left.png",
 					"coordinates": {
 						"x": 85,
-						"y": 142,
+						"y": 325,
 						"z": 10
 						},
 					"coordinatesArrow": {
@@ -336,7 +336,7 @@
 						"y": -9,
 						"z": 10
 						},
-					"width": 100,
+					"width": 140,
 					"widthArrow": 21
         
 			

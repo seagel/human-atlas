@@ -96,8 +96,8 @@ Item {
 
 
 
-           TableViewColumn{ role: "your"  ; title: "Your Answer" ; width: 150;  }
-           TableViewColumn{ role: "correct" ; title: "Correct Answer" ; width: 150 }
+           TableViewColumn{ role: "your"  ; title: "Your Answer" ; width: 130;  }
+           TableViewColumn{ role: "correct" ; title: "Correct Answer" ; width: 130 }
            TableViewColumn{ role: "image"; title: "Image";width:150 ; delegate: Image {
 
                    source: styleData.value

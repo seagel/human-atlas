@@ -29,7 +29,7 @@ RowLayout {
 
         anchors {
             left: parent.left
-            leftMargin: 200
+            leftMargin: 10
         }
 
         organism: root.organism
@@ -56,42 +56,129 @@ RowLayout {
         }
     }
 
-    Text {
-        Layout.fillWidth: true
-        Layout.maximumWidth: 170
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 800
-            topMargin: 50
-        }
-        text: root.currentOrgan
+    Rectangle {
+        id:organNameRectangle
+//      anchors {
+//        right: parent.right;
+//        top:parent.top
+//        topMargin: 100
+//        rightMargin: 90
+//        margins: 50;
+//        }
+
+      border.width: 3
+      border.color: "black"
+      x:0;y:0
+//      visible:false
+
+      height: 100; width: 200
+
+      Text {
+            id: organName
+            font.bold: true
+            font.pixelSize: 30
+            text: root.currentOrgan
+            wrapMode: Text.WordWrap
+            width:380
+            anchors{
+                top:parent.top
+                topMargin: 20
+                left:parent.left
+                leftMargin: 20
+
+            }
+      }
     }
 
-    Image {
-        Layout.fillWidth: true
-        Layout.maximumWidth: 170
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 700
-            topMargin: 100
+    Rectangle {
+        id:organImageRectangle
+      anchors {
+        left: organNameRectangle.right;
+        top:parent.top
+        topMargin: 100
+        rightMargin: 90
+        margins: 50;
+
         }
-        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
+      //color:"green"
+      radius: 30
+      border.width: 3
+      border.color: "black"
+                        height: 200; width: 400
+//     visible: false
+          Image {
+//              Layout.fillWidth: true
+//              Layout.maximumWidth: 170
+              anchors {
+                  left: parent.left
+                  top: parent.top
+                  //leftMargin: 700
+                  //topMargin: 100
+              }
+              anchors.fill: parent
+              source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
+          }
     }
 
-    Text {
-        id: organDesc
-        Layout.fillWidth: true
-        Layout.maximumWidth: 170
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 700
-            topMargin: 100
+//    Text {
+//        Layout.fillWidth: true
+//        Layout.maximumWidth: 170
+//        anchors {
+//            left: parent.left
+//            top: parent.top
+//            leftMargin: 800
+//            topMargin: 50
+//        }
+//        text: root.currentOrgan
+//    }
+
+//    Image {
+//        Layout.fillWidth: true
+//        Layout.maximumWidth: 170
+//        anchors {
+//            left: parent.left
+//            top: parent.top
+//            leftMargin: 700
+//            topMargin: 100
+//        }
+//        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
+//    }
+
+    Rectangle {
+        id:organDescRectangle
+      anchors {
+        right: parent.right;
+        top:parent.top
+        topMargin: 100
+        rightMargin: 90
+        margins: 50;
         }
-        text: root.currentOrganDesc
-    }
+      radius: 30
+      border.width: 3
+      border.color: "black"
+
+
+      height: 200; width: 400
+      visible:false
+
+      //spacing: 5
+
+      Text {
+            id: organDesc
+            font.bold: true
+            font.pixelSize: 30
+            text: root.currentOrganDesc
+            wrapMode: Text.WordWrap
+            width:380
+            anchors{
+                top:parent.top
+                topMargin: 20
+                left:parent.left
+                leftMargin: 20
+
+            }
+      }
+}
 
     Audio {
         id: pronunciation
