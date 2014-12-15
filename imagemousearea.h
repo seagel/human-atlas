@@ -3,8 +3,7 @@
 
 #include <QQuickItem>
 
-class ImageMouseArea : public QQuickItem
-{
+class ImageMouseArea : public QQuickItem {
     Q_OBJECT
     Q_PROPERTY(QString imageName READ imageName WRITE setImageName)
 
