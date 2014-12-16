@@ -150,7 +150,7 @@ RowLayout {
                 refY = referenceCoordinates[droppedOrgan].coordinates.y,
                 threshold = 10; // needs to be verified
 
-            if ((droppedX <= refX + threshold) && (droppedY <= refY + threshold) || (droppedX <= refX - threshold) && (droppedY <= refY - threshold))
+            if ((droppedX <= refX + threshold) || (droppedX >= refX - threshold) && (droppedY <= refY + threshold) || (droppedY >= refY - threshold))
                 organMatches++;
         }
 
