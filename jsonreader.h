@@ -5,8 +5,7 @@
 #include <QFile>
 #include <QTextStream>
 
-class JSONReader : public QObject
-{
+class JSONReader : public QObject {
     Q_OBJECT
 public:
     explicit JSONReader(QObject *parent = 0);

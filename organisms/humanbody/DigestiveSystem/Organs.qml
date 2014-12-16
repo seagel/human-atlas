@@ -15,6 +15,7 @@ Item {
     //property variant organsList: [ "mouth","oesophagus"]
 
     Image {
+        id: background
         anchors {
             left: parent.left
             top: parent.top
@@ -84,8 +85,6 @@ Item {
         y: 0
 
         onClicked: root.clicked(organ)
-
-
     }
 
     Components.OrganImage {
@@ -216,35 +215,27 @@ Item {
     Repeater{
         model:getModel()
         Image {
-
-
-
             source: root.coordinatesSheet.lines[modelData + "Line"].source
             x:root.coordinatesSheet.lines[modelData + "Line"].coordinates.x;
             y:root.coordinatesSheet.lines[modelData + "Line"].coordinates.y
             z:root.coordinatesSheet.lines[modelData + "Line"].coordinates.z
             width:root.coordinatesSheet.lines[modelData + "Line"].width
             visible: root.displayOrganLabel
-            Image {
 
+            Image {
                 source: root.coordinatesSheet.lines[modelData + "Line"].sourceArrow
                 x:root.coordinatesSheet.lines[modelData + "Line"].coordinatesArrow.x;
                 y:root.coordinatesSheet.lines[modelData + "Line"].coordinatesArrow.y
                 z:root.coordinatesSheet.lines[modelData + "Line"].coordinatesArrow.z
                 width:root.coordinatesSheet.lines[modelData + "Line"].widthArrow
                 visible: root.displayOrganLabel
-
             }
-
         }
+
         function getModel(){
             root.coordinatesSheet = JSON.parse(myFile.read());
-
             return organsList
         }
-
-
-
     }
 
 
@@ -259,7 +250,10 @@ Item {
     }
 
     Component.onCompleted: {
-        root.coordinatesSheet = JSON.parse(myFile.read());
+        if (dragOrgans) {
+            background.visible = false;
+            return;
+        }
 
         mouthImage.x = root.coordinatesSheet.mouth.coordinates.x;
         mouthImage.y = root.coordinatesSheet.mouth.coordinates.y;

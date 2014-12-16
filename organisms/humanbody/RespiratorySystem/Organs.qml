@@ -14,6 +14,7 @@ Item {
     property variant organsList: ["bronchi_left", "bronchi_right", "bronchioles", "diaphragm", "epiglottis","lungs", "nose","oral_cavity", "ribs", "trachea" ]
 
     Image {
+        id: background
         anchors {
             left: parent.left
             top: parent.top
@@ -229,7 +230,7 @@ Item {
         font.pixelSize: 20
         x:0;y:0;z:0
     }
-    
+
       Repeater{
         model:getModel()
         Image {
@@ -276,6 +277,11 @@ Item {
     }
 
     Component.onCompleted: {
+        if (dragOrgans) {
+            background.visible = false;
+            return;
+        }
+
         root.coordinatesSheet = JSON.parse(myFile.read());
 
         bronchi_leftImage.x = root.coordinatesSheet.bronchi_left.coordinates.x;
