@@ -14,32 +14,30 @@ RowLayout {
     property string wrongAnwserColor: "red"
     property string correctAnwserColor: "green"
 
-    property variant organs: [ "aorta","inferior_vena_cava", "left_atrium","left_pulmonary_artries", "left_pulmonary_veins", "left_ventricle","pulmonary_valves", "right_atrium" , "right_pulmonary_artries", "right_pulmonary_veins", "right_ventricle" ,"superior_vena_cava"]
+    property variant organs: [ "aorta","inferior_vena_cava","superior_vena_cava", "left_atrium", "right_atrium" , "left_ventricle", "right_ventricle" , "left_pulmonary_artries", "right_pulmonary_artries", "pulmonary_veins", "pulmonary_valves" ]
     property variant labelColorSheet: { "aorta":root.wrongAnwserColor,
                                         "inferior_vena_cava":root.wrongAnwserColor,
+                                        "superior_vena_cava":root.wrongAnwserColor,
                                         "left_atrium":root.wrongAnwserColor,
-                                        "left_pulmonary_artries":root.wrongAnwserColor,
-                                        "left_pulmonary_veins": root.wrongAnwserColor,
-                                        "left_ventricle":root.wrongAnwserColor,
-                                        "pulmonary_valves":root.wrongAnwserColor,
                                         "right_atrium" :root.wrongAnwserColor,
-                                        "right_pulmonary_artries":root.wrongAnwserColor,
-                                        "right_pulmonary_veins":root.wrongAnwserColor,
+                                        "left_ventricle":root.wrongAnwserColor,
                                         "right_ventricle" :root.wrongAnwserColor,
-                                        "superior_vena_cava":root.wrongAnwserColor
+                                        "left_pulmonary_artries":root.wrongAnwserColor,
+                                        "right_pulmonary_artries":root.wrongAnwserColor,
+                                        "pulmonary_veins": root.wrongAnwserColor,
+                                        "pulmonary_valves":root.wrongAnwserColor
                                        }
     property variant organsLabelSheet: { "aorta":"Aorta",
                                          "inferior_vena_cava":"Inferior Vena Cava",
+                                         "superior_vena_cava":"Superior Vena Cava",
                                          "left_atrium":"Left Atrium",
-                                         "left_pulmonary_artries":"Left Pulmonary Artries",
-                                         "left_pulmonary_veins":"Left Pulmonary Veins",
-                                         "left_ventricle":"Left Ventricle",
-                                         "pulmonary_valves":"Pulmonary Valves",
                                          "right_atrium" :"Right Atrium",
-                                         "right_pulmonary_artries":"Right Pulmonary Artries",
-                                         "right_pulmonary_veins":"Right Pulmonary Veins",
+                                         "left_ventricle":"Left Ventricle",
                                          "right_ventricle" :"Right Ventricle",
-                                         "superior_vena_cava":"Superior Vena Cava"
+                                         "left_pulmonary_artries":"Left Pulmonary Artries",
+                                         "right_pulmonary_artries":"Right Pulmonary Artries",
+                                         "pulmonary_veins":"Pulmonary Veins",
+                                         "pulmonary_valves":"Pulmonary Valves"
                                          }
     property variant quizAnswerSheetCorrect: []
     property variant quizAnswerSheetYour: []

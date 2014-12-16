@@ -12,16 +12,18 @@ Item {
     property bool dragOrgans: false
     property variant coordinatesSheet
 
-    property variant organsList: [ "aorta","inferior_vena_cava", "left_atrium","left_pulmonary_artries", "left_pulmonary_veins", "left_ventricle","pulmonary_valves", "right_atrium" , "right_pulmonary_artries", "right_pulmonary_veins", "right_ventricle" ,"superior_vena_cava"]
+    property variant organsList: [ "aorta","inferior_vena_cava","superior_vena_cava", "left_atrium", "right_atrium" , "left_ventricle", "right_ventricle" , "left_pulmonary_artries", "right_pulmonary_artries", "pulmonary_veins", "pulmonary_valves" ]
 
     Image {
         anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: -45
-            topMargin: 120
+    //            left: parent.left
+    //            top: parent.top
+//            leftMargin: -45
+//            topMargin: 120
         }
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/background.png"
+        x:50
+        y:250
         z: 0
     }
 
@@ -72,16 +74,18 @@ Item {
         dragOrgans: root.dragOrgans
         x: 0
         y: 0
+        z: 0
 
         onClicked: root.clicked(organ)
     }
 
     Components.OrganImage {
-        id: left_pulmonary_veinsImage
-        organ: "left_pulmonary_veins"
+        id: pulmonary_veinsImage
+        organ: "pulmonary_veins"
         dragOrgans: root.dragOrgans
         x: 0
         y: 0
+        z: 0
 
         onClicked: root.clicked(organ)
     }
@@ -103,6 +107,7 @@ Item {
         dragOrgans: root.dragOrgans
         x: 0
         y: 0
+        z: 0
 
         onClicked: root.clicked(organ)
     }
@@ -129,16 +134,6 @@ Item {
         onClicked: root.clicked(organ)
     }
 
-    Components.OrganImage {
-        id: right_pulmonary_veinsImage
-        organ: "right_pulmonary_veins"
-        dragOrgans: root.dragOrgans
-        x: 0
-        y: 0
-        z: 0
-
-        onClicked: root.clicked(organ)
-    }
 
     Components.OrganImage {
         id: right_ventricleImage
@@ -199,9 +194,9 @@ Item {
     }
 
     Text {
-        id: left_pulmonary_veinsImageLabel
-        text: left_pulmonary_veinsImage.organ
-        color: root.organLabelColor(left_pulmonary_veinsImage.organ)
+        id: pulmonary_veinsImageLabel
+        text: pulmonary_veinsImage.organ
+        color: root.organLabelColor(pulmonary_veinsImage.organ)
         visible: root.displayOrganLabel
         font.pixelSize: 20
         x:0;y:0;z:0
@@ -243,14 +238,7 @@ Item {
         x:0;y:0;z:0
     }
 
-    Text {
-        id: right_pulmonary_veinsImageLabel
-        text: right_pulmonary_veinsImage.organ
-        color: root.organLabelColor(right_pulmonary_veinsImage.organ)
-        visible: root.displayOrganLabel
-        font.pixelSize: 20
-        x:0;y:0;z:0
-    }
+
 
     Text {
         id: right_ventricleImageLabel
@@ -348,19 +336,21 @@ Item {
 
         left_pulmonary_artriesImage.x = root.coordinatesSheet.left_pulmonary_artries.coordinates.x;
         left_pulmonary_artriesImage.y = root.coordinatesSheet.left_pulmonary_artries.coordinates.y;
+        left_pulmonary_artriesImage.z = root.coordinatesSheet.left_pulmonary_artries.coordinates.z;
         left_pulmonary_artriesImageLabel.text=root.coordinatesSheet.left_pulmonary_artries.label
         left_pulmonary_artriesImageLabel.x=root.coordinatesSheet.left_pulmonary_artries.labelcoordinates.x
         left_pulmonary_artriesImageLabel.y=root.coordinatesSheet.left_pulmonary_artries.labelcoordinates.y
         left_pulmonary_artriesImageLabel.z=root.coordinatesSheet.left_pulmonary_artries.labelcoordinates.z
         left_pulmonary_artriesImageLabel.font.pixelSize=root.coordinatesSheet.left_pulmonary_artries.fontsize
 
-        left_pulmonary_veinsImage.x = root.coordinatesSheet.left_pulmonary_veins.coordinates.x;
-        left_pulmonary_veinsImage.y = root.coordinatesSheet.left_pulmonary_veins.coordinates.y;
-        left_pulmonary_veinsImageLabel.text=root.coordinatesSheet.left_pulmonary_veins.label
-        left_pulmonary_veinsImageLabel.x=root.coordinatesSheet.left_pulmonary_veins.labelcoordinates.x
-        left_pulmonary_veinsImageLabel.y=root.coordinatesSheet.left_pulmonary_veins.labelcoordinates.y
-        left_pulmonary_veinsImageLabel.z=root.coordinatesSheet.left_pulmonary_veins.labelcoordinates.z
-        left_pulmonary_veinsImageLabel.font.pixelSize=root.coordinatesSheet.left_pulmonary_veins.fontsize
+        pulmonary_veinsImage.x = root.coordinatesSheet.pulmonary_veins.coordinates.x;
+        pulmonary_veinsImage.y = root.coordinatesSheet.pulmonary_veins.coordinates.y;
+        pulmonary_veinsImage.z = root.coordinatesSheet.pulmonary_veins.coordinates.z;
+        pulmonary_veinsImageLabel.text=root.coordinatesSheet.pulmonary_veins.label
+        pulmonary_veinsImageLabel.x=root.coordinatesSheet.pulmonary_veins.labelcoordinates.x
+        pulmonary_veinsImageLabel.y=root.coordinatesSheet.pulmonary_veins.labelcoordinates.y
+        pulmonary_veinsImageLabel.z=root.coordinatesSheet.pulmonary_veins.labelcoordinates.z
+        pulmonary_veinsImageLabel.font.pixelSize=root.coordinatesSheet.pulmonary_veins.fontsize
 
         left_ventricleImage.x = root.coordinatesSheet.left_ventricle.coordinates.x;
         left_ventricleImage.y = root.coordinatesSheet.left_ventricle.coordinates.y;
@@ -373,6 +363,7 @@ Item {
 
         pulmonary_valvesImage.x = root.coordinatesSheet.pulmonary_valves.coordinates.x;
         pulmonary_valvesImage.y = root.coordinatesSheet.pulmonary_valves.coordinates.y;
+        pulmonary_valvesImage.z = root.coordinatesSheet.pulmonary_valves.coordinates.z;
         pulmonary_valvesImageLabel.text=root.coordinatesSheet.pulmonary_valves.label
         pulmonary_valvesImageLabel.x=root.coordinatesSheet.pulmonary_valves.labelcoordinates.x
         pulmonary_valvesImageLabel.y=root.coordinatesSheet.pulmonary_valves.labelcoordinates.y
@@ -397,14 +388,7 @@ Item {
         right_pulmonary_artriesImageLabel.z=root.coordinatesSheet.right_pulmonary_artries.labelcoordinates.z
         right_pulmonary_artriesImageLabel.font.pixelSize=root.coordinatesSheet.right_pulmonary_artries.fontsize
 
-        right_pulmonary_veinsImage.x = root.coordinatesSheet.right_pulmonary_veins.coordinates.x;
-        right_pulmonary_veinsImage.y = root.coordinatesSheet.right_pulmonary_veins.coordinates.y;
-        right_pulmonary_veinsImage.z = root.coordinatesSheet.right_pulmonary_veins.coordinates.z;
-        right_pulmonary_veinsImageLabel.text=root.coordinatesSheet.right_pulmonary_veins.label
-        right_pulmonary_veinsImageLabel.x=root.coordinatesSheet.right_pulmonary_veins.labelcoordinates.x
-        right_pulmonary_veinsImageLabel.y=root.coordinatesSheet.right_pulmonary_veins.labelcoordinates.y
-        right_pulmonary_veinsImageLabel.z=root.coordinatesSheet.right_pulmonary_veins.labelcoordinates.z
-        right_pulmonary_veinsImageLabel.font.pixelSize=root.coordinatesSheet.right_pulmonary_veins.fontsize
+
 
         right_ventricleImage.x = root.coordinatesSheet.right_ventricle.coordinates.x;
         right_ventricleImage.y = root.coordinatesSheet.right_ventricle.coordinates.y;

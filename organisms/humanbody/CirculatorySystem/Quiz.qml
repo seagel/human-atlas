@@ -10,7 +10,7 @@ RowLayout {
     property string organism
     property string organSystem
     property string currentQuizOrgan: "aorta"
-    property variant organs: [ "aorta","inferior_vena_cava", "left_atrium","left_pulmonary_artries", "left_pulmonary_veins", "left_ventricle","pulmonary_valves", "right_atrium" , "right_pulmonary_artries", "right_pulmonary_veins", "right_ventricle" ,"superior_vena_cava"]
+    property variant organs: [ "aorta","inferior_vena_cava","superior_vena_cava", "left_atrium", "right_atrium" , "left_ventricle", "right_ventricle" , "left_pulmonary_artries", "right_pulmonary_artries", "pulmonary_veins", "pulmonary_valves" ]
 
     anchors.fill: parent
 
