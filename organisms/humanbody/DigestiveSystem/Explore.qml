@@ -6,8 +6,11 @@ import JSONReader 1.0
 
 import components 1.0 as Components
 
-RowLayout {
+
+Row {
+
     id: root
+
     property string organism
     property string organSystem
     property string currentOrgan: ""
@@ -21,16 +24,15 @@ RowLayout {
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + "data.json"
         onError: console.log(msg);
     }
+Rectangle {
+    width:parent.width/2
+    height: parent.height
+    color: "#55ADAB"
+
+
+
 
     Organs {
-        Layout.fillWidth: true
-        Layout.maximumWidth: 400
-        Layout.fillHeight: true
-
-        anchors {
-            left: parent.left
-            leftMargin: 10
-        }
 
         organism: root.organism
         organSystem: root.organSystem
@@ -42,142 +44,92 @@ RowLayout {
             pronunciation.play();
         }
 
-        Button {
-            text: "Back"
-            style: Components.ButtonStyle {}
-            width: 50
-            height: 50
-            x: 750
-            y: 700
 
+    }
+    Item {
+        height: 100
+        width: 100
+
+        x: 400
+        y: 600
+
+
+
+        Image {
+            id: backimagebutton
+            anchors.fill: parent
+            source: "../../../back.png"
+        }
+
+        MouseArea {
+            anchors.fill: parent
             onClicked: {
                 stack.push(modeSelection)
             }
         }
-    }
 
-    Rectangle {
-        id:organNameRectangle
-//      anchors {
-//        right: parent.right;
-//        top:parent.top
-//        topMargin: 100
-//        rightMargin: 90
-//        margins: 50;
-//        }
+        Text {
+            text: "Back"
+            anchors.top: backimagebutton.bottom
+            x:40
 
-      border.width: 3
-      border.color: "black"
-      x:0;y:0
-//      visible:false
 
-      height: 100; width: 200
 
-      Text {
-            id: organName
+            color: "white"
             font.bold: true
-            font.pixelSize: 30
-            text: root.currentOrgan
-            wrapMode: Text.WordWrap
-            width:380
-            anchors{
-                top:parent.top
-                topMargin: 20
-                left:parent.left
-                leftMargin: 20
-
-            }
-      }
+        }
     }
+}
+Rectangle {
+    width:parent.width/2
+    height: parent.height
+    color: "#55ADAB"
 
-    Rectangle {
-        id:organImageRectangle
-      anchors {
-        left: organNameRectangle.right;
-        top:parent.top
-        topMargin: 100
-        rightMargin: 90
-        margins: 50;
+
+
+    Text {
+        id:organName
+        width:parent.width-220
+        height: 200
+        text: root.organData[currentOrgan].label
+        anchors{
+            left:parent.left
+            top:parent.top
 
         }
-      //color:"green"
-      radius: 30
-      border.width: 3
-      border.color: "black"
-                        height: 200; width: 400
-//     visible: false
-          Image {
-//              Layout.fillWidth: true
-//              Layout.maximumWidth: 170
-              anchors {
-                  left: parent.left
-                  top: parent.top
-                  //leftMargin: 700
-                  //topMargin: 100
-              }
-              anchors.fill: parent
-              source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
-          }
+        font.pixelSize: 30
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+
     }
 
-//    Text {
-//        Layout.fillWidth: true
-//        Layout.maximumWidth: 170
-//        anchors {
-//            left: parent.left
-//            top: parent.top
-//            leftMargin: 800
-//            topMargin: 50
-//        }
-//        text: root.currentOrgan
-//    }
-
-//    Image {
-//        Layout.fillWidth: true
-//        Layout.maximumWidth: 170
-//        anchors {
-//            left: parent.left
-//            top: parent.top
-//            leftMargin: 700
-//            topMargin: 100
-//        }
-//        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
-//    }
-
-    Rectangle {
-        id:organDescRectangle
-      anchors {
-        right: parent.right;
-        top:parent.top
-        topMargin: 100
-        rightMargin: 90
-        margins: 50;
+    Image {
+        id:organImage
+        width: 200
+        height: 200
+        source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
+        anchors{
+            right:parent.right
+            top: parent.top
+            rightMargin: 20
         }
-      radius: 30
-      border.width: 3
-      border.color: "black"
+    }
 
+    Text {
+        id:organDesc
+        width: parent.width-20
+        height: 400
+        wrapMode: Text.Wrap
+        anchors{
+            left:parent.left
+            top: organName.bottom
+            rightMargin: 20
+        }
 
-      height: 200; width: 400
-      visible:false
+        text: root.currentOrganDesc
+    }
 
-      //spacing: 5
-
-      Text {
-            id: organDesc
-            font.bold: true
-            font.pixelSize: 30
-            text: root.currentOrganDesc
-            wrapMode: Text.WordWrap
-            width:380
-            anchors{
-                top:parent.top
-                topMargin: 20
-                left:parent.left
-                leftMargin: 20
-
-            }
-      }
 }
 
     Audio {
@@ -188,4 +140,6 @@ RowLayout {
     Component.onCompleted: {
         root.organData = JSON.parse(myFile.read());
     }
+
+
 }

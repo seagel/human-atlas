@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        nameRole: "Circulatory System"
+        nameRole: "Heart"
         componentNameRole: "CirculatorySystem"
         image: "images/circulatory.jpg"
     }

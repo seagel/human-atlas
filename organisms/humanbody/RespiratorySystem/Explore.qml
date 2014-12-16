@@ -6,8 +6,11 @@ import JSONReader 1.0
 
 import components 1.0 as Components
 
-RowLayout {
+
+Row {
+
     id: root
+
     property string organism
     property string organSystem
     property string currentOrgan: ""
@@ -21,16 +24,15 @@ RowLayout {
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + "data.json"
         onError: console.log(msg);
     }
+Rectangle {
+    width:parent.width/2
+    height: parent.height
+    color: "#55ADAB"
+
+
+
 
     Organs {
-        Layout.fillWidth: true
-        Layout.maximumWidth: 400
-        Layout.fillHeight: true
-
-        anchors {
-            left: parent.left
-            leftMargin: 200
-        }
 
         organism: root.organism
         organSystem: root.organSystem
@@ -42,56 +44,93 @@ RowLayout {
             pronunciation.play();
         }
 
-        Button {
-            text: "Back"
-            style: Components.ButtonStyle {}
-            width: 50
-            height: 50
-            x: 750
-            y: 700
 
+    }
+    Item {
+        height: 100
+        width: 100
+
+        x: 400
+        y: 600
+
+
+
+        Image {
+            id: backimagebutton
+            anchors.fill: parent
+            source: "../../../back.png"
+        }
+
+        MouseArea {
+            anchors.fill: parent
             onClicked: {
                 stack.push(modeSelection)
             }
         }
+
+        Text {
+            text: "Back"
+            anchors.top: backimagebutton.bottom
+            x:40
+
+
+
+            color: "white"
+            font.bold: true
+        }
     }
+}
+Rectangle {
+    width:parent.width/2
+    height: parent.height
+    color: "#55ADAB"
+
+
 
     Text {
-        Layout.fillWidth: true
-        Layout.maximumWidth: 170
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 800
-            topMargin: 50
+        id:organName
+        width:parent.width-220
+        height: 200
+        text: root.organData[currentOrgan].label
+        anchors{
+            left:parent.left
+            top:parent.top
+
         }
-        text: root.currentOrgan
+        font.pixelSize: 30
+        wrapMode: Text.Wrap
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+
     }
 
     Image {
-        Layout.fillWidth: true
-        Layout.maximumWidth: 170
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 700
-            topMargin: 100
-        }
+        id:organImage
+        width: 200
+        height: 200
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + root.currentOrgan + ".png"
+        anchors{
+            right:parent.right
+            top: parent.top
+            rightMargin: 20
+        }
     }
 
     Text {
-        id: organDesc
-        Layout.fillWidth: true
-        Layout.maximumWidth: 170
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 700
-            topMargin: 100
+        id:organDesc
+        width: parent.width-20
+        height: 400
+        wrapMode: Text.Wrap
+        anchors{
+            left:parent.left
+            top: organName.bottom
+            rightMargin: 20
         }
+
         text: root.currentOrganDesc
     }
+
+}
 
     Audio {
         id: pronunciation
@@ -101,4 +140,6 @@ RowLayout {
     Component.onCompleted: {
         root.organData = JSON.parse(myFile.read());
     }
+
+
 }
