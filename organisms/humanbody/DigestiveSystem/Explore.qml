@@ -120,6 +120,7 @@ Rectangle {
         id:organDesc
         width: parent.width-20
         height: 400
+        font.pixelSize: 18
         wrapMode: Text.Wrap
         anchors{
             left:parent.left

@@ -121,6 +121,7 @@ Rectangle {
         width: parent.width-20
         height: 400
         wrapMode: Text.Wrap
+        font.pixelSize: 18
         anchors{
             left:parent.left
             top: organName.bottom
