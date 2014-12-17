@@ -1,8 +1,8 @@
 {
     "aorta": {
         "coordinates": {
-            "x": 125,
-            "y": 80,
+            "x": 115,
+            "y": 64,
             "z": -1
         },
         "description": "The aorta is the main artery in the human body, originating from the left ventricle of the heart and extending down to the abdomen, where it splits into two smaller arteries. The aorta distributes oxygenated blood to all parts of the body through the systemic circulation.",
@@ -16,8 +16,8 @@
     },
     "inferior_vena_cava": {
         "coordinates": {
-            "x": 80,
-            "y": 480,
+            "x": 40,
+            "y": 470,
             "z": -18
         },
         "description": "The inferior vena cava (or IVC), also known as the posterior vena cava, is the large vein that carries deoxygenated blood from the lower half of the body into the right atrium of the heart.",
@@ -47,8 +47,8 @@
     "left_pulmonary_artries": {
         "coordinates": {
             "x": 0,
-            "y": 180,
-            "z": 0	
+            "y": 145,
+            "z": -4	
         },
         "description": "The left pulmonary artery or left branch of the pulmonary artery, shorter and somewhat smaller than the right, passes horizontally in front of the descending aorta and left bronchus to the root of the left lung, where it divides into two branches, one for each lobe of the lung.",
         "label": "Left Pulmonary Artries",
@@ -61,8 +61,8 @@
     },
     "pulmonary_veins": {
         "coordinates": {
-            "x": 0,
-            "y": 220,
+            "x": -15,
+            "y": 137,
             "z": -5
         },
         "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
@@ -92,8 +92,8 @@
     },
     "pulmonary_valves": {
         "coordinates": {
-            "x": 173,
-            "y": 350,
+            "x": 153,
+            "y": 335,
             "z": 1
         },
         "description": "The pulmonary valve (sometimes referred to as the pulmonic valve) is the semilunar valve of the heart that lies between the right ventricle and the pulmonary artery and has three cusps.",
@@ -107,8 +107,8 @@
     },
     "right_atrium": {
         "coordinates": {
-            "x": 60,
-            "y": 260,
+            "x": 57,
+            "y": 248,
             "z": -5
         },
         "description": "The right atrium is one of four chambers (two atria and two ventricles) in the hearts of mammals (including humans) and archosaurs (which include birds and crocodilians). It receives deoxygenated blood from the superior and inferior venae cavae, the coronary sinus, and the anterior and smallest cardiac veins, and pumps it into the right ventricle through the tricuspid valve.",
@@ -123,7 +123,7 @@
     "right_pulmonary_artries": {
         "coordinates": {
             "x": 162,
-            "y": 168,
+            "y": 170,
             "z": 0
         },
         "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
@@ -153,8 +153,8 @@
     },
     "superior_vena_cava": {
         "coordinates": {
-            "x": 78,
-            "y": 118,
+            "x": 20,
+            "y": 100,
             "z": 0
         },
         "description": "The superior vena cava (also known as the cava or cva) is a large diameter, yet short, vein that carries deoxygenated blood from the upper half of the body to the heart's right atrium.",
