@@ -11,6 +11,8 @@
         <file>components/ModeSelector.qml</file>
         <file>components/qmldir</file>
         <file>components/ButtonStyle.qml</file>
+        <file>components/Note.qml</file>
+        <file>components/bubble.png</file>
     </qresource>
     <qresource prefix="/images">
         <file>circulatory.jpg</file>

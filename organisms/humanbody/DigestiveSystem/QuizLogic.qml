@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
 
 import components 1.0 as Components
+import "../../../components"
 
 RowLayout {
     id: root
@@ -13,6 +14,8 @@ RowLayout {
     property string responseSheet
     property string wrongAnwserColor: "red"
     property string correctAnwserColor: "green"
+    property Note sugg: null
+
 
     property variant organs: [ "mouth","oesophagus", "liver","stomach", "small_intestine", "large_intestine","anus", "pancreas" , "gall_bladder"]
     property variant labelColorSheet: { "mouth" :root.wrongAnwserColor,
@@ -70,11 +73,13 @@ RowLayout {
 
                 }
 
+
                Organs {
                     organism: root.organism
                     organSystem: root.organSystem
                     labelColorSheet: root.labelColorSheet
                     onClicked: {
+                        diagram.hideNote();
                         if (!root.isGameOver)
                             diagram.handleAnswer(organ, root.currentQuizOrgan)
                     }
@@ -175,6 +180,32 @@ RowLayout {
 
                         }
                     }
+
+
+                }
+                Item {
+                    id : suggestion
+                    width : 180
+                    height : 130
+                    x:800;y:10
+
+                    function showNote() {
+                        sugg = Qt.createQmlObject(
+                                "import \"../../../components\"\n"+
+                                "Note{ \n" +
+                                "textTopMargin: 5\n" +
+                                "textLeftMargin: 10\n" +
+                                "textWidth: 160\n" +
+                                "textHeight: 100\n" +
+                                "fontSize:20\n"+
+                                "anchors.fill: parent\n" +
+                                "text : \"Click on the Asked Organ.\"}\n" , suggestion, "Note")
+                    }
+                }
+                function hideNote(){
+                    if(sugg!=null){
+                    sugg.destroy();
+                    }
                 }
 
                 function handleAnswer(answerOrgan, correctOrgan) {
@@ -219,6 +250,9 @@ RowLayout {
                }
                 function isArray(myArray) {
                     return myArray.constructor.toString().indexOf("Array") > -1;
+                }
+                Component.onCompleted: {
+                    suggestion.showNote();
                 }
 
    }
