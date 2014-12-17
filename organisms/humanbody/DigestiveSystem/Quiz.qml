@@ -23,8 +23,7 @@ RowLayout {
                 organs: root.organs
                 organism: root.organism
                 organSystem: root.organSystem
-        }
-
+            }
     }
 
     Component {
@@ -50,6 +49,6 @@ RowLayout {
 //            }
 
         }
-    }  
+    }
 }
 

@@ -118,7 +118,7 @@ RowLayout {
             x: 400
             y: 630
             onClicked: {
-                stack.push(modeSelection)
+                stack.push(modeSelection);
             }
         }
     }
@@ -128,10 +128,36 @@ RowLayout {
         width: parent.width / 2
         height: parent.height
         anchors.right: parent.right
+        Drag.active: true
         property string droppedOrgan
-        Drag.active: false
+        property variant droppedOrgans: ({})
+        property variant organs: []
         property int droppedX
         property int droppedY
+        property string wrongAnwserColor: "red"
+        property string correctAnwserColor: "green"
+        property variant labelColorSheet: {
+            "mouth": wrongAnwserColor,
+            "oesophagus": wrongAnwserColor,
+            "liver": wrongAnwserColor,
+            "stomach": wrongAnwserColor,
+            "small_intestine": wrongAnwserColor,
+            "large_intestine": wrongAnwserColor,
+            "anus": wrongAnwserColor,
+            "pancreas": wrongAnwserColor,
+            "gall_bladder": wrongAnwserColor
+        }
+        property variant organsLabelSheet: {
+            "mouth": "Mouth",
+            "oesophagus": "Oesophagus",
+            "liver": "Liver",
+            "stomach": "Stomach",
+            "small_intestine": "Small Intestine",
+            "large_intestine": "Large Intestine",
+            "anus": "Anus",
+            "pancreas": "Pancreas",
+            "gall_bladder": "Gall Bladder"
+        }
 
         Text {
             id: dropAreaText
@@ -143,15 +169,9 @@ RowLayout {
         }
 
         onDropped: {
-            var droppedOrgan = drag.source.organ,
-                droppedX = drag.x,
-                droppedY = drag.y,
-                refX = referenceCoordinates[droppedOrgan].coordinates.x,
-                refY = referenceCoordinates[droppedOrgan].coordinates.y,
-                threshold = 10; // needs to be verified
-
-            if ((droppedX <= refX + threshold) || (droppedX >= refX - threshold) && (droppedY <= refY + threshold) || (droppedY >= refY - threshold))
-                organMatches++;
+            droppedOrgans[drag.source.organ] = {};
+            droppedOrgans[drag.source.organ].x = drag.x;
+            droppedOrgans[drag.source.organ].y = drag.y;
         }
 
         Image {
@@ -174,7 +194,6 @@ RowLayout {
             dragOrgans: false
             displayOrganLabel: true
             opacity: 0
-            property string clickedOrgan
         }
 
         Text {
@@ -189,8 +208,7 @@ RowLayout {
 
         Button {
             id: feedbackButton
-            style: Components.ButtonStyle {
-            }
+            style: Components.ButtonStyle {}
             text: "Feedback"
             x: 0
             y: 670
@@ -199,19 +217,22 @@ RowLayout {
 
             onClicked: {
                 if (feedbackButton.text == "Reset") {
-                    stack.push(buildSelection)
+                    stack.push(buildSelection);
                 } else {
-                    if (root.organMatches >= numberOfOrgans) {
-                        feedbackText.color = "green"
-                        feedbackText.text += "Good job! You have learnt the "
-                                + root.organSystem + "!"
-                        dropAreaText.color = "green"
-                    } else {
-                        workSpaceOrgansList.opacity = 1
-                        buildSpaceOrgansList.opacity = 0.2
-                        feedbackText.text += "Check what you got wrong"
-                        dropAreaText.color = "red"
+                    for (var organ in dropArea.droppedOrgans) {
+                        var dX = dropArea.droppedOrgans[organ].x,
+                            dY = dropArea.droppedOrgans[organ].y,
+                            rX = root.referenceCoordinates[organ].coordinates.x,
+                            rY = root.referenceCoordinates[organ].coordinates.y,
+                            limit = 30; // Needs to be checked.
+
+                        if (((dX >= rX - limit) && (dX < rX + limit)) && ((dY >= rY - limit) && (dY < rY + limit)))
+                           dropArea.labelColorSheet[organ] = dropArea.correctAnwserColor;
                     }
+
+                    workSpaceOrgansList.labelColorSheet = dropArea.labelColorSheet;
+                    workSpaceOrgansList.opacity = 1
+                    buildSpaceOrgansList.opacity = 0.2
 
                     feedbackButton.text = "Reset"
                     dropArea.feedbackReset()
@@ -231,8 +252,9 @@ RowLayout {
     Component.onCompleted: {
         referenceCoordinates = JSON.parse(myFile.read());
 
-        for (var key in referenceCoordinates)
-            if(referenceCoordinates.hasOwnProperty(key))
-                numberOfOrgans++;
+        for (var key in referenceCoordinates) {
+            if (referenceCoordinates.hasOwnProperty(key))
+                dropArea.organs.push(key);
+        }
     }
 }
