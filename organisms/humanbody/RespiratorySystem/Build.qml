@@ -189,7 +189,7 @@ RowLayout {
                     for (var organ in droppedOrgans) {
                         var dX = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[0],
                             dY = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[1],
-                            rX = root.referenceCoordinates[droppedOrgans[organ]].coordinates.x,
+                            rX = root.referenceCoordinates[droppedOrgans[organ]].coordinates.x + dropArea.width,
                             rY = root.referenceCoordinates[droppedOrgans[organ]].coordinates.y,
                             limit = 30; // Needs to be checked.
 
