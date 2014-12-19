@@ -4,7 +4,8 @@ QT += qml quick widgets
 
 SOURCES += main.cpp \
     imagemousearea.cpp \
-    jsonreader.cpp
+    jsonreader.cpp \
+    globaldatastore.cpp
 
 RESOURCES += qml.qrc
 
@@ -16,6 +17,7 @@ include(deployment.pri)
 
 HEADERS += \
     imagemousearea.h \
-    jsonreader.h
+    jsonreader.h \
+    globaldatastore.h
 
 CONFIG += c++11

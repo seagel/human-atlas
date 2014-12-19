@@ -124,35 +124,21 @@ RowLayout {
         anchors.right: parent.right
         Drag.active: true
         property string droppedOrgan
-        property variant droppedOrgans: ({})
         property variant organs: []
         property int droppedX
         property int droppedY
         property string wrongAnwserColor: "red"
         property string correctAnwserColor: "green"
         property variant labelColorSheet: {
-            "bronchi_left": root.wrongAnwserColor,
-            "bronchi_right": root.wrongAnwserColor,
-            "bronchioles": root.wrongAnwserColor,
-            "diaphragm":root.wrongAnwserColor,
-            "epiglottis": root.wrongAnwserColor,
-            "lungs" :root.wrongAnwserColor,
-            "nose": root.wrongAnwserColor,
-            "oral_cavity":  root.wrongAnwserColor,
-            "ribs" : root.wrongAnwserColor,
-            "trachea": root.wrongAnwserColor
-        }
-        property variant organsLabelSheet: {
-            "bronchi_left": "Bronchi Left" ,
-            "bronchi_right": "Bronchi Right" ,
-            "bronchioles":"Bronchioles" ,
-            "diaphragm": "Diaphragm",
-            "epiglottis": "Epiglottis" ,
-            "lungs" : "Lungs" ,
-            "nose": "Nose",
-            "oral_cavity": "Oral Cavity"  ,
-            "ribs" : "Ribs" ,
-            "trachea": "Trachea"
+            "mouth": wrongAnwserColor,
+            "oesophagus": wrongAnwserColor,
+            "liver": wrongAnwserColor,
+            "stomach": wrongAnwserColor,
+            "small_intestine": wrongAnwserColor,
+            "large_intestine": wrongAnwserColor,
+            "anus": wrongAnwserColor,
+            "pancreas": wrongAnwserColor,
+            "gall_bladder": wrongAnwserColor
         }
 
         Text {
@@ -162,12 +148,6 @@ RowLayout {
             font.bold: true
             font.pixelSize: 14
             horizontalAlignment: Text.AlignHCenter
-        }
-
-        onDropped: {
-            droppedOrgans[drag.source.organ] = {};
-            droppedOrgans[drag.source.organ].x = drag.x;
-            droppedOrgans[drag.source.organ].y = drag.y;
         }
 
         Image {
@@ -192,16 +172,6 @@ RowLayout {
             opacity: 0
         }
 
-        Text {
-            id: feedbackText
-            text: ""
-            color: "red"
-            font.bold: true
-            font.pixelSize: 14
-            x: 70
-            y: 600
-        }
-
         Button {
             id: feedbackButton
             style: Components.ButtonStyle {}
@@ -215,11 +185,12 @@ RowLayout {
                 if (feedbackButton.text == "Reset") {
                     stack.push(buildSelection);
                 } else {
-                    for (var organ in dropArea.droppedOrgans) {
-                        var dX = dropArea.droppedOrgans[organ].x,
-                            dY = dropArea.droppedOrgans[organ].y,
-                            rX = root.referenceCoordinates[organ].coordinates.x,
-                            rY = root.referenceCoordinates[organ].coordinates.y,
+                    var droppedOrgans = _globalDataStore.getKeys().split(' ');
+                    for (var organ in droppedOrgans) {
+                        var dX = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[0],
+                            dY = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[1],
+                            rX = root.referenceCoordinates[droppedOrgans[organ]].coordinates.x,
+                            rY = root.referenceCoordinates[droppedOrgans[organ]].coordinates.y,
                             limit = 30; // Needs to be checked.
 
                         if (((dX >= rX - limit) && (dX < rX + limit)) && ((dY >= rY - limit) && (dY < rY + limit)))
@@ -227,11 +198,11 @@ RowLayout {
                     }
 
                     workSpaceOrgansList.labelColorSheet = dropArea.labelColorSheet;
-                    workSpaceOrgansList.opacity = 1
-                    buildSpaceOrgansList.opacity = 0.2
+                    workSpaceOrgansList.opacity = 1;
+                    buildSpaceOrgansList.opacity = 0.2;
 
-                    feedbackButton.text = "Reset"
-                    dropArea.feedbackReset()
+                    feedbackButton.text = "Reset";
+                    dropArea.feedbackReset();
                 }
             }
         }
@@ -248,8 +219,11 @@ RowLayout {
     Component.onCompleted: {
         referenceCoordinates = JSON.parse(myFile.read());
 
-        for (var key in referenceCoordinates)
+        for (var key in referenceCoordinates) {
             if (referenceCoordinates.hasOwnProperty(key))
-                numberOfOrgans++;
+                dropArea.organs.push(key);
+        }
+
+        _globalDataStore.clear();
     }
 }

@@ -4,6 +4,7 @@
 #include <QQmlApplicationEngine>
 #include <QtQml>
 #include <jsonreader.h>
+#include <globaldatastore.h>
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
@@ -12,6 +13,7 @@ int main(int argc, char *argv[]) {
     qmlRegisterType<JSONReader>("JSONReader", 1, 0, "JSONReader");
 
     QQmlApplicationEngine engine;
+    GlobalDataStore globalDataStore;
 
     QDir applicationDir(QApplication::applicationDirPath());
     applicationDir.cd("organisms");
@@ -19,6 +21,7 @@ int main(int argc, char *argv[]) {
     engine.addImportPath("qrc:/components");
 
     engine.rootContext()->setContextProperty("_organismsDataDirectory", QUrl::fromLocalFile(applicationDir.absolutePath()).toString());
+    engine.rootContext()->setContextProperty("_globalDataStore", &globalDataStore);
 
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 

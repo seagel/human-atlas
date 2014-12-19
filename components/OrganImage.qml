@@ -30,7 +30,8 @@ Image {
             root.selected(organ)
         }
         onReleased: {
-            parent.Drag.drop()
+            parent.Drag.drop();
+            _globalDataStore.setOrgan(organ, root.x, root.y);
         }
     }
 

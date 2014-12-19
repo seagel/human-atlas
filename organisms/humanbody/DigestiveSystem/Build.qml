@@ -130,7 +130,6 @@ RowLayout {
         anchors.right: parent.right
         Drag.active: true
         property string droppedOrgan
-        property variant droppedOrgans: ({})
         property variant organs: []
         property int droppedX
         property int droppedY
@@ -147,17 +146,6 @@ RowLayout {
             "pancreas": wrongAnwserColor,
             "gall_bladder": wrongAnwserColor
         }
-        property variant organsLabelSheet: {
-            "mouth": "Mouth",
-            "oesophagus": "Oesophagus",
-            "liver": "Liver",
-            "stomach": "Stomach",
-            "small_intestine": "Small Intestine",
-            "large_intestine": "Large Intestine",
-            "anus": "Anus",
-            "pancreas": "Pancreas",
-            "gall_bladder": "Gall Bladder"
-        }
 
         Text {
             id: dropAreaText
@@ -166,12 +154,6 @@ RowLayout {
             font.bold: true
             font.pixelSize: 14
             horizontalAlignment: Text.AlignHCenter
-        }
-
-        onDropped: {
-            droppedOrgans[drag.source.organ] = {};
-            droppedOrgans[drag.source.organ].x = drag.x;
-            droppedOrgans[drag.source.organ].y = drag.y;
         }
 
         Image {
@@ -196,16 +178,6 @@ RowLayout {
             opacity: 0
         }
 
-        Text {
-            id: feedbackText
-            text: ""
-            color: "red"
-            font.bold: true
-            font.pixelSize: 14
-            x: 70
-            y: 600
-        }
-
         Button {
             id: feedbackButton
             style: Components.ButtonStyle {}
@@ -219,11 +191,12 @@ RowLayout {
                 if (feedbackButton.text == "Reset") {
                     stack.push(buildSelection);
                 } else {
-                    for (var organ in dropArea.droppedOrgans) {
-                        var dX = dropArea.droppedOrgans[organ].x,
-                            dY = dropArea.droppedOrgans[organ].y,
-                            rX = root.referenceCoordinates[organ].coordinates.x,
-                            rY = root.referenceCoordinates[organ].coordinates.y,
+                    var droppedOrgans = _globalDataStore.getKeys().split(' ');
+                    for (var organ in droppedOrgans) {
+                        var dX = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[0],
+                            dY = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[1],
+                            rX = root.referenceCoordinates[droppedOrgans[organ]].coordinates.x,
+                            rY = root.referenceCoordinates[droppedOrgans[organ]].coordinates.y,
                             limit = 30; // Needs to be checked.
 
                         if (((dX >= rX - limit) && (dX < rX + limit)) && ((dY >= rY - limit) && (dY < rY + limit)))
@@ -231,11 +204,11 @@ RowLayout {
                     }
 
                     workSpaceOrgansList.labelColorSheet = dropArea.labelColorSheet;
-                    workSpaceOrgansList.opacity = 1
-                    buildSpaceOrgansList.opacity = 0.2
+                    workSpaceOrgansList.opacity = 1;
+                    buildSpaceOrgansList.opacity = 0.2;
 
-                    feedbackButton.text = "Reset"
-                    dropArea.feedbackReset()
+                    feedbackButton.text = "Reset";
+                    dropArea.feedbackReset();
                 }
             }
         }
@@ -256,5 +229,7 @@ RowLayout {
             if (referenceCoordinates.hasOwnProperty(key))
                 dropArea.organs.push(key);
         }
+
+        _globalDataStore.clear();
     }
 }
