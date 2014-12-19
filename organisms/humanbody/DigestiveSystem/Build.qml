@@ -195,12 +195,14 @@ RowLayout {
                     for (var organ in droppedOrgans) {
                         var dX = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[0],
                             dY = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[1],
-                            rX = root.referenceCoordinates[droppedOrgans[organ]].coordinates.x,
+                            rX = root.referenceCoordinates[droppedOrgans[organ]].coordinates.x + 512,
                             rY = root.referenceCoordinates[droppedOrgans[organ]].coordinates.y,
                             limit = 30; // Needs to be checked.
 
+                        console.log(dX, dY, rX, rY)
+
                         if (((dX >= rX - limit) && (dX < rX + limit)) && ((dY >= rY - limit) && (dY < rY + limit)))
-                           dropArea.labelColorSheet[organ] = dropArea.correctAnwserColor;
+                            dropArea.labelColorSheet[droppedOrgans[organ]] = dropArea.correctAnwserColor;
                     }
 
                     workSpaceOrgansList.labelColorSheet = dropArea.labelColorSheet;

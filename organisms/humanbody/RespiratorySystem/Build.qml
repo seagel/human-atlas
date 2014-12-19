@@ -155,8 +155,8 @@ RowLayout {
             anchors {
                 left: parent.left
                 top: parent.top
-                leftMargin: -45
-                topMargin: -20
+                leftMargin: 0
+                topMargin: 28
             }
             source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/background.png"
             z: -2
@@ -194,7 +194,7 @@ RowLayout {
                             limit = 30; // Needs to be checked.
 
                         if (((dX >= rX - limit) && (dX < rX + limit)) && ((dY >= rY - limit) && (dY < rY + limit)))
-                           dropArea.labelColorSheet[organ] = dropArea.correctAnwserColor;
+                           dropArea.labelColorSheet[droppedOrgans[organ]] = dropArea.correctAnwserColor;
                     }
 
                     workSpaceOrgansList.labelColorSheet = dropArea.labelColorSheet;
