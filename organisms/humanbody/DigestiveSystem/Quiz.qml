@@ -41,12 +41,6 @@ RowLayout {
             labelColorSheet: quizLogic.labelColorSheet
             answerListStringsNames: quizLogic.answerListString
 
-//            function getTableModel(){
-//                var newListModel = Qt.createQmlObject('import QtQuick 2.2; \
-//                        ListModel {'+ answerListStringsNames +'}', parent);
-//                console.log("test");
-//                    return newListModel;
-//            }
 
         }
     }

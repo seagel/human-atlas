@@ -108,17 +108,37 @@ RowLayout {
             dragOrgans: true
             coordinatesSheet: root.coordinatesSheet
         }
+        Item {
+            height: 100
+            width: 100
 
-        Button {
-            text: "Back"
-            style: Components.ButtonStyle {
+            x: 450
+            y: 600
+
+
+
+            Image {
+                id: backimagebutton
+                anchors.fill: parent
+                source: "../../../back.png"
             }
-            width: 50
-            height: 50
-            x: 400
-            y: 630
-            onClicked: {
-                stack.push(modeSelection);
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    stack.push(modeSelection)
+                }
+            }
+
+            Text {
+                text: "Back"
+                anchors.top: backimagebutton.bottom
+                x:40
+
+
+
+                color: "white"
+                font.bold: true
             }
         }
     }
@@ -182,7 +202,7 @@ RowLayout {
             id: feedbackButton
             style: Components.ButtonStyle {}
             text: "Feedback"
-            x: 0
+            x: 80
             y: 670
             width: 100
             height: 50
