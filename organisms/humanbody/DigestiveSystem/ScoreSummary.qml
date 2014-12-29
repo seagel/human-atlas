@@ -49,7 +49,7 @@ Item {
                 Image {
                     id: backimagebutton
                     anchors.fill: parent
-                    source: "../../../back.png"
+                    source: "../back.png"
                 }
 
                 MouseArea {

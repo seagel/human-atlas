@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-import QtWebKit 3.0
+
 import QtQuick.Controls 1.2
 import JSONReader 1.0
 
@@ -114,7 +114,7 @@ RowLayout {
             Image {
                 id: backimagebutton
                 anchors.fill: parent
-                source: "../../../back.png"
+                source: "../back.png"
             }
 
             MouseArea {
