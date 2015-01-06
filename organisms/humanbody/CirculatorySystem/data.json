@@ -46,15 +46,15 @@
     },
     "left_pulmonary_artries": {
         "coordinates": {
-            "x": 0,
-            "y": 145,
-            "z": -4
+            "x": 162,
+            "y": 170,
+            "z": 0
         },
         "description": "The left pulmonary artery or left branch of the pulmonary artery, shorter and somewhat smaller than the right, passes horizontally in front of the descending aorta and left bronchus to the root of the left lung, where it divides into two branches, one for each lobe of the lung.",
-        "label": "Left Pulmonary Artries",
+        "label": "Left Pulmonary Arteries",
         "labelcoordinates": {
-            "x": 350,
-            "y": 205,
+            "x": 330,
+            "y": 175,
             "z": 0
         },
         "fontsize": 20
@@ -121,15 +121,15 @@
     },
     "right_pulmonary_artries": {
         "coordinates": {
-            "x": 162,
-            "y": 170,
-            "z": 0
+            "x": 0,
+            "y": 145,
+            "z": -4
         },
-        "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
-        "label": "Right Pulmonary Artries",
+        "description": "The right pulmonary artery or right branch of the pulmonary artery, longer and larger than the left, runs horizontally to the right, behind the ascending aorta and superior vena cava and in front of the right bronchus, to the root of the right lung, where it divides into two branches.",
+        "label": "Right Pulmonary Arteries",
         "labelcoordinates": {
-            "x": 330,
-            "y": 175,
+            "x": 350,
+            "y": 205,
             "z": 0
         },
         "fontsize": 20
