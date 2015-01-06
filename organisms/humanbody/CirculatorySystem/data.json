@@ -7,12 +7,12 @@
         },
         "description": "The aorta is the main artery in the human body, originating from the left ventricle of the heart and extending down to the abdomen, where it splits into two smaller arteries. The aorta distributes oxygenated blood to all parts of the body through the systemic circulation.",
         "label": "Aorta",
-        "labelcoordinates":{
+        "labelcoordinates": {
             "x": 5,
             "y": 100,
             "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "inferior_vena_cava": {
         "coordinates": {
@@ -22,12 +22,12 @@
         },
         "description": "The inferior vena cava (or IVC), also known as the posterior vena cava, is the large vein that carries deoxygenated blood from the lower half of the body into the right atrium of the heart.",
         "label": "Inferior Vena Cava",
-        "labelcoordinates":{
+        "labelcoordinates": {
             "x": 230,
             "y": 580,
             "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "left_atrium": {
         "coordinates": {
@@ -37,27 +37,27 @@
         },
         "description": "The left atrium is one of four chambers in the human heart. It receives oxygenated blood from the pulmonary veins, and pumps it into the left ventricle, via the mitral valve. Atria facilitate circulation primarily by allowing uninterrupted venous flow to the heart, preventing the inertia of interrupted venous flow that would otherwise occur at each ventricular systole.",
         "label": "Left Atrium",
-        "labelcoordinates":{
-            "x":440,
-            "y":305,
-            "z":0
+        "labelcoordinates": {
+            "x": 440,
+            "y": 305,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "left_pulmonary_artries": {
         "coordinates": {
             "x": 0,
             "y": 145,
-            "z": -4	
+            "z": -4
         },
         "description": "The left pulmonary artery or left branch of the pulmonary artery, shorter and somewhat smaller than the right, passes horizontally in front of the descending aorta and left bronchus to the root of the left lung, where it divides into two branches, one for each lobe of the lung.",
         "label": "Left Pulmonary Artries",
-        "labelcoordinates":{
-            "x":350,
-            "y":205,
-            "z":0
+        "labelcoordinates": {
+            "x": 350,
+            "y": 205,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "pulmonary_veins": {
         "coordinates": {
@@ -67,13 +67,12 @@
         },
         "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
         "label": "Pulmonary Veins",
-        "labelcoordinates":{
-            "x":400,
-            "y":235,
-            "z":0
+        "labelcoordinates": {
+            "x": 400,
+            "y": 235,
+            "z": 0
         },
-        "fontsize":20
-
+        "fontsize": 20
     },
     "left_ventricle": {
         "coordinates": {
@@ -83,12 +82,12 @@
         },
         "description": "A ventricle is one of two large chambers that collect and expel blood received from an atrium towards the peripheral beds within the body and lungs.",
         "label": "Left Ventricle",
-        "labelcoordinates":{
-            "x":420,
-            "y":410,
-            "z":0
+        "labelcoordinates": {
+            "x": 420,
+            "y": 410,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "pulmonary_valves": {
         "coordinates": {
@@ -98,12 +97,12 @@
         },
         "description": "The pulmonary valve (sometimes referred to as the pulmonic valve) is the semilunar valve of the heart that lies between the right ventricle and the pulmonary artery and has three cusps.",
         "label": "Pulmonary Valves",
-        "labelcoordinates":{
-            "x":390,
-            "y":370,
-            "z":0
+        "labelcoordinates": {
+            "x": 390,
+            "y": 370,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "right_atrium": {
         "coordinates": {
@@ -113,12 +112,12 @@
         },
         "description": "The right atrium is one of four chambers (two atria and two ventricles) in the hearts of mammals (including humans) and archosaurs (which include birds and crocodilians). It receives deoxygenated blood from the superior and inferior venae cavae, the coronary sinus, and the anterior and smallest cardiac veins, and pumps it into the right ventricle through the tricuspid valve.",
         "label": "Right Atrium",
-        "labelcoordinates":{
-            "x":440,
-            "y":340,
-            "z":0
+        "labelcoordinates": {
+            "x": 440,
+            "y": 340,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "right_pulmonary_artries": {
         "coordinates": {
@@ -128,14 +127,13 @@
         },
         "description": "The pulmonary veins are large blood vessels that receive oxygenated blood from the lungs and drain into the left atrium of the heart. There are four pulmonary veins, two from each lung. The pulmonary veins are among the few veins that carry oxygenated blood.",
         "label": "Right Pulmonary Artries",
-        "labelcoordinates":{
-            "x":330,
-            "y":175,
-            "z":0
+        "labelcoordinates": {
+            "x": 330,
+            "y": 175,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
-
     "right_ventricle": {
         "coordinates": {
             "x": 100,
@@ -144,12 +142,12 @@
         },
         "description": "A ventricle is one of two large chambers that collect and expel blood received from an atrium towards the peripheral beds within the body and lungs.",
         "label": "Right Ventricle",
-        "labelcoordinates":{
-            "x":420,
-            "y":480,
-            "z":0
+        "labelcoordinates": {
+            "x": 420,
+            "y": 480,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
     "superior_vena_cava": {
         "coordinates": {
@@ -159,226 +157,189 @@
         },
         "description": "The superior vena cava (also known as the cava or cva) is a large diameter, yet short, vein that carries deoxygenated blood from the upper half of the body to the heart's right atrium.",
         "label": "Superior Vena Cava",
-        "labelcoordinates":{
-            "x":350,
-            "y":130,
-            "z":0
+        "labelcoordinates": {
+            "x": 350,
+            "y": 130,
+            "z": 0
         },
-        "fontsize":20
+        "fontsize": 20
     },
-    "lines":{
-
-			"aortaLine":{
-				"source":"../line.png",
-				"sourceArrow":"../left.png",
-					"coordinates": {
-						"x": 65,
-						"y": 113,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": -7,
-						"y": -9,
-						"z": 10
-						},
-					"width": 160,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"inferior_vena_cavaLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 100,
-						"y": 590,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 100,
-						"y": -9,
-						"z": 10
-						},
-					"width": 100,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"left_atriumLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 300,
-						"y": 320,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 110,
-						"y": -9,
-						"z": 10
-						},
-					"width": 110,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"left_pulmonary_artriesLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 50,
-						"y": 215,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 270,
-						"y": -9,
-						"z": 10
-						},
-					"width": 270,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"pulmonary_veinsLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 320,
-						"y": 250,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 50,
-						"y": -9,
-						"z": 10
-						},
-					"width": 50,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"left_ventricleLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 300,
-						"y": 420,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 100,
-						"y": -9,
-						"z": 10
-						},
-					"width": 100,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"pulmonary_valvesLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 200,
-						"y": 380,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 165,
-						"y": -9,
-						"z": 10
-						},
-					"width": 165,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"right_atriumLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 120,
-						"y": 350,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 290,
-						"y": -9,
-						"z": 10
-						},
-					"width": 290,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"right_pulmonary_artriesLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 265,
-						"y": 190,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 40,
-						"y": -9,
-						"z": 10
-						},
-					"width": 40,
-					"widthArrow": 21
-        
-			
-		},
-		
-
-		
-					"right_ventricleLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 220,
-						"y": 490,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 175,
-						"y": -9,
-						"z": 10
-						},
-					"width": 175,
-					"widthArrow": 21
-        
-			
-		},
-		
-					"superior_vena_cavaLine":{
-				"source":"../line.png",
-				"sourceArrow":"../right.png",
-					"coordinates": {
-						"x": 100,
-						"y": 140,
-						"z": 10
-						},
-					"coordinatesArrow": {
-						"x": 210,
-						"y": -9,
-						"z": 10
-						},
-					"width": 210,
-					"widthArrow": 21
-        
-			
-		}
-		
-		
-		}
+    "lines": {
+        "aortaLine": {
+            "source": "../line.png",
+            "sourceArrow": "../left.png",
+            "coordinates": {
+                "x": 65,
+                "y": 113,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": -7,
+                "y": -9,
+                "z": 10
+            },
+            "width": 160,
+            "widthArrow": 21
+        },
+        "inferior_vena_cavaLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 100,
+                "y": 590,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 100,
+                "y": -9,
+                "z": 10
+            },
+            "width": 100,
+            "widthArrow": 21
+        },
+        "left_atriumLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 300,
+                "y": 320,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 110,
+                "y": -9,
+                "z": 10
+            },
+            "width": 110,
+            "widthArrow": 21
+        },
+        "left_pulmonary_artriesLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 50,
+                "y": 215,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 270,
+                "y": -9,
+                "z": 10
+            },
+            "width": 270,
+            "widthArrow": 21
+        },
+        "pulmonary_veinsLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 320,
+                "y": 250,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 50,
+                "y": -9,
+                "z": 10
+            },
+            "width": 50,
+            "widthArrow": 21
+        },
+        "left_ventricleLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 300,
+                "y": 420,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 100,
+                "y": -9,
+                "z": 10
+            },
+            "width": 100,
+            "widthArrow": 21
+        },
+        "pulmonary_valvesLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 200,
+                "y": 380,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 165,
+                "y": -9,
+                "z": 10
+            },
+            "width": 165,
+            "widthArrow": 21
+        },
+        "right_atriumLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 120,
+                "y": 350,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 290,
+                "y": -9,
+                "z": 10
+            },
+            "width": 290,
+            "widthArrow": 21
+        },
+        "right_pulmonary_artriesLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 265,
+                "y": 190,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 40,
+                "y": -9,
+                "z": 10
+            },
+            "width": 40,
+            "widthArrow": 21
+        },
+        "right_ventricleLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 220,
+                "y": 490,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 175,
+                "y": -9,
+                "z": 10
+            },
+            "width": 175,
+            "widthArrow": 21
+        },
+        "superior_vena_cavaLine": {
+            "source": "../line.png",
+            "sourceArrow": "../right.png",
+            "coordinates": {
+                "x": 100,
+                "y": 140,
+                "z": 10
+            },
+            "coordinatesArrow": {
+                "x": 210,
+                "y": -9,
+                "z": 10
+            },
+            "width": 210,
+            "widthArrow": 21
+        }
+    }
 }
