@@ -22,5 +22,7 @@
         <file>quiz.png</file>
         <file>build.png</file>
         <file>back.png</file>
+        <file>home.png</file>
+        <file>quit.png</file>
     </qresource>
 </RCC>

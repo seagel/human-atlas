@@ -72,4 +72,37 @@ ApplicationWindow {
             }
         }
     }
+    Item {
+        height: 50
+        width: 50
+        anchors {
+            left: parent.left
+            leftMargin: 30
+            top: parent.top
+            topMargin: 20
+        }
+
+        Image {
+            anchors.fill: parent
+            source: "images/quit.png"
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                Qt.quit();
+            }
+        }
+
+        Text {
+            text: "Quit"
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                top: parent.top
+                topMargin: 50
+            }
+            color: "white"
+            font.bold: true
+        }
+    }
 }
