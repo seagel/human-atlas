@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtQuick.Dialogs 1.1
 import QtQuick.Controls 1.2
 import JSONReader 1.0
 
@@ -84,6 +85,13 @@ RowLayout {
         id: myFile
         source: _organismsDataDirectory + "/" + root.organism + "/" + root.organSystem + "/" + "data.json"
         onError: console.log(msg)
+    }
+
+    MessageDialog {
+        id: errorDialog
+        title: "Error"
+        text: "Please drop at least one organ."
+        visible: false;
     }
 
     Rectangle {
@@ -207,6 +215,12 @@ RowLayout {
                     stack.push(buildSelection);
                 } else {
                     var droppedOrgans = _globalDataStore.getKeys().split(' ');
+
+                    if (droppedOrgans[0] === '') {
+                        errorDialog.visible = true;
+                        return;
+                    }
+
                     for (var organ in droppedOrgans) {
                         var dX = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[0],
                             dY = _globalDataStore.getOrgan(droppedOrgans[organ]).split(',')[1],
