@@ -234,10 +234,6 @@ Item {
       Repeater{
         model:getModel()
         Image {
-
-
-
-
             source: root.coordinatesSheet.lines[modelData + "Line"].source
             x:root.coordinatesSheet.lines[modelData + "Line"].coordinates.x;
             y:root.coordinatesSheet.lines[modelData + "Line"].coordinates.y
@@ -257,13 +253,12 @@ Item {
 
         }
         function getModel(){
-            root.coordinatesSheet = JSON.parse(myFile.read());
+            if (dragOrgans)
+                return;
 
+            root.coordinatesSheet = JSON.parse(myFile.read());
             return organsList
         }
-
-
-
     }
 
     function organLabelColor(organName) {
@@ -277,97 +272,113 @@ Item {
     }
 
     Component.onCompleted: {
-        if (dragOrgans) {
+        if (dragOrgans)
             background.visible = false;
-            return;
-        }
-
-        root.coordinatesSheet = JSON.parse(myFile.read());
 
         bronchi_leftImage.x = root.coordinatesSheet.bronchi_left.coordinates.x;
         bronchi_leftImage.y = root.coordinatesSheet.bronchi_left.coordinates.y;
         bronchi_leftImage.z = root.coordinatesSheet.bronchi_left.coordinates.z;
-        bronchi_leftImageLabel.text=root.coordinatesSheet.bronchi_left.label
-        bronchi_leftImageLabel.x=root.coordinatesSheet.bronchi_left.labelcoordinates.x
-        bronchi_leftImageLabel.y=root.coordinatesSheet.bronchi_left.labelcoordinates.y
-        bronchi_leftImageLabel.z=root.coordinatesSheet.bronchi_left.labelcoordinates.z
-        bronchi_leftImageLabel.font.pixelSize=root.coordinatesSheet.bronchi_left.fontsize
+        if (!dragOrgans) {
+            bronchi_leftImageLabel.text=root.coordinatesSheet.bronchi_left.label
+            bronchi_leftImageLabel.x=root.coordinatesSheet.bronchi_left.labelcoordinates.x
+            bronchi_leftImageLabel.y=root.coordinatesSheet.bronchi_left.labelcoordinates.y
+            bronchi_leftImageLabel.z=root.coordinatesSheet.bronchi_left.labelcoordinates.z
+            bronchi_leftImageLabel.font.pixelSize=root.coordinatesSheet.bronchi_left.fontsize
+        }
 
         bronchi_rightImage.x = root.coordinatesSheet.bronchi_right.coordinates.x;
         bronchi_rightImage.y = root.coordinatesSheet.bronchi_right.coordinates.y;
         bronchi_rightImage.z = root.coordinatesSheet.bronchi_right.coordinates.z;
-        bronchi_rightImageLabel.text=root.coordinatesSheet.bronchi_right.label
-        bronchi_rightImageLabel.x=root.coordinatesSheet.bronchi_right.labelcoordinates.x
-        bronchi_rightImageLabel.y=root.coordinatesSheet.bronchi_right.labelcoordinates.y
-        bronchi_rightImageLabel.z=root.coordinatesSheet.bronchi_right.labelcoordinates.z
-        bronchi_rightImageLabel.font.pixelSize=root.coordinatesSheet.bronchi_right.fontsize
+        if (!dragOrgans) {
+            bronchi_rightImageLabel.text=root.coordinatesSheet.bronchi_right.label
+            bronchi_rightImageLabel.x=root.coordinatesSheet.bronchi_right.labelcoordinates.x
+            bronchi_rightImageLabel.y=root.coordinatesSheet.bronchi_right.labelcoordinates.y
+            bronchi_rightImageLabel.z=root.coordinatesSheet.bronchi_right.labelcoordinates.z
+            bronchi_rightImageLabel.font.pixelSize=root.coordinatesSheet.bronchi_right.fontsize
+        }
 
         bronchiolesImage.x = root.coordinatesSheet.bronchioles.coordinates.x;
         bronchiolesImage.y = root.coordinatesSheet.bronchioles.coordinates.y;
         bronchiolesImage.z = root.coordinatesSheet.bronchioles.coordinates.z;
-        bronchiolesImageLabel.text=root.coordinatesSheet.bronchioles.label
-        bronchiolesImageLabel.x=root.coordinatesSheet.bronchioles.labelcoordinates.x
-        bronchiolesImageLabel.y=root.coordinatesSheet.bronchioles.labelcoordinates.y
-        bronchiolesImageLabel.z=root.coordinatesSheet.bronchioles.labelcoordinates.z
-        bronchiolesImageLabel.font.pixelSize=root.coordinatesSheet.bronchioles.fontsize
+        if (!dragOrgans) {
+            bronchiolesImageLabel.text=root.coordinatesSheet.bronchioles.label
+            bronchiolesImageLabel.x=root.coordinatesSheet.bronchioles.labelcoordinates.x
+            bronchiolesImageLabel.y=root.coordinatesSheet.bronchioles.labelcoordinates.y
+            bronchiolesImageLabel.z=root.coordinatesSheet.bronchioles.labelcoordinates.z
+            bronchiolesImageLabel.font.pixelSize=root.coordinatesSheet.bronchioles.fontsize
+        }
 
         diaphragmImage.x = root.coordinatesSheet.diaphragm.coordinates.x;
         diaphragmImage.y = root.coordinatesSheet.diaphragm.coordinates.y;
-        diaphragmImageLabel.text=root.coordinatesSheet.diaphragm.label
-        diaphragmImageLabel.x=root.coordinatesSheet.diaphragm.labelcoordinates.x
-        diaphragmImageLabel.y=root.coordinatesSheet.diaphragm.labelcoordinates.y
-        diaphragmImageLabel.z=root.coordinatesSheet.diaphragm.labelcoordinates.z
-        diaphragmImageLabel.font.pixelSize=root.coordinatesSheet.diaphragm.fontsize
+        if (!dragOrgans) {
+            diaphragmImageLabel.text=root.coordinatesSheet.diaphragm.label
+            diaphragmImageLabel.x=root.coordinatesSheet.diaphragm.labelcoordinates.x
+            diaphragmImageLabel.y=root.coordinatesSheet.diaphragm.labelcoordinates.y
+            diaphragmImageLabel.z=root.coordinatesSheet.diaphragm.labelcoordinates.z
+            diaphragmImageLabel.font.pixelSize=root.coordinatesSheet.diaphragm.fontsize
+        }
 
         epiglottisImage.x = root.coordinatesSheet.epiglottis.coordinates.x;
         epiglottisImage.y = root.coordinatesSheet.epiglottis.coordinates.y;
-        epiglottisImageLabel.text=root.coordinatesSheet.epiglottis.label
-        epiglottisImageLabel.x=root.coordinatesSheet.epiglottis.labelcoordinates.x
-        epiglottisImageLabel.y=root.coordinatesSheet.epiglottis.labelcoordinates.y
-        epiglottisImageLabel.z=root.coordinatesSheet.epiglottis.labelcoordinates.z
-        epiglottisImageLabel.font.pixelSize=root.coordinatesSheet.epiglottis.fontsize
+        if (!dragOrgans) {
+            epiglottisImageLabel.text=root.coordinatesSheet.epiglottis.label
+            epiglottisImageLabel.x=root.coordinatesSheet.epiglottis.labelcoordinates.x
+            epiglottisImageLabel.y=root.coordinatesSheet.epiglottis.labelcoordinates.y
+            epiglottisImageLabel.z=root.coordinatesSheet.epiglottis.labelcoordinates.z
+            epiglottisImageLabel.font.pixelSize=root.coordinatesSheet.epiglottis.fontsize
+        }
 
         lungsImage.x = root.coordinatesSheet.lungs.coordinates.x;
         lungsImage.y = root.coordinatesSheet.lungs.coordinates.y;
         lungsImage.z = root.coordinatesSheet.lungs.coordinates.z;
-        lungsImageLabel.text=root.coordinatesSheet.lungs.label
-        lungsImageLabel.x=root.coordinatesSheet.lungs.labelcoordinates.x
-        lungsImageLabel.y=root.coordinatesSheet.lungs.labelcoordinates.y
-        lungsImageLabel.z=root.coordinatesSheet.lungs.labelcoordinates.z
-        lungsImageLabel.font.pixelSize=root.coordinatesSheet.lungs.fontsize
+        if (!dragOrgans) {
+            lungsImageLabel.text=root.coordinatesSheet.lungs.label
+            lungsImageLabel.x=root.coordinatesSheet.lungs.labelcoordinates.x
+            lungsImageLabel.y=root.coordinatesSheet.lungs.labelcoordinates.y
+            lungsImageLabel.z=root.coordinatesSheet.lungs.labelcoordinates.z
+            lungsImageLabel.font.pixelSize=root.coordinatesSheet.lungs.fontsize
+        }
 
         noseImage.x = root.coordinatesSheet.nose.coordinates.x;
         noseImage.y = root.coordinatesSheet.nose.coordinates.y;
         noseImage.z = root.coordinatesSheet.nose.coordinates.z;
-        noseImageLabel.text=root.coordinatesSheet.nose.label
-        noseImageLabel.x=root.coordinatesSheet.nose.labelcoordinates.x
-        noseImageLabel.y=root.coordinatesSheet.nose.labelcoordinates.y
-        noseImageLabel.z=root.coordinatesSheet.nose.labelcoordinates.z
-        noseImageLabel.font.pixelSize=root.coordinatesSheet.nose.fontsize
+        if (!dragOrgans) {
+            noseImageLabel.text=root.coordinatesSheet.nose.label
+            noseImageLabel.x=root.coordinatesSheet.nose.labelcoordinates.x
+            noseImageLabel.y=root.coordinatesSheet.nose.labelcoordinates.y
+            noseImageLabel.z=root.coordinatesSheet.nose.labelcoordinates.z
+            noseImageLabel.font.pixelSize=root.coordinatesSheet.nose.fontsize
+        }
 
         oral_cavityImage.x = root.coordinatesSheet.oral_cavity.coordinates.x;
         oral_cavityImage.y = root.coordinatesSheet.oral_cavity.coordinates.y;
         oral_cavityImage.z = root.coordinatesSheet.oral_cavity.coordinates.z;
-        oral_cavityImageLabel.text=root.coordinatesSheet.oral_cavity.label
-        oral_cavityImageLabel.x=root.coordinatesSheet.oral_cavity.labelcoordinates.x
-        oral_cavityImageLabel.y=root.coordinatesSheet.oral_cavity.labelcoordinates.y
-        oral_cavityImageLabel.z=root.coordinatesSheet.oral_cavity.labelcoordinates.z
-        oral_cavityImageLabel.font.pixelSize=root.coordinatesSheet.oral_cavity.fontsize
+        if (!dragOrgans) {
+            oral_cavityImageLabel.text=root.coordinatesSheet.oral_cavity.label
+            oral_cavityImageLabel.x=root.coordinatesSheet.oral_cavity.labelcoordinates.x
+            oral_cavityImageLabel.y=root.coordinatesSheet.oral_cavity.labelcoordinates.y
+            oral_cavityImageLabel.z=root.coordinatesSheet.oral_cavity.labelcoordinates.z
+            oral_cavityImageLabel.font.pixelSize=root.coordinatesSheet.oral_cavity.fontsize
+        }
 
         ribsImage.x = root.coordinatesSheet.ribs.coordinates.x;
         ribsImage.y = root.coordinatesSheet.ribs.coordinates.y;
-        ribsImageLabel.text=root.coordinatesSheet.ribs.label
-        ribsImageLabel.x=root.coordinatesSheet.ribs.labelcoordinates.x
-        ribsImageLabel.y=root.coordinatesSheet.ribs.labelcoordinates.y
-        ribsImageLabel.z=root.coordinatesSheet.ribs.labelcoordinates.z
-        ribsImageLabel.font.pixelSize=root.coordinatesSheet.ribs.fontsize
+        if (!dragOrgans) {
+            ribsImageLabel.text=root.coordinatesSheet.ribs.label
+            ribsImageLabel.x=root.coordinatesSheet.ribs.labelcoordinates.x
+            ribsImageLabel.y=root.coordinatesSheet.ribs.labelcoordinates.y
+            ribsImageLabel.z=root.coordinatesSheet.ribs.labelcoordinates.z
+            ribsImageLabel.font.pixelSize=root.coordinatesSheet.ribs.fontsize
+        }
 
         tracheaImage.x = root.coordinatesSheet.trachea.coordinates.x;
         tracheaImage.y = root.coordinatesSheet.trachea.coordinates.y;
-        tracheaImageLabel.text=root.coordinatesSheet.trachea.label
-        tracheaImageLabel.x=root.coordinatesSheet.trachea.labelcoordinates.x
-        tracheaImageLabel.y=root.coordinatesSheet.trachea.labelcoordinates.y
-        tracheaImageLabel.z=root.coordinatesSheet.trachea.labelcoordinates.z
-        tracheaImageLabel.font.pixelSize=root.coordinatesSheet.trachea.fontsize
+        if (!dragOrgans) {
+            tracheaImageLabel.text=root.coordinatesSheet.trachea.label
+            tracheaImageLabel.x=root.coordinatesSheet.trachea.labelcoordinates.x
+            tracheaImageLabel.y=root.coordinatesSheet.trachea.labelcoordinates.y
+            tracheaImageLabel.z=root.coordinatesSheet.trachea.labelcoordinates.z
+            tracheaImageLabel.font.pixelSize=root.coordinatesSheet.trachea.fontsize
+        }
     }
 }

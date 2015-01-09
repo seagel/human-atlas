@@ -24,36 +24,57 @@ RowLayout {
         },
         "bronchi_right": {
             "coordinates": {
-                "x": 0,
+                "x": 150,
                 "y": 0,
                 "z": 1
             }
         },
         "bronchioles": {
             "coordinates": {
+                "x": 120,
+                "y": 200,
+                "z": 1
+            }
+        },
+        "diaphragm": {
+            "coordinates": {
                 "x": 0,
-                "y": 0,
-                "z": -1
+                "y": 550,
+                "z": 1
+            }
+        },
+        "epiglottis": {
+            "coordinates": {
+                "x": 350,
+                "y": 150,
+                "z": 1
+            }
+        },
+        "lungs": {
+            "coordinates": {
+                "x": 200,
+                "y": 200,
+                "z": 1
             }
         },
         "nose": {
             "coordinates": {
-                "x": 0,
+                "x": 300,
                 "y": 0,
                 "z": -1
             }
         },
         "oral_cavity": {
             "coordinates": {
-                "x": 0,
-                "y": 0,
+                "x": 350,
+                "y": 500,
                 "z": 0
             }
         },
         "ribs": {
             "coordinates": {
                 "x": 0,
-                "y": 0,
+                "y": 200,
                 "z": 5
             }
         },
@@ -66,8 +87,8 @@ RowLayout {
         },
         "trachea": {
             "coordinates": {
-                "x": 0,
-                "y": 0,
+                "x": 300,
+                "y": 500,
                 "z": 1
             }
         }

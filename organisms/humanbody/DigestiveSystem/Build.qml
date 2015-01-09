@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-
 import QtQuick.Controls 1.2
 import JSONReader 1.0
 
@@ -12,7 +11,7 @@ RowLayout {
     property string organSystem
     property string currentOrgan
     property int organMatches: 0
-    property  int  numberOfOrgans: 0
+    property int numberOfOrgans: 0
     property variant referenceCoordinates
     property variant coordinatesSheet: {
         "mouth": {
@@ -24,14 +23,14 @@ RowLayout {
         },
         "oesophagus": {
             "coordinates": {
-                "x": 0,
+                "x": 120,
                 "y": 0,
                 "z": 1
             }
         },
         "liver": {
             "coordinates": {
-                "x": 0,
+                "x": 240,
                 "y": 0,
                 "z": -1
             }
@@ -39,41 +38,41 @@ RowLayout {
         "stomach": {
             "coordinates": {
                 "x": 0,
-                "y": 0
+                "y": 250
             }
         },
         "small_intestine": {
             "coordinates": {
-                "x": 0,
-                "y": 0,
+                "x": 150,
+                "y": 270,
                 "z": 2
             }
         },
         "large_intestine": {
             "coordinates": {
                 "x": 0,
-                "y": 0,
+                "y": 450,
                 "z": 1
             }
         },
         "anus": {
             "coordinates": {
-                "x": 0,
-                "y": 0,
+                "x": 350,
+                "y": 500,
                 "z": 1
             }
         },
         "pancreas": {
             "coordinates": {
-                "x": 0,
-                "y": 0,
+                "x": 300,
+                "y": 200,
                 "z": -1
             }
         },
         "gall_bladder": {
             "coordinates": {
-                "x": 0,
-                "y": 0,
+                "x": 300,
+                "y": 450,
                 "z": 1
             }
         }
@@ -115,8 +114,6 @@ RowLayout {
             x: 450
             y: 600
 
-
-
             Image {
                 id: backimagebutton
                 anchors.fill: parent
@@ -134,8 +131,6 @@ RowLayout {
                 text: "Back"
                 anchors.top: backimagebutton.bottom
                 x:40
-
-
 
                 color: "white"
                 font.bold: true

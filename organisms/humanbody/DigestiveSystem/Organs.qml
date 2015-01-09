@@ -232,7 +232,10 @@ Item {
             }
         }
 
-        function getModel(){
+        function getModel() {
+            if (dragOrgans)
+                return;
+
             root.coordinatesSheet = JSON.parse(myFile.read());
             return organsList
         }
@@ -250,88 +253,104 @@ Item {
     }
 
     Component.onCompleted: {
-        if (dragOrgans) {
+        if (dragOrgans)
             background.visible = false;
-            return;
-        }
 
         mouthImage.x = root.coordinatesSheet.mouth.coordinates.x;
         mouthImage.y = root.coordinatesSheet.mouth.coordinates.y;
         mouthImage.z = root.coordinatesSheet.mouth.coordinates.z;
-        mouthImageLabel.text=root.coordinatesSheet.mouth.label
-        mouthImageLabel.x=root.coordinatesSheet.mouth.labelcoordinates.x
-        mouthImageLabel.y=root.coordinatesSheet.mouth.labelcoordinates.y
-        mouthImageLabel.z=root.coordinatesSheet.mouth.labelcoordinates.z
-        mouthImageLabel.font.pixelSize=root.coordinatesSheet.mouth.fontsize
+        if (!dragOrgans) {
+            mouthImageLabel.text=root.coordinatesSheet.mouth.label
+            mouthImageLabel.x=root.coordinatesSheet.mouth.labelcoordinates.x
+            mouthImageLabel.y=root.coordinatesSheet.mouth.labelcoordinates.y
+            mouthImageLabel.z=root.coordinatesSheet.mouth.labelcoordinates.z
+            mouthImageLabel.font.pixelSize=root.coordinatesSheet.mouth.fontsize
+        }
 
         oesophagusImage.x = root.coordinatesSheet.oesophagus.coordinates.x;
         oesophagusImage.y = root.coordinatesSheet.oesophagus.coordinates.y;
         oesophagusImage.z = root.coordinatesSheet.oesophagus.coordinates.z;
-        oesophagusImageLabel.text=root.coordinatesSheet.oesophagus.label
-        oesophagusImageLabel.x=root.coordinatesSheet.oesophagus.labelcoordinates.x
-        oesophagusImageLabel.y=root.coordinatesSheet.oesophagus.labelcoordinates.y
-        oesophagusImageLabel.z=root.coordinatesSheet.oesophagus.labelcoordinates.z
-        oesophagusImageLabel.font.pixelSize=root.coordinatesSheet.oesophagus.fontsize
+        if (!dragOrgans) {
+            oesophagusImageLabel.text=root.coordinatesSheet.oesophagus.label
+            oesophagusImageLabel.x=root.coordinatesSheet.oesophagus.labelcoordinates.x
+            oesophagusImageLabel.y=root.coordinatesSheet.oesophagus.labelcoordinates.y
+            oesophagusImageLabel.z=root.coordinatesSheet.oesophagus.labelcoordinates.z
+            oesophagusImageLabel.font.pixelSize=root.coordinatesSheet.oesophagus.fontsize
+        }
 
 
         liverImage.x = root.coordinatesSheet.liver.coordinates.x;
         liverImage.y = root.coordinatesSheet.liver.coordinates.y;
         liverImage.z = root.coordinatesSheet.liver.coordinates.z;
-        liverImageLabel.text=root.coordinatesSheet.liver.label
-        liverImageLabel.x=root.coordinatesSheet.liver.labelcoordinates.x
-        liverImageLabel.y=root.coordinatesSheet.liver.labelcoordinates.y
-        liverImageLabel.z=root.coordinatesSheet.liver.labelcoordinates.z
-        liverImageLabel.font.pixelSize=root.coordinatesSheet.liver.fontsize
+        if (!dragOrgans) {
+            liverImageLabel.text=root.coordinatesSheet.liver.label
+            liverImageLabel.x=root.coordinatesSheet.liver.labelcoordinates.x
+            liverImageLabel.y=root.coordinatesSheet.liver.labelcoordinates.y
+            liverImageLabel.z=root.coordinatesSheet.liver.labelcoordinates.z
+            liverImageLabel.font.pixelSize=root.coordinatesSheet.liver.fontsize
+        }
 
         stomachImage.x = root.coordinatesSheet.stomach.coordinates.x;
         stomachImage.y = root.coordinatesSheet.stomach.coordinates.y;
-        stomachImageLabel.text=root.coordinatesSheet.stomach.label
-        stomachImageLabel.x=root.coordinatesSheet.stomach.labelcoordinates.x
-        stomachImageLabel.y=root.coordinatesSheet.stomach.labelcoordinates.y
-        stomachImageLabel.z=root.coordinatesSheet.stomach.labelcoordinates.z
-        stomachImageLabel.font.pixelSize=root.coordinatesSheet.stomach.fontsize
+        if (!dragOrgans) {
+            stomachImageLabel.text=root.coordinatesSheet.stomach.label
+            stomachImageLabel.x=root.coordinatesSheet.stomach.labelcoordinates.x
+            stomachImageLabel.y=root.coordinatesSheet.stomach.labelcoordinates.y
+            stomachImageLabel.z=root.coordinatesSheet.stomach.labelcoordinates.z
+            stomachImageLabel.font.pixelSize=root.coordinatesSheet.stomach.fontsize
+        }
 
         small_intestineImage.x = root.coordinatesSheet.small_intestine.coordinates.x;
         small_intestineImage.y = root.coordinatesSheet.small_intestine.coordinates.y;
-        small_intestineImageLabel.text=root.coordinatesSheet.small_intestine.label
-        small_intestineImageLabel.x=root.coordinatesSheet.small_intestine.labelcoordinates.x
-        small_intestineImageLabel.y=root.coordinatesSheet.small_intestine.labelcoordinates.y
-        small_intestineImageLabel.z=root.coordinatesSheet.small_intestine.labelcoordinates.z
-        small_intestineImageLabel.font.pixelSize=root.coordinatesSheet.small_intestine.fontsize
+        if (!dragOrgans) {
+            small_intestineImageLabel.text=root.coordinatesSheet.small_intestine.label
+            small_intestineImageLabel.x=root.coordinatesSheet.small_intestine.labelcoordinates.x
+            small_intestineImageLabel.y=root.coordinatesSheet.small_intestine.labelcoordinates.y
+            small_intestineImageLabel.z=root.coordinatesSheet.small_intestine.labelcoordinates.z
+            small_intestineImageLabel.font.pixelSize=root.coordinatesSheet.small_intestine.fontsize
+        }
 
         large_intestineImage.x = root.coordinatesSheet.large_intestine.coordinates.x;
         large_intestineImage.y = root.coordinatesSheet.large_intestine.coordinates.y;
         large_intestineImage.z = root.coordinatesSheet.large_intestine.coordinates.z;
-        large_intestineImageLabel.text=root.coordinatesSheet.large_intestine.label
-        large_intestineImageLabel.x=root.coordinatesSheet.large_intestine.labelcoordinates.x
-        large_intestineImageLabel.y=root.coordinatesSheet.large_intestine.labelcoordinates.y
-        large_intestineImageLabel.z=root.coordinatesSheet.large_intestine.labelcoordinates.z
-        large_intestineImageLabel.font.pixelSize=root.coordinatesSheet.large_intestine.fontsize
+        if (!dragOrgans) {
+            large_intestineImageLabel.text=root.coordinatesSheet.large_intestine.label
+            large_intestineImageLabel.x=root.coordinatesSheet.large_intestine.labelcoordinates.x
+            large_intestineImageLabel.y=root.coordinatesSheet.large_intestine.labelcoordinates.y
+            large_intestineImageLabel.z=root.coordinatesSheet.large_intestine.labelcoordinates.z
+            large_intestineImageLabel.font.pixelSize=root.coordinatesSheet.large_intestine.fontsize
+        }
 
         anusImage.x = root.coordinatesSheet.anus.coordinates.x;
         anusImage.y = root.coordinatesSheet.anus.coordinates.y;
-        anusImageLabel.text=root.coordinatesSheet.anus.label
-        anusImageLabel.x=root.coordinatesSheet.anus.labelcoordinates.x
-        anusImageLabel.y=root.coordinatesSheet.anus.labelcoordinates.y
-        anusImageLabel.z=root.coordinatesSheet.anus.labelcoordinates.z
-        anusImageLabel.font.pixelSize=root.coordinatesSheet.anus.fontsize
+        if (!dragOrgans) {
+            anusImageLabel.text=root.coordinatesSheet.anus.label
+            anusImageLabel.x=root.coordinatesSheet.anus.labelcoordinates.x
+            anusImageLabel.y=root.coordinatesSheet.anus.labelcoordinates.y
+            anusImageLabel.z=root.coordinatesSheet.anus.labelcoordinates.z
+            anusImageLabel.font.pixelSize=root.coordinatesSheet.anus.fontsize
+        }
 
         pancreasImage.x = root.coordinatesSheet.pancreas.coordinates.x;
         pancreasImage.y = root.coordinatesSheet.pancreas.coordinates.y;
         pancreasImage.z = root.coordinatesSheet.pancreas.coordinates.z;
-        pancreasImageLabel.text=root.coordinatesSheet.pancreas.label
-        pancreasImageLabel.x=root.coordinatesSheet.pancreas.labelcoordinates.x
-        pancreasImageLabel.y=root.coordinatesSheet.pancreas.labelcoordinates.y
-        pancreasImageLabel.z=root.coordinatesSheet.pancreas.labelcoordinates.z
-        pancreasImageLabel.font.pixelSize=root.coordinatesSheet.pancreas.fontsize
+        if (!dragOrgans) {
+            pancreasImageLabel.text=root.coordinatesSheet.pancreas.label
+            pancreasImageLabel.x=root.coordinatesSheet.pancreas.labelcoordinates.x
+            pancreasImageLabel.y=root.coordinatesSheet.pancreas.labelcoordinates.y
+            pancreasImageLabel.z=root.coordinatesSheet.pancreas.labelcoordinates.z
+            pancreasImageLabel.font.pixelSize=root.coordinatesSheet.pancreas.fontsize
+        }
 
         gall_bladderImage.x = root.coordinatesSheet.gall_bladder.coordinates.x;
         gall_bladderImage.y = root.coordinatesSheet.gall_bladder.coordinates.y;
         gall_bladderImage.z = root.coordinatesSheet.gall_bladder.coordinates.z;
-        gall_bladderImageLabel.text=root.coordinatesSheet.gall_bladder.label
-        gall_bladderImageLabel.x=root.coordinatesSheet.gall_bladder.labelcoordinates.x
-        gall_bladderImageLabel.y=root.coordinatesSheet.gall_bladder.labelcoordinates.y
-        gall_bladderImageLabel.z=root.coordinatesSheet.gall_bladder.labelcoordinates.z
-        gall_bladderImageLabel.font.pixelSize=root.coordinatesSheet.gall_bladder.fontsize
+        if (!dragOrgans) {
+            gall_bladderImageLabel.text=root.coordinatesSheet.gall_bladder.label
+            gall_bladderImageLabel.x=root.coordinatesSheet.gall_bladder.labelcoordinates.x
+            gall_bladderImageLabel.y=root.coordinatesSheet.gall_bladder.labelcoordinates.y
+            gall_bladderImageLabel.z=root.coordinatesSheet.gall_bladder.labelcoordinates.z
+            gall_bladderImageLabel.font.pixelSize=root.coordinatesSheet.gall_bladder.fontsize
+        }
     }
 }
