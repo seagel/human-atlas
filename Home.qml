@@ -34,7 +34,7 @@ Item {
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
-            topMargin: 170
+            topMargin: 210
         }
         font.pointSize: 20
         color: "#ffffff"

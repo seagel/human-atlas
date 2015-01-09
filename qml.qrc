@@ -15,9 +15,9 @@
         <file>components/bubble.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file>circulatory.jpg</file>
-        <file>digest.jpg</file>
-        <file>resp.jpg</file>
+        <file>circulatory.png</file>
+        <file>digestive.png</file>
+        <file>respiratory.png</file>
         <file>explore.png</file>
         <file>quiz.png</file>
         <file>build.png</file>

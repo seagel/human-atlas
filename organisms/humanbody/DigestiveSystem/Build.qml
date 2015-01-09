@@ -205,9 +205,9 @@ RowLayout {
             id: feedbackButton
             style: Components.ButtonStyle {}
             text: "Feedback"
-            x: 80
-            y: 670
-            width: 100
+            x: 350
+            y: 700
+            width: 150
             height: 50
 
             onClicked: {
